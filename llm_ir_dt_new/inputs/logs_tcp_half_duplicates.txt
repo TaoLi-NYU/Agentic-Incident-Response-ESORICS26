@@ -1,0 +1,164 @@
+The IDS observed extensive ICMP traffic from the client-side attack platform, consistent with host discovery and reconnaissance across the server network.
+The IDS detected repeated SSH connection attempts against the SSH server (10.0.2.11).
+The IDS raised multiple alerts for a potential SSH brute force attack, indicating repeated authentication attempts against the SSH service.
+The IDS detected repeated SMB traffic to the Samba server (10.0.2.12), including NetBIOS-related SMB traffic, consistent with probing or exploitation activity against the Samba service.
+The IDS detected repeated HTTP traffic toward web-facing services in the server network.
+The IDS raised multiple Shellshock attack attempt alerts against the Shellshock-vulnerable web server (10.0.2.13).
+Overall, the alert stream indicates a multi-stage attack involving reconnaissance, password guessing or credential attacks, SMB probing or exploitation attempts, and web exploitation attempts originating from the attack platform (10.0.1.11) toward vulnerable services in the server network.
+
+2026-05-31 01:58:56,116 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,116 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,116 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,116 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,116 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.11 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.11 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.11 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.11 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.12 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.12 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.12 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.12 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.12 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.12 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.12 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.12 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.13 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.13 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.13 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.13 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.13 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.13 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.13 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.13 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.14 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,117 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.14 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.14 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.14 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.14 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.14 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.14 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.14 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.15 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.15 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.15 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.15 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.10 -> 10.0.2.15 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.15 -> 10.0.2.10 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.1.11 -> 10.0.2.15 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=Attempted Information Leak] {ICMP} 10.0.2.15 -> 10.0.1.11 [1:1000001:2] ICMP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56358 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56358 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:40004 -> 10.0.2.12:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:33560 -> 10.0.2.13:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:58176 -> 10.0.2.14:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:44398 -> 10.0.2.15:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59860 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 10.0.2.10:59860 -> 10.0.2.11:22 [1:1000002:2] Potential SSH brute force attack
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:49732 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:38326 -> 10.0.2.15:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:38700 -> 10.0.2.11:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,118 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:40398 -> 10.0.2.12:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:51284 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:42138 -> 10.0.2.12:139 [1:1000004:2] SMB traffic to Samba server (NetBIOS)
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:42138 -> 10.0.2.12:139 [1:1000004:2] SMB traffic to Samba server (NetBIOS)
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59870 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56358 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56358 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:40004 -> 10.0.2.12:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:33560 -> 10.0.2.13:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:58176 -> 10.0.2.14:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:44398 -> 10.0.2.15:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59860 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 10.0.1.11:59860 -> 10.0.2.11:22 [1:1000002:2] Potential SSH brute force attack
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:49732 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:38326 -> 10.0.2.15:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:38700 -> 10.0.2.11:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:40398 -> 10.0.2.12:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:51284 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:42138 -> 10.0.2.12:139 [1:1000004:2] SMB traffic to Samba server (NetBIOS)
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:42138 -> 10.0.2.12:139 [1:1000004:2] SMB traffic to Samba server (NetBIOS)
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59870 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59880 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59882 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59894 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59900 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 10.0.2.10:59900 -> 10.0.2.11:22 [1:1000002:2] Potential SSH brute force attack
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59914 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59880 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,119 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59882 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59894 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59900 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 10.0.1.11:59900 -> 10.0.2.11:22 [1:1000002:2] Potential SSH brute force attack
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59914 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59916 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59916 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59928 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59928 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,120 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:51294 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 10.0.2.10:51294 -> 10.0.2.13:80 [1:1000005:2] Shellshock attack attempt
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:51300 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 10.0.2.10:51300 -> 10.0.2.13:80 [1:1000005:2] Shellshock attack attempt
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:49738 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:38334 -> 10.0.2.15:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59934 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56372 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,121 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:56386 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:51294 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 10.0.1.11:51294 -> 10.0.2.13:80 [1:1000005:2] Shellshock attack attempt
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:51300 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 10.0.1.11:51300 -> 10.0.2.13:80 [1:1000005:2] Shellshock attack attempt
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:49738 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:38334 -> 10.0.2.15:80 [1:1000006:2] HTTP traffic detected
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59934 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:59946 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 10.0.2.10:59946 -> 10.0.2.11:22 [1:1000002:2] Potential SSH brute force attack
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:59946 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-05-31 01:58:56,122 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 10.0.1.11:59946 -> 10.0.2.11:22 [1:1000002:2] Potential SSH brute force attack

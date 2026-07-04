@@ -1,0 +1,1733 @@
+{
+  "summary": {
+    "dataset": "/home/yu3194924316/.cache/huggingface/hub/datasets--kimhammar--CSLE-IncidentResponse-V1/snapshots/c4d1e893e550b3c216aed1664f6474eac978a991/incident_examples.json",
+    "checkpoint": "/tmp/checkpoint-850-localbase-tactic-eval",
+    "start_index": 17000,
+    "end_index": 17019,
+    "num_samples": 20,
+    "tactic_labeled_sample_count": 5,
+    "empty_gold_tactics_count": 15,
+    "macro_precision": 0.35467532467532464,
+    "macro_recall": 0.4375,
+    "macro_f1": 0.3803205128205128,
+    "macro_jaccard": 0.35353896103896104,
+    "exact_set_match_rate": 0.25,
+    "macro_precision_labeled_tactics_only": 0.6187012987012988,
+    "macro_recall_labeled_tactics_only": 0.95,
+    "macro_f1_labeled_tactics_only": 0.7212820512820513,
+    "macro_jaccard_labeled_tactics_only": 0.6141558441558441,
+    "exact_set_match_rate_labeled_tactics_only": 0.2,
+    "incident_correct_count": 16,
+    "incident_wrong_count": 4,
+    "incident_accuracy": 0.8
+  },
+  "per_tactic_metrics": [
+    {
+      "tactic": "Reconnaissance",
+      "true_positive": 0,
+      "false_positive": 3,
+      "false_negative": 1,
+      "true_negative": 16,
+      "support_gold": 1,
+      "support_predicted": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": null,
+      "gold_positive_accuracy": 0.0,
+      "gold_positive_indices": [
+        17006
+      ],
+      "missed_gold_positive_indices": [
+        17006
+      ],
+      "false_positive_indices": [
+        17002,
+        17009,
+        17011
+      ]
+    },
+    {
+      "tactic": "Resource Development",
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "true_negative": 20,
+      "support_gold": 0,
+      "support_predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "gold_positive_accuracy": null,
+      "gold_positive_indices": [],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": []
+    },
+    {
+      "tactic": "Initial Access",
+      "true_positive": 5,
+      "false_positive": 11,
+      "false_negative": 0,
+      "true_negative": 4,
+      "support_gold": 5,
+      "support_predicted": 16,
+      "precision": 0.3125,
+      "recall": 1.0,
+      "f1": 0.47619047619047616,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17000,
+        17004,
+        17006,
+        17008,
+        17012
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17001,
+        17002,
+        17003,
+        17009,
+        17010,
+        17011,
+        17013,
+        17014,
+        17016,
+        17017,
+        17019
+      ]
+    },
+    {
+      "tactic": "Execution",
+      "true_positive": 2,
+      "false_positive": 12,
+      "false_negative": 0,
+      "true_negative": 6,
+      "support_gold": 2,
+      "support_predicted": 14,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "f1": 0.25,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17004,
+        17008
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17000,
+        17001,
+        17002,
+        17003,
+        17006,
+        17009,
+        17010,
+        17011,
+        17013,
+        17016,
+        17017,
+        17019
+      ]
+    },
+    {
+      "tactic": "Persistence",
+      "true_positive": 1,
+      "false_positive": 9,
+      "false_negative": 0,
+      "true_negative": 10,
+      "support_gold": 1,
+      "support_predicted": 10,
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17004
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17001,
+        17002,
+        17003,
+        17006,
+        17008,
+        17009,
+        17011,
+        17016,
+        17019
+      ]
+    },
+    {
+      "tactic": "Privilege Escalation",
+      "true_positive": 0,
+      "false_positive": 5,
+      "false_negative": 0,
+      "true_negative": 15,
+      "support_gold": 0,
+      "support_predicted": 5,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null,
+      "gold_positive_accuracy": null,
+      "gold_positive_indices": [],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17002,
+        17006,
+        17008,
+        17016,
+        17019
+      ]
+    },
+    {
+      "tactic": "Defense Evasion",
+      "true_positive": 0,
+      "false_positive": 6,
+      "false_negative": 0,
+      "true_negative": 14,
+      "support_gold": 0,
+      "support_predicted": 6,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null,
+      "gold_positive_accuracy": null,
+      "gold_positive_indices": [],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17001,
+        17002,
+        17006,
+        17008,
+        17016,
+        17019
+      ]
+    },
+    {
+      "tactic": "Credential Access",
+      "true_positive": 0,
+      "false_positive": 6,
+      "false_negative": 0,
+      "true_negative": 14,
+      "support_gold": 0,
+      "support_predicted": 6,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null,
+      "gold_positive_accuracy": null,
+      "gold_positive_indices": [],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17002,
+        17004,
+        17006,
+        17008,
+        17016,
+        17019
+      ]
+    },
+    {
+      "tactic": "Discovery",
+      "true_positive": 1,
+      "false_positive": 5,
+      "false_negative": 0,
+      "true_negative": 14,
+      "support_gold": 1,
+      "support_predicted": 6,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "f1": 0.2857142857142857,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17012
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17002,
+        17006,
+        17008,
+        17016,
+        17019
+      ]
+    },
+    {
+      "tactic": "Lateral Movement",
+      "true_positive": 2,
+      "false_positive": 10,
+      "false_negative": 0,
+      "true_negative": 8,
+      "support_gold": 2,
+      "support_predicted": 12,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "f1": 0.2857142857142857,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17000,
+        17004
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17002,
+        17003,
+        17006,
+        17008,
+        17009,
+        17011,
+        17013,
+        17014,
+        17016,
+        17019
+      ]
+    },
+    {
+      "tactic": "Collection",
+      "true_positive": 1,
+      "false_positive": 11,
+      "false_negative": 0,
+      "true_negative": 8,
+      "support_gold": 1,
+      "support_predicted": 12,
+      "precision": 0.08333333333333333,
+      "recall": 1.0,
+      "f1": 0.15384615384615385,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17004
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17000,
+        17002,
+        17003,
+        17006,
+        17008,
+        17009,
+        17010,
+        17011,
+        17013,
+        17016,
+        17019
+      ]
+    },
+    {
+      "tactic": "Command and Control",
+      "true_positive": 2,
+      "false_positive": 9,
+      "false_negative": 0,
+      "true_negative": 9,
+      "support_gold": 2,
+      "support_predicted": 11,
+      "precision": 0.18181818181818182,
+      "recall": 1.0,
+      "f1": 0.3076923076923077,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17006,
+        17008
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17001,
+        17002,
+        17009,
+        17010,
+        17011,
+        17014,
+        17016,
+        17017,
+        17019
+      ]
+    },
+    {
+      "tactic": "Exfiltration",
+      "true_positive": 4,
+      "false_positive": 11,
+      "false_negative": 0,
+      "true_negative": 5,
+      "support_gold": 4,
+      "support_predicted": 15,
+      "precision": 0.26666666666666666,
+      "recall": 1.0,
+      "f1": 0.4210526315789474,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17000,
+        17004,
+        17006,
+        17008
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": [
+        17001,
+        17002,
+        17003,
+        17009,
+        17010,
+        17011,
+        17013,
+        17014,
+        17016,
+        17017,
+        17019
+      ]
+    },
+    {
+      "tactic": "Impact",
+      "true_positive": 1,
+      "false_positive": 0,
+      "false_negative": 0,
+      "true_negative": 19,
+      "support_gold": 1,
+      "support_predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "gold_positive_accuracy": 1.0,
+      "gold_positive_indices": [
+        17012
+      ],
+      "missed_gold_positive_indices": [],
+      "false_positive_indices": []
+    }
+  ],
+  "results": [
+    {
+      "index": 17000,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": true,
+      "gold_tactics": [
+        "Initial Access",
+        "Lateral Movement",
+        "Exfiltration"
+      ],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Lateral Movement",
+        "Collection",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999,
+        "jaccard": 0.6,
+        "exact_set_match": false,
+        "true_positive": [
+          "Initial Access",
+          "Lateral Movement",
+          "Exfiltration"
+        ],
+        "false_positive": [
+          "Execution",
+          "Collection"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "external IP"
+          ],
+          "System": [
+            "192.168.200.40",
+            "192.168.200.50",
+            "GITSRV",
+            "BUILD01"
+          ],
+          "Targeted": [
+            "192.168.200.40",
+            "192.168.200.50",
+            "GITSRV",
+            "BUILD01"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A multi-stage compromise has occurred involving servers 192.168.200.40 (GITSRV) and 192.168.200.50 (BUILD01). The attacker exploited vulnerabilities on GITSRV, moved laterally to BUILD01, and exfiltrated data.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.006 Command and Scripting Interpreter: Groovy",
+          "T1021.002 Remote Services: Docker",
+          "T1005 Data from Local System",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17001,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Defense Evasion",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Defense Evasion",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "external IP"
+          ],
+          "System": [
+            "10.5.5.10",
+            "10.5.5.20",
+            "10.5.6.0/24"
+          ],
+          "Targeted": [
+            "10.5.5.10",
+            "10.5.5.20"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A security incident has occurred involving unauthorized access to the Kibana service on SIEM01 (10.5.5.10), followed by suspicious activities including potential tampering with rsyslog on LOGSRV (10.5.5.20), outbound traffic, and data exfiltration. The attacker exploited the lack of authentication on Kibana to gain access and potentially compromised the SIEM host.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Defense Evasion",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.004 Command and Scripting Interpreter: Unix Shell",
+          "T1547.001 Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1070 Indicator Removal on Host",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17002,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Reconnaissance",
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Privilege Escalation",
+        "Defense Evasion",
+        "Credential Access",
+        "Discovery",
+        "Lateral Movement",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Reconnaissance",
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "10.60.1.90",
+            "10.60.1.21",
+            "10.60.1.11",
+            "unknown IP"
+          ],
+          "System": [
+            "10.60.0.10",
+            "203.0.113.120",
+            "10.60.1.11",
+            "10.60.1.21",
+            "10.60.1.30",
+            "10.60.1.41",
+            "10.60.1.44",
+            "10.60.1.55",
+            "10.60.1.90",
+            "10.60.2.10",
+            "10.60.2.20",
+            "10.60.2.30",
+            "104.16.17.35",
+            "8.8.8.8",
+            "192.0.2.25"
+          ],
+          "Targeted": [
+            "10.60.1.90",
+            "10.60.1.21",
+            "10.60.1.11"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "Multiple Snort alerts indicate suspicious activity, including potential reconnaissance, scanning, and possible compromise. The alerts are spread across several IPs, including a known scanner pod, a critical billing service, and an unknown IP. While some alerts may be false positives or related to legitimate security testing, the combination of alerts warrants investigation to determine the nature of the activity and whether a security incident has occurred.",
+        "MITRE ATT&CK Tactics": [
+          "Reconnaissance",
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration",
+          "Command and Control"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1595.001 Active Scanning: Scanning IP Blocks",
+          "T1046 Network Service Discovery",
+          "T1059.004 Command and Scripting Interpreter: Unix Shell",
+          "T1053.005 Scheduled Task/Job: Cron",
+          "T1068 Exploitation for Privilege Escalation",
+          "T1027 Obfuscated Files or Information",
+          "T1552.001 Unsecured Credentials: Credentials In Files",
+          "T1082 System Information Discovery",
+          "T1021.004 Remote Services: SSH",
+          "T1005 Data from Local System",
+          "T1041 Exfiltration Over C2 Channel",
+          "T1071.001 Application Layer Protocol: Web Protocols"
+        ]
+      }
+    },
+    {
+      "index": 17003,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Lateral Movement",
+        "Collection",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "203.0.113.77",
+            "unknown internal IP"
+          ],
+          "System": [
+            "10.50.1.20",
+            "WEB-APP1",
+            "10.50.1.10",
+            "DB-SRV1",
+            "10.50.1.50"
+          ],
+          "Targeted": [
+            "10.50.1.20",
+            "WEB-APP1",
+            "10.50.1.10",
+            "DB-SRV1"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "An attacker from IP 203.0.113.77 initiated a compromise by exploiting WEB-APP1 (10.50.1.20), leading to lateral movement to DB-SRV1 (10.50.1.10) and exfiltration of sensitive payment data. The attacker gained access to DB-SRV1, which was not supposed to be contacted directly, and used it to exfiltrate data. Suspicious activity from unknown internal IPs suggests potential persistence or further lateral movement.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.007 Command and Scripting Interpreter: JavaScript",
+          "T1505.003 Server Software Component: Web Shell",
+          "T1021.004 Remote Services: SSH",
+          "T1213 Data from Information Repositories",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17004,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": true,
+      "gold_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Lateral Movement",
+        "Collection",
+        "Exfiltration"
+      ],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Credential Access",
+        "Lateral Movement",
+        "Collection",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1": 0.923076923076923,
+        "jaccard": 0.8571428571428571,
+        "exact_set_match": false,
+        "true_positive": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration"
+        ],
+        "false_positive": [
+          "Credential Access"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "185.143.223.67"
+          ],
+          "System": [
+            "192.168.30.10",
+            "192.168.30.20",
+            "192.168.31.150"
+          ],
+          "Targeted": [
+            "192.168.30.10",
+            "192.168.30.20",
+            "192.168.31.150"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "An attacker from IP 185.143.223.67 conducted reconnaissance and exploited vulnerabilities in the GitLab server (192.168.30.10), including a potential brute-force or credential stuffing attack. The attacker gained unauthorized access, created a token for persistence, and pivoted to the CI runner (192.168.30.20) to exfiltrate data. The attacker also leveraged the unsecured Docker API on a developer laptop (192.168.31.150) for further control.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Credential Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1110 Brute Force",
+          "T1059.004 Command and Scripting Interpreter: Unix Shell",
+          "T1552.001 Unsecured Credentials: Credentials In Files",
+          "T1021.004 Remote Services: SSH",
+          "T1213 Data from Information Repositories",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17005,
+      "gold_incident": "Yes",
+      "predicted_incident": "No",
+      "incident_correct": false,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "exact_set_match": true,
+        "true_positive": [],
+        "false_positive": [],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {},
+        "Incident": "No",
+        "Incident description": "The provided logs are vague and lack specific details about the nature of the alerts, the source IPs, or the actions taken. Without concrete information, it is not possible to determine if this constitutes a security incident. The alerts may represent routine network activity or false positives. Further investigation is required to gather more detailed information before any recovery actions can be considered.",
+        "MITRE ATT&CK Tactics": [],
+        "MITRE ATT&CK Techniques": []
+      }
+    },
+    {
+      "index": 17006,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": true,
+      "gold_tactics": [
+        "Reconnaissance",
+        "Initial Access",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Privilege Escalation",
+        "Defense Evasion",
+        "Credential Access",
+        "Discovery",
+        "Lateral Movement",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.2727272727272727,
+        "recall": 0.75,
+        "f1": 0.39999999999999997,
+        "jaccard": 0.25,
+        "exact_set_match": false,
+        "true_positive": [
+          "Initial Access",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_positive": [
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection"
+        ],
+        "false_negative": [
+          "Reconnaissance"
+        ]
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "203.0.113.88",
+            "198.51.100.45"
+          ],
+          "System": [
+            "10.0.0.15",
+            "10.0.0.20",
+            "10.0.0.10",
+            "10.0.0.5",
+            "APP01",
+            "MAIL01",
+            "DC01",
+            "JUMP1"
+          ],
+          "Targeted": [
+            "10.0.0.15",
+            "10.0.0.10",
+            "10.0.0.20",
+            "10.0.0.5",
+            "APP01",
+            "DC01",
+            "MAIL01",
+            "JUMP1"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "An attacker exploited a Telerik UI vulnerability (CVE-2019-18935) on APP01 to gain initial access.  The attacker then performed lateral movement to DC01 and MAIL01, established C2 communication, and exfiltrated data.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.001 Command and Scripting Interpreter: PowerShell",
+          "T1547.001 Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1068 Exploitation for Privilege Escalation",
+          "T1027 Obfuscated Files or Information",
+          "T1003.001 OS Credential Dumping: LSASS Memory",
+          "T1087.002 Account Discovery: Domain Account",
+          "T1021.002 Remote Services: SMB/Windows Admin Shares",
+          "T1114.002 Email Collection: Remote Email Collection",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17007,
+      "gold_incident": "Yes",
+      "predicted_incident": "No",
+      "incident_correct": false,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "exact_set_match": true,
+        "true_positive": [],
+        "false_positive": [],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {},
+        "Incident": "No",
+        "Incident description": "The provided logs are insufficient to confirm a security incident. The alerts indicate potential suspicious activity, but without specific details about the source IP, nature of the activity, or impact, it is not possible to classify this as a confirmed incident. Further investigation is required to gather more information before any recovery actions are taken.",
+        "MITRE ATT&CK Tactics": [],
+        "MITRE ATT&CK Techniques": []
+      }
+    },
+    {
+      "index": 17008,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": true,
+      "gold_tactics": [
+        "Initial Access",
+        "Execution",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Privilege Escalation",
+        "Defense Evasion",
+        "Credential Access",
+        "Discovery",
+        "Lateral Movement",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.36363636363636365,
+        "recall": 1.0,
+        "f1": 0.5333333333333333,
+        "jaccard": 0.36363636363636365,
+        "exact_set_match": false,
+        "true_positive": [
+          "Initial Access",
+          "Execution",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_positive": [
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "external IP addresses involved in suspicious outbound connections and reconnaissance"
+          ],
+          "System": [
+            "172.20.30.50",
+            "172.20.30.200",
+            "APP-SRV-02",
+            "DB-02"
+          ],
+          "Targeted": [
+            "172.20.30.50",
+            "APP-SRV-02"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "Critical security incident involving compromise of APP-SRV-02 (172.20.30.50) via Apache Struts vulnerability. The attacker gained unauthorized access, exfiltrated data, and attempted lateral movement within the network.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.004 Command and Scripting Interpreter: Unix Shell",
+          "T1547.001 Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1068 Exploitation for Privilege Escalation",
+          "T1027 Obfuscated Files or Information",
+          "T1003.001 OS Credential Dumping: LSASS Memory",
+          "T1082 System Information Discovery",
+          "T1021.002 Remote Services: SMB/Windows Admin Shares",
+          "T1005 Data from Local System",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17009,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Reconnaissance",
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Lateral Movement",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Reconnaissance",
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "51.89.123.45"
+          ],
+          "System": [
+            "192.168.55.10",
+            "192.168.55.20",
+            "192.168.56.0/24"
+          ],
+          "Targeted": [
+            "192.168.55.10",
+            "192.168.55.20"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A multi-stage attack was detected, starting with reconnaissance from 51.89.123.45 against the Jira server (192.168.55.10). The attacker gained access, performed malicious activities, moved laterally to the Jenkins server (192.168.55.20), and potentially exfiltrated data.",
+        "MITRE ATT&CK Tactics": [
+          "Reconnaissance",
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1595.001 Active Scanning: Scanning IP Blocks",
+          "T1190 Exploit Public-Facing Application",
+          "T1059.004 Command and Scripting Interpreter: Unix Shell",
+          "T1053.005 Scheduled Task/Job: Cron",
+          "T1021.004 Remote Services: SSH",
+          "T1005 Data from Local System",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17010,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Execution",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "external IP"
+          ],
+          "System": [
+            "192.168.55.10",
+            "192.168.55.20"
+          ],
+          "Targeted": [
+            "192.168.55.10",
+            "192.168.55.20"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "Exploitation of the Redis server (192.168.55.10) leading to data exfiltration and potential command and control activity.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Collection",
+          "Exfiltration",
+          "Command and Control"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.004 Command and Scripting Interpreter: Unix Shell",
+          "T1005 Data from Local System",
+          "T1048 Exfiltration Over Alternative Protocol",
+          "T1071.001 Application Layer Protocol: Web Protocols"
+        ]
+      }
+    },
+    {
+      "index": 17011,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Reconnaissance",
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Lateral Movement",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Reconnaissance",
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "178.218.95.36",
+            "178.218.96.44",
+            "204.188.102.22",
+            "178.218.97.50",
+            "204.188.102.41"
+          ],
+          "System": [
+            "203.0.113.140",
+            "10.60.20.12",
+            "10.60.20.22"
+          ],
+          "Targeted": [
+            "203.0.113.140",
+            "10.60.20.12",
+            "10.60.20.22"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A coordinated multi-stage attack has compromised LINUXWEB, WINDEV, and TESTSQL. The attack began with reconnaissance against LINUXWEB, followed by lateral movement to WINDEV and TESTSQL. Data exfiltration from TESTSQL to attacker-controlled infrastructure has been observed. Immediate containment and remediation are required to prevent further damage.",
+        "MITRE ATT&CK Tactics": [
+          "Reconnaissance",
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Lateral Movement",
+          "Command and Control",
+          "Collection",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1595.001 Active Scanning: Scanning IP Blocks",
+          "T1190 Exploit Public-Facing Application",
+          "T1059.001 Command and Scripting Interpreter: PowerShell",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1021.002 Remote Services: SMB/Windows Admin Shares",
+          "T1041 Exfiltration Over C2 Channel",
+          "T1048.003 Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
+        ]
+      }
+    },
+    {
+      "index": 17012,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": true,
+      "gold_tactics": [
+        "Initial Access",
+        "Discovery",
+        "Impact"
+      ],
+      "predicted_tactics": [
+        "Initial Access",
+        "Discovery",
+        "Impact"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "exact_set_match": true,
+        "true_positive": [
+          "Initial Access",
+          "Discovery",
+          "Impact"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "external entity exploiting exposed etcd ports"
+          ],
+          "System": [
+            "10.100.0.10",
+            "10.100.0.11",
+            "10.100.0.12",
+            "10.100.0.20"
+          ],
+          "Targeted": [
+            "10.100.0.10",
+            "10.100.0.11",
+            "10.100.0.12",
+            "10.100.0.20"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A coordinated attack exploited the exposed etcd ports (2379/2380) on the three-node etcd cluster (10.100.0.10, 10.100.0.11, 10.100.0.12) due to a mis-set firewall rule. The attacker gained unauthorized access, performed reconnaissance, and disrupted the Kubernetes control plane (10.100.0.20), leading to repeated service disruptions and potential data integrity issues.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Discovery",
+          "Impact"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1046 Network Service Scanning",
+          "T1499.004 Denial of Service: Resource Exhaustion"
+        ]
+      }
+    },
+    {
+      "index": 17013,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Lateral Movement",
+        "Collection",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Execution",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "203.0.113.45"
+          ],
+          "System": [
+            "192.168.90.10",
+            "192.168.90.20"
+          ],
+          "Targeted": [
+            "192.168.90.10",
+            "192.168.90.20"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A multi-stage attack compromised GITSRV and RUNNER01. The attacker gained initial access via GITSRV, moved laterally to RUNNER01, and exfiltrated data.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Lateral Movement",
+          "Collection",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.006 Command and Scripting Interpreter: Groovy",
+          "T1021.004 Remote Services: Docker",
+          "T1005 Data from Local System",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17014,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Lateral Movement",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Lateral Movement",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "45.33.12.109"
+          ],
+          "System": [
+            "JENKINS01",
+            "192.168.100.50",
+            "K8SMASTER",
+            "192.168.100.60",
+            "192.168.101.0/24"
+          ],
+          "Targeted": [
+            "JENKINS01",
+            "192.168.100.50",
+            "K8SMASTER",
+            "192.168.100.60"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A coordinated attack has been detected against our infrastructure. The attacker, originating from IP 45.33.12.109, targeted our Jenkins server (JENKINS01) with suspicious probing and exploitation attempts. Following initial access, the attacker established command-and-control channels and potentially exfiltrated data. The attack appears to have progressed to lateral movement, with suspicious activity observed between JENKINS01 and K8SMASTER. Immediate containment and remediation are required to prevent further compromise.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Command and Control",
+          "Exfiltration",
+          "Lateral Movement"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1041 Exfiltration Over C2 Channel",
+          "T1021.004 Remote Services: SSH"
+        ]
+      }
+    },
+    {
+      "index": 17015,
+      "gold_incident": "Yes",
+      "predicted_incident": "No",
+      "incident_correct": false,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "exact_set_match": true,
+        "true_positive": [],
+        "false_positive": [],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {},
+        "Incident": "No",
+        "Incident description": "The provided logs are vague and lack specific details about the nature of the suspicious activity. Without concrete evidence of malicious behavior, unauthorized access, or data exfiltration, it is not possible to classify this as a security incident. Further investigation is required to gather more information before any recovery actions can be taken.",
+        "MITRE ATT&CK Tactics": [],
+        "MITRE ATT&CK Techniques": []
+      }
+    },
+    {
+      "index": 17016,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Privilege Escalation",
+        "Defense Evasion",
+        "Credential Access",
+        "Discovery",
+        "Lateral Movement",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "147.182.41.20"
+          ],
+          "System": [
+            "203.0.113.180",
+            "10.44.100.20",
+            "10.44.100.10"
+          ],
+          "Targeted": [
+            "203.0.113.180",
+            "10.44.100.20"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "Suspicious activity originating from IP 147.182.41.20 targeting WEBMAIL01 (203.0.113.180) has been detected. The attacker appears to have gained some level of access, potentially via a vulnerability on WEBMAIL01, and is attempting to move laterally to MAILSTORE (10.44.100.20) and possibly exfiltrate data. The presence of suspicious DNS queries and lateral movement attempts indicates a serious security incident requiring immediate response.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.001 Command and Scripting Interpreter: PowerShell",
+          "T1547.001 Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1068 Exploitation for Privilege Escalation",
+          "T1027 Obfuscated Files or Information",
+          "T1003.001 OS Credential Dumping: LSASS Memory",
+          "T1082 System Information Discovery",
+          "T1021.002 Remote Services: SMB/Windows Admin Shares",
+          "T1114.002 Email Collection: Remote Email Collection",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17017,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Execution",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "external IP"
+          ],
+          "System": [
+            "ES01",
+            "10.90.10.10",
+            "LOG01",
+            "10.90.10.20"
+          ],
+          "Targeted": [
+            "ES01",
+            "10.90.10.10"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "An attacker exploited an exposed Elasticsearch service on ES01 (10.90.10.10) to gain unauthorized access, potentially exfiltrate data, and establish command-and-control communication with an external host.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190 Exploit Public-Facing Application",
+          "T1059.004 Command and Scripting Interpreter: Unix Shell",
+          "T1071.001 Application Layer Protocol: Web Protocols",
+          "T1041 Exfiltration Over C2 Channel"
+        ]
+      }
+    },
+    {
+      "index": 17018,
+      "gold_incident": "Yes",
+      "predicted_incident": "No",
+      "incident_correct": false,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "exact_set_match": true,
+        "true_positive": [],
+        "false_positive": [],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {},
+        "Incident": "No",
+        "Incident description": "The provided logs are insufficient to determine a security incident. The alert indicates a potential compromise of the server at IP 10.10.10.50, but there is no detailed information about the nature of the alert, the source, or any malicious activity. Without specific details, this cannot be classified as a confirmed incident.",
+        "MITRE ATT&CK Tactics": [],
+        "MITRE ATT&CK Techniques": []
+      }
+    },
+    {
+      "index": 17019,
+      "gold_incident": "Yes",
+      "predicted_incident": "Yes",
+      "incident_correct": true,
+      "tactics_label_available": false,
+      "gold_tactics": [],
+      "predicted_tactics": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Privilege Escalation",
+        "Defense Evasion",
+        "Credential Access",
+        "Discovery",
+        "Lateral Movement",
+        "Collection",
+        "Command and Control",
+        "Exfiltration"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "jaccard": 0.0,
+        "exact_set_match": false,
+        "true_positive": [],
+        "false_positive": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "false_negative": []
+      },
+      "parsed_prediction": {
+        "Entities": {
+          "Attacker": [
+            "198.51.100.90",
+            "46.101.210.55"
+          ],
+          "System": [
+            "172.16.50.100",
+            "172.16.50.21",
+            "172.16.50.1"
+          ],
+          "Targeted": [
+            "172.16.50.100"
+          ]
+        },
+        "Incident": "Yes",
+        "Incident description": "A multi-stage attack has compromised BUILD-SRV-01 (172.16.50.100), with evidence of initial compromise, reconnaissance, lateral movement, and data exfiltration.  The attack appears to have originated from 198.51.100.90, with data exfiltrated to 46.101.210.55.",
+        "MITRE ATT&CK Tactics": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Collection",
+          "Command and Control",
+          "Exfiltration"
+        ],
+        "MITRE ATT&CK Techniques": [
+          "T1190",
+          "T1059.004",
+          "T1547.001",
+          "T1068",
+          "T1070.001",
+          "T1003.001",
+          "T1018",
+          "T1021.004",
+          "T1005",
+          "T1071.001",
+          "T1041"
+        ]
+      }
+    }
+  ]
+}

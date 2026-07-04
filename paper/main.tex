@@ -1,0 +1,1263 @@
+%%
+%% This is file `sample-sigconf.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `all,proceedings,bibtex,sigconf')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%% The first command in your LaTeX source must be the \documentclass
+%% command.
+%%
+%% For submission and review of your manuscript please change the
+%% command to \documentclass[manuscript, screen, review]{acmart}.
+%%
+%% When submitting camera ready or to TAPS, please change the command
+%% to \documentclass[sigconf]{acmart} or whichever template is required
+%% for your publication.
+%%
+%%
+\documentclass[sigconf]{acmart}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2026}
+\acmYear{2026}
+\acmDOI{XXXXXXX.XXXXXXX}
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[CCS '26]{ACM SIGSAC Conference on Computer and Communications Security}{November 15--19,
+  2026}{Hague, Netherlands}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmISBN{978-1-4503-XXXX-X/2026/06}
+
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% For managing citations, it is recommended to use bibliography
+%% files in BibTeX format.
+%%
+%% You can then either use BibTeX with the ACM-Reference-Format style,
+%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
+%% support for advanced citation of software artefact from the
+%% biblatex-software package, also separately available on CTAN.
+%%
+%% Look at the sample-*-biblatex.tex files for templates showcasing
+%% the biblatex styles.
+%%
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+
+\input{packages}
+
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+%\title{Large Language Model Agent for Multiscale\\ Incident Response Planning with a Digital Twin}
+\title{Agentic Incident Response through \\Multiscale Planning with a Digital Twin}
+%\title{Digital Twin-Verified Large Language Model Agent for Multiscale Incident Response Planning}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+
+\author{Anonymous Authors}
+\affiliation{
+\institution{Anonymous Institutions}
+\city{}
+\country{}
+}
+
+% \author{Tao Li}
+% \affiliation{%
+%   \institution{City University of Hong Kong}
+%   \city{Hong Kong SAR}
+%   \country{China}}
+% \email{li.tao@cityu.edu.hk}
+
+% \author{Yiran Gao}
+% \affiliation{%
+%   \institution{City University of Hong Kong}
+%   \city{Hong Kong SAR}
+%   \country{China}}
+%   \email{gaoyiran525@gmail.com}
+
+% \author{Kim Hammar}
+% \affiliation{%
+%  \institution{University of Melbourne}
+%  \city{Melbourne}
+%  \country{Australia}}
+%  \email{kim.hammar@unimelb.edu.au}
+
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+%\renewcommand{\shortauthors}{Trovato et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+%The current manual processes in security management are slow and laborious, and are further hampered by a growing shortage of cybersecurity experts. Hence, there emerges a pressing need for automated network incident response planning. The early development features a decision-theoretic approach that abstracts incident response as an abstract sequential decision-making process, for example, a Markov decision process (MDP). However, such a stylized modeling leaves a gap between the abstract, tactical-scale strategy planning and practical, operational-scale defense execution. Human labor is still required to fill this gap. Recent developments leverage large language models' (LLMs) ability to handle raw system logs and alerts, exploring an end-to-end agentic solution. Yet, LLM-based approaches suffer from hallucinations, hindering their effective deployment in sensitive, complex network environments. This work aims to combine the best of two worlds by connecting MDP planning at the tactical scale with LLM-based response generation at the operational scale via a digital twin (DT) with dual simulation-emulation functionality. DT's MDP simulation enables a rollout-based planning algorithm that yields high-level strategies for dynamically allocating security resources, which are then translated into low-level, actionable items by LLMs. These actions are verified through DT's high-fidelity emulation to reduce hallucinations. By seamlessly integrating decision-theoretic planning, LLM-based response generation, and DT, our proposed incident response machinery achieves principled, verified automation at tactical and operational scales. We apply the DT-enabled multiscale response planning to an incident response use case, which demonstrates that our method outperforms existing LLM-based responses with shorter recovery time and fewer hallucinations.  
+\begin{abstract}
+Incident response is currently managed by security operators who follow predefined playbooks, which is slow and laborious. As a consequence, there is a growing need for automated incident response planning. Decision-theoretic approaches have been proposed for automating such planning tasks, but most methods in the research literature are limited to abstract models and cannot be directly applied to an operational system. A promising approach to mitigate this limitation is to use the security knowledge embedded in large language models (LLMs) to develop agentic response systems. However, current agentic approaches rely on repeated invocations of the LLM to generate a response plan, which is unreliable and limits the depth of planning that can be performed. In this paper, we address this limitation by combining decision-theoretic planning with agentic response generation. Following this multiscale approach, we use a decision-theoretic planner to compute a high-level response strategy that allocates security resources (the tactical scale), which are then translated into executable commands by an LLM agent (the operational scale). Within this architecture, we use a digital twin that supports tactical planning through simulation and operational verification through emulation. We show that our approach outperforms the state-of-the-art by X\% in recovery time.
+\end{abstract}
+
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10002978.10003014</concept_id>
+       <concept_desc>Security and privacy~Network security</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Security and privacy~Network security}
+
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Do, Not, Use, This, Code, Put, the, Correct, Terms, for, Your, Paper}
+
+
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+%, a figure further exacerbated by a global shortage of more than 4 million security experts \cite{isc2}.
+\section{Introduction}
+Incident response refers to the coordinated actions taken to contain, mitigate, and recover from cyberattacks. Today, incident response is largely a manual process carried out by security operators. Though this approach can be effective, it is often slow and requires specialized skills. For instance, a recent report by IBM indicates that 60\% of the surveyed organizations take more than 100 days to respond and recover from security incidents in networked systems \cite{ibm-report}.
+
+To reduce this delay, autonomous cyber defense (ACD) has emerged as a promising approach for developing agents that can respond to attacks without human intervention; see surveys \cite{burnap25acd-survey,reddi23rl4sec}. For incident response planning, existing ACD methods typically rely on abstract decision-making models and simulators; see, e.g., \cite{zhu13gamesec}. By converting the networked system into an abstract simulation (e.g., a simulation of a Markov decision process \cite{erik18pomdp-defense, cyborg_acd_2021, austria24cyberwheel,tao25deception}), these methods make the planning problem tractable. However, this abstraction also limits the practical applicability of the resulting response plans. In particular, response plans produced by current ACD methods operate at the \textit{tactical scale}: they prescribe high-level defensive actions (e.g., defend this host), but do not specify how these actions should be implemented on the \textit{operational scale}.
+
+A promising approach to close this gap is to use a large language model (LLM) to automatically generate an operational response plan, i.e., a response plan that can be executed on a networked system. Unlike abstract decision-theoretic agents, LLM agents can process large volumes of system logs and generate executable system commands \cite{llm4sec-review25}. However, current LLM-based approaches rely mostly on prompt engineering of general-purpose LLMs without principled planning algorithms, which is unreliable and has no way of mitigating hallucinations; see e.g., \cite{hamoun25llm-acd, cardenas25llm4acd,guo25ircopilot}. In other words, current LLM-based approaches for incident response operate directly at the operational scale without a tactical scale for planning.
+
+\begin{figure}
+  \centering
+  \scalebox{0.8}{
+ \includegraphics{figs/multiscale_planning.pdf}    
+ }
+ \caption{Illustration of our multiscale approach to agentic incident response planning. We do planning on two scales: tactical and operational. On the tactical scale, we employ a decision-theoretic planner to generate a high-level response strategy. On the operational scale, we use a Large Language Model (LLM) agent to translate the high-level strategy into executable commands and verify them in a digital twin.}
+\label{fig:multiscale}
+\end{figure}
+
+To address these limitations and bridge the gap between the tactical and operational scales, we propose combining decision-theoretic planning with LLM-based response generation; see Fig.~\ref{fig:multiscale}. On the tactical scale, we use a decision-theoretic planner that computes a high-level response strategy based on an abstract model. This strategy is then input to an LLM agent, which operates at the operational scale by grounding the strategy in the system context and translating it into an executable response plan. This separation allows the planner to provide tactical guidance, while the LLM handles the system-specific details required for execution.
+
+Within this multiscale architecture, we use a digital twin (i.e., a virtual replica of the system affected by the incident) that supports tactical planning through simulation and operational verification through emulation \cite{hammarcsle}. In particular, simulation enables computationally efficient planning at the tactical scale by abstracting system details, while emulation enables operational-scale verification by allowing for testing the generated response plan before deployment. 
+
+We implement our multiscale architecture on our testbed and use it to recover a networked system against three multi-stage attacks. In contrast to LLM agents proposed in prior work \cite{hamoun25llm-acd, cardenas25llm4acd,guo25ircopilot}, our implementation can be deployed locally and does not rely on an external LLM provider. In particular, we fine-tune  the Deepseek-R1-14B LLM \cite{deepseekai2025deepseekr1incentivizingreasoningcapability} based on a dataset of $50,000$ incidents and the corresponding responses. Despite being so lightweight ($14$B parameters compared to $\approx 800$B), we show that our system outperforms frontier LLMs (e.g., GPT-5.5) by up to X\% in recovery time for the attacks we evaluated. Moreover, it outperforms state-of-the-art incident response methods proposed in prior work by Y\%.
+
+Our contributions can be summarized as follows:
+\begin{itemize}
+  \item We present a novel architecture for agentic incident response that combines decision-theoretic planning on the tactical scale with LLM-based generation on the operational scale.
+  \item We implement our architecture using a lightweight LLM and demonstrate that it outperforms the state-of-the-art in terms of recovery time from three multi-stage attacks.
+\end{itemize} 
+
+\section{Related Work}
+Prior work that studies agentic incident response can be categorized into two main approaches: decision-theoretic and LLM-based approaches. We review the research literature related to each approach below, followed by a brief discussion on the use of a digital twin in cybersecurity, which is a central component of our method.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Decision-theoretic incident response.}}
+Since incident response can be viewed as a sequential decision-making process, there have been considerable and ongoing efforts to apply control, optimization, and, most recently, reinforcement learning (RL) methods to incident response. The general recipe, which can be traced back to \cite{kreidl04feedback-defense}, is to first model the response process as a discrete-time control system, where the system state encapsulates the network security posture and control actions are security responses; examples include the Markov decision process (MDP) \cite{burnap25acd-survey} and the Markov game \cite{alpcan10book}, among others. Then, the optimal response plan corresponds to the optimal policy of the sequential decision-making models. 
+
+Building on the feedback control idea in \cite{kreidl04feedback-defense}, recent developments \cite{iannucci18mdp-cyber,miehling22control-cyber} have actively engaged with robust control and optimal control to achieve optimal response planning in the offline design, while online learning \cite{kim-tao25col}, meta learning \cite{tao23ztd} and model predictive control \cite{kim-tao25quantization} have also been explored recently for online adaptive planning. Related to control-theoretic response planning, RL has emerged as a promising paradigm for data-driven optimal control when closed-form modeling is not feasible. However, RL still relies on an accurate simulator of the target system (usually an MDP simulator \cite{reddi23rl4sec}), which is rarely available in practice.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{LLM-based approaches for incident response.}}
+A promising approach to address the drawback of decision-theoretic approaches is to use large language models (LLMs) to automatically generate effective response actions based on system logs. This approach is not limited to a predefined set of actions and eliminates the need for a simulator. Early studies in this direction include \cite{hamoun25llm-acd, guo25ircopilot, tao25deception,wang2026cybergym}. These approaches can be separated into two categories: prompt-based LLM orchestration and LLM-RL hybrid approaches. 
+
+The first category decomposes incident response into several subtasks and develops tailored prompts for tackling each task \cite{hamoun25llm-acd, guo25ircopilot, tao25deception}. While these works report encouraging results, they have three key limitations: they do not leverage principled planning techniques, they rely on extensive tuning of prompts, and most of them require uploading incident data to external LLM providers.
+
+The second category combines RL and LLM agents, for example by using RL agents to supervise LLM-based action generation \cite{keman24rl-mentor}, LLM agents to support RL agents through knowledge sharing \cite{lopes24hybrid-ai}, or communication between the two types of agents \cite{cardenas25llm4acd}. Although these approaches introduce more structured forms of response planning, they still depend on RL training and agent evaluation in simulated environments such as CybORG \cite{cyborg_acd_2021}. This creates a significant gap between the environment in which the agents are evaluated and a scenario playing out in an operational system.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Digital twins in cybersecurity.}}
+The concept of digital twins originate from the manufacturing and aviation sectors, where a digital replica runs in parallel with the physical process, offering real-time situational awareness \cite{grieves2016digital}. In the context of cybersecurity, digital twins provide two main kinds of functionalities: emulation and simulation; see e.g., \cite{dietz21dt-forensics,weippl19dt-aware,maclaughlin22dt-ml,pernul20dt,colomo20dt-survery,repetto26cdt,pernul20dt-soc}. Emulation aims to reproduce the target system’s functions and timing behavior in a virtual replica. It provides a controlled environment for virtual operations, the outcomes of which can be used to optimize operations in the target system. In contrast, simulation is a lightweight abstraction that models selected system aspects to explore security scenarios without reproducing the full behavior of the target system.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Novelty of our approach.}} To our knowledge, we are the first to combine tactical planning with operational response generation, whereas prior work focuses on either tactical planning or operational response generation in isolation. We also verify the generated responses in an emulation environment, whereas most prior work relies on abstract simulation environments. Moreover, unlike prior work that typically uses digital twins for either simulation or emulation, our method uses both: simulation for tactical-scale planning and emulation for operational-scale verification. Finally, by fine-tuning a local LLM, our approach is more lightweight and reduces dependence on external LLM providers compared to prior work.
+
+%Through real-world data acquisition and synchronization, DT provides accurate twinning with the actual network environment, with system states replicated at every step for further screening. The virtual system can be used for digital forensics before real-world forensics takes place \cite{dietz21dt-forensics}, for visualizing vulnerabilities \cite{weippl19dt-aware}, and for synthesizing training data for machine learning models \cite{maclaughlin22dt-ml}. Closely related to this twining is DT emulation, which approximates the target system's actual functions and timing behavior, allowing one to run attack scenarios in a controlled environment and providing the user with a digital copy of the target system to explore. The advantage of emulation is that one can collect system measurements, logs, and other information for event management \cite{pernul20dt}, incident prediction \cite{colomo20dt-survery}, and other security operations \cite{repetto26cdt}. 
+
+%Unlike emulation's holistic replica of the target system, DT's simulation focuses on specific aspects of security posture (specified assets \cite{pernul20dt} or process \cite{kim23dt}), based on real data and a system model with user-specified configurations. The advantage of simulation is that it provides a controlled abstraction of emulation in terms of level of detail and accuracy, enabling one to observe key aspects of system behavior within a compressed time interval under different configurations that cannot be tested in the real world due to security risks. The existing works focus on creating a DT-based cyber range for training cybersecurity analysts \cite{ghazinour21dt-cyber-range}, training RL defense \cite{kim-tao25col}, and simulating threats and attacks in red teaming \cite{pernul20dt-soc}.
+
+\section{Preliminaries}
+In this section, we present basic definitions that will be used in the subsequent section to present our methodology. We first describe the main stages of incident response and then review POMDPs as a formal model for planning under partial observability.
+
+\subsection{Incident Response Planning}\label{subsec:ir}
+Incident response involves selecting a sequence of actions that restores a networked system to a secure and operational state after a cyberattack. These actions should analyze the scope of the attack, secure forensic evidence, contain and evict the attacker, harden the system to prevent recurrence, and restore critical services. Examples of response actions include redirecting network flows, updating access control policies, patching vulnerabilities, shutting down compromised systems, and restarting operational services.
+
+We model the system affected by the incident using a graph $\mathcal{G}=\langle \mathcal{V}, \mathcal{E}\rangle$. The node set $\mathcal{V}\triangleq\{1, 2, \ldots, N\}$ includes $N$ components, and their interconnections are denoted by the edge set $\mathcal{E}$. The system operator, which we refer to as the defender, monitors the system using infrastructure statistics from an intrusion detection system (IDS). Once an attack has been detected, the task of the defender is to plan a sequence of actions to restore the system to a secure and operational state as quickly as possible.
+
+Following the MITRE D3FEND taxonomy \cite{d3fend}, we divide the incident response process into the following six stages.
+\begin{enumerate}[nosep]
+    \item \textit{\textbf{Containment}}: isolating the attack and preventing it from spreading to other connected components.
+    \item \textit{\textbf{Assessment}}: identifying the scope and severity of the attack.
+    \item \textit{\textbf{Preservation}}: preserving forensic evidence for analysis.
+    \item \textit{\textbf{Eviction}}: revoking the attacker's access to the system.
+    \item \textit{\textbf{Hardening}}: patching vulnerabilities and hardening the system to prevent recurrence of the attack.
+    \item \textit{\textbf{Restoration}}: restoring services and user access.
+\end{enumerate}
+The goal of the defender is to find a sequence of actions that drives the affected system through these response stages as quickly as possible while minimizing operational costs. A key challenge in selecting such actions is that the available information about the attack is often limited to partial indicators of compromise, e.g., IDS alerts. Moreover, the tactics of the attacker are generally unknown.
+%Besides, the tactics of the attacker (e.g., lateral movement) are generally unknown.
+\subsection{Partially Observable Markov Decision Processes}\label{subsec:pomdp}
+Given the partial observability of the system's security state, we formulate incident response planning as a partially observable Markov decision process (POMDP). In this section, we briefly review the formalism of POMDPs for a general use case, deferring the details of our system model for multiscale planning to the next section.    
+
+A POMDP evolves in time steps $t=0,1,2\hdots$. At each time step $t$, the system's security status is represented by a state variable $s_t$, which is unobservable to the defender. Instead, the defender has access to an observation $o_t$, which represents system metrics that are correlated with the recovery state (e.g., log files and IDS alerts). Specifically, the correlation between states and observations is modeled by an observation kernel $O(o_t \mid s_t)$, which defines the probability of observing $o_t$ in state $s_t$. At each time step $t$, a response strategy $\pi$ prescribes an action $a_t=\pi(o_{0:t-1})$ that influences the system's state evolution according to the Markov transition kernel $P_\theta$, where $\theta$ denotes the attacker's tactics and $P_\theta(s_{t+1}\mid s_t, a_t)$ specifies the probability of transitioning to state $s_{t+1}$ when executing response action $a_t$ in state $s_t$. We assume the existence of an absorbing terminal state $s_T$ such that $P_\theta(s_T\mid s_T, a)=1$ for all actions $a$. This state models the operating conditions when the system has fully recovered from the incident and no further response is needed.
+
+The time required to implement each response action may vary. For example, isolating a compromised host may take a few seconds, while performing forensic analysis of affected systems may last several hours. We model this time through a cost function $c$, where $c(s_t, a_t)$ represents the time to execute response action $a_t$ in state $s_t$. Naturally, $c(s_T, a)=0$ for all response actions $a$, since the terminal state does not require any response. Given this cost function, the problem of minimizing the recovery time can be expressed as
+\begin{equation}
+\label{eq:pomdp}
+\min_{\pi}\mathbb{E}_{P_\theta,\pi}\left[ \sum_{t=0}^H c(s_t,a_t)\right],
+\end{equation}
+where $H$ is a finite time horizon. 
+
+%More generally, the cost function points to the metrics that evaluate the incident response plans, and should be configured on a case-by-case basis. For example, the cost function can model the time to recover from the incident.
+%In this work, we define the cost function to model the recovery time, as detailed in the following sections. This metric is widely used in both research and practice as a way to quantify the performance of incident response processes and functions; see e.g., \cite{ibm-report,itbenach25}.
+% TODO: overview the methodology. We introduce the factorized POMDP, where the node-level POMDP state is a binary vector, with each entry indicating whether the node has been compromised. In each node, there is a recovery POMDP, as in the previous paper, that generates a recovery plan.
+
+% TODO: tactical-scale planning occurs at the node level via simulation, whereas operational-scale planning addresses response generation and DT emulation.
+%Given the defender's limited security resources and the challenge of incomplete information in incident response planning, the entire process spans two levels: tactical planning for allocating security resources across networked components and operational planning for concrete recovery actions for those components. Due to uncertainty about the system's security posture, the defender needs to prioritize system components that are more likely to have been compromised. The allocation of security resources to compromised components constitutes a tactical-level planning problem, which determines the order in which system components are recovered in operational response.
+%In light of this planning across the tactical and operational levels, we model incident response as a factorized POMDP where the state $s_t$ is decomposed into a global system security posture and a local component-specific recovery status.
+\section{Formalizing the Incident Response Use Case}\label{sec:system_model}
+We formulate incident response as a planning process on two levels: (\textit{i}) tactical planning for allocating security resources to system components; and (\textit{ii}) operational planning of recovery actions for those components. To capture this two-level planning mathematically, we model incident response as a factorized POMDP where the state $s_t$ is decomposed into a security posture (tactical level) and a local recovery status (operational level), as detailed below.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{System states.}}
+Consider an IT infrastructure with $N$ components. Each component can be in two global states: safe ($0$) or compromised ($1$). Consequently, the \textit{global} security state is the Boolean vector:
+\begin{align*}
+g_t=(g^1_t, \ldots, g_t^N), && g^k_t\in \{0, 1\}.
+\end{align*}  
+%$g_t=(g^1_t, \ldots, g_t^N)$, $g^k_t\in \{0, 1\}$, $k\in \{1,2,\ldots, N\}\triangleq [N]$.
+Moreover, each component $k$ is associated with a \textit{local} recovery state, which is defined as the 6-dimensional Boolean vector
+\begin{align*}
+\ell^k_t=(\ell^{k(c)}_t, \ell^{k(a)}_t, \ell^{k(p)}_t, \ell^{k(e)}_t, \ell^{k(h)}_t, \ell^{k(r)}_t), && \ell^k_t\in \{0, 1\}^6,
+\end{align*}
+where the $l$th entry indicates whether the $l$th response stage in \Cref{subsec:ir} has been completed. For example, $\ell^{k(c)}_t=1$ if the attack has been contained; $\ell^{k(c)}_t=0$ otherwise. Hence, the system state $s_t$ is obtained by concatenating the global and local states, i.e., $s_t=((g_t^k,\ell_t^k)_{k\in [N]})$, where $[N] \triangleq \{1,2,\ldots, N\}$.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Beliefs.}}
+As discussed in \Cref{subsec:pomdp}, the state is unobservable to the defender who needs to form a belief of the state using partial observations $o_{0:t-1}$. Mathematically, a belief is a probability distribution over possible states. Due to the binary structure of $s_t$, the probabilistic belief admits the representation $b_t=(b_t^g, (b_t^k)_{k\in [N]})$, where $b_t^g\in [0,1]^N$ and $b_t^g(k)$ indicates the probability of the $k$-th component being safe. Similarly, $b_t^{k(i)}$ indicates the probability that the $i$-th response stage has been completed for component $k$.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Actions.}}
+Since tactical and operational planning are distinct, we model a response action as a tuple $a_t=(a_t^g, a_t^{\ell})$, where $a_t^g$ is the action on the tactical level and $a_t^{\ell}$ is the action on the operational level. Specifically, the tactical action $a_t^g$ is a permutation of $\{1,2, \ldots, N\}$ indicating the response priority over the networked components, where $a_t^g(k)$ is the priority of system component $k$. Similarly, the operational action $a_t^{\ell}$ corresponds to the recovery action (e.g., a system command) applied to the prioritized system component. 
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Costs.}}
+Given these definitions of the security state $s_t$ and response action $a_t$, we define the cost function $c$ as
+\begin{align*}
+c(s_t,a_t)=c^g(g_t, a_t^g)+c^\ell(\ell_t, a^\ell_t),
+\end{align*}
+where $c^\ell$ models the time required to execute the selected recovery action on the chosen component and $c^g$ captures the cost of delaying recovery for the remaining components. This delay matters because unattended compromised components may have different levels of criticality and importance. To model this importance, we define $r(g_t)\in \mathbb{R}^N$ to be a vector of importance weights, where $r_k(g_t)$ is the importance of component $k$ in global state $g_t$ and $\sum_{k\in[N]} r_k(g_t)=1$. Given these importance weights, we define the global cost as
+\begin{align*}
+c^g(g_t,a_t^g) = \lambda \left(\sum_{j\neq k} r_j(g_t)a_t^g(j)\right) c^\ell(\ell_t,a_t^\ell),
+\end{align*}
+where $k$ is the component selected for recovery. Thus, the global cost penalizes recovery orders that leave important or risky components waiting. The parameter $\lambda\in(0,1]$ controls the relative weight of the delay cost compared with the execution time cost.
+
+We illustrate this cost definition through the following example.
+%These weights may depend on asset value, network position, recovery progress, and attack behavior, as illustrated in Example~\ref{exam:state-dependent-factor}. 
+
+%The local cost function admits a straightforward interpretation: $c^\ell(\ell_t, a^\ell_t)$ is the execution time cost of recovering the selected server, which the agent aims to minimize. However, during this time, all other compromised servers remain unattended, creating an opportunity cost if the wrong recovery order is chosen, as other servers carry a greater attack-spread risk and greater asset importance and service impact. Hence, we design the global cost to reflect the opportunity cost in determining the recovery order. Denote the importance factor by $r(g_t)\in \mathbb R^N$, $\sum_{k\in [N]} r_k(g_t)=1$, as the importance of each node given the current system state. In general, the factor $r(g_t)$ depends on the asset valuation, node connectivity, current recovery status, and attack strategies, as shown in Example~\ref{exam:state-dependent-factor} below. The opportunity cost is given by $c^g(g_t, a_t^g)=\lambda(\sum_{j\neq k}r_j(g_t)a_t^g(j)) c^\ell(\ell_t, a_t^\ell)$, which represents the waiting cost when attending each node following the priority order $a_t^g$. The coefficient $\lambda\in (0,1]$ represents a trade-off between execution time and opportunity cost. 
+
+% The directed edges encode feasible attacker movements with success probabilities. At step $t$, server $v_1$ is prioritized because it connects multiple downstream attack paths. After $v_1$ is recovered, the same attack graph is evaluated under the updated global state $g_{t+1}$, and server $v_3$ becomes the most urgent remaining target due to propagation risk.
+
+%\begin{example}
+%\label{exam:state-dependent-factor}   
+%Consider a network where the attack progression is described by an attack graph: each vertex corresponds to a server, and each directed edge represents a feasible attacker movement from one server to another via a specific technique, with the edge weight encoding the probability of a successful movement.  
+%
+%As shown in \Cref{fig:state-dependent-priority},  at a response step $t$, the global state $g_t$ specifies which servers remain compromised and which servers have already been recovered. A highly connected central server $v_1$ is ranked first because it acts as a bridge between two compromised regions of the network. An adjacent server $v_2$ is ranked second because it is close to the central server and may be more easily reached by the attacker if the central server remains compromised. However, once the central server is recovered, the attack graph changes. The previously second-ranked adjacent server may no longer be as urgent as $v_3$, since $v_s$ has become the central node of the remaining cluster, which may now pose the highest propagation risk and should be given top priority.
+%\end{example}
+\begin{example}
+\label{exam:state-dependent-factor}
+\textit{The global state $g_t$ and the priority weights $r(g_t)$ can be illustrated using an attack graph, where nodes represent system components, directed edges represent attack steps, and edge weights represent probabilities of attack steps; see \Cref{fig:state-dependent-priority}. As shown in the left graph of \Cref{fig:state-dependent-priority}, system component $v_1$ receives the highest priority at step $t$ because it connects two compromised regions of the network. Recovering $v_1$ can therefore reduce the risk of further attack propagation. After component $v_1$ is recovered, the priorities among the remaining unrecovered components change, which results in a new attack graph with a different structure, as shown in the right graph of \Cref{fig:state-dependent-priority}.}
+\end{example}
+
+\begin{figure}[H]
+  \centering
+  \scalebox{0.95}{
+\input{figs/attack-graph2}
+}
+\caption{Representation of the global state $g_t$ and the priority weights $r(g_t)$ as an attack graph; cf.~Example~\ref{exam:state-dependent-factor}. Nodes represent system components $i\in \{1,\hdots,N\}$, which are colored green if $g^i_t=0$ and red otherwise. Edges represent attack steps with the associated probabilities. The top priority node according to $r(g_t)$ is indicated in orange. The left and right graphs represent the priorities at time $t$ and $t+1$, respectively.}
+\label{fig:state-dependent-priority}
+\end{figure}
+% , where $v_2$ may not be the most urgent target. Instead, $v_3$ may become the top priority because it is now central to containing the remaining compromised components
+%Similarly, component $v_2$ is ranked second because it is close to $v_1$ and may be reached next if the attack continues. 
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{State dynamics.}} State transitions are coupled across the global and local scales. In particular, the local recovery action $a_t^{\ell}$ updates the local state  $\ell_t^k$ of the highest-priority component $a_t^g$, which determines whether the global state of that component (i.e., $g^k_t$) is updated or not. This coupling gives the factorized transition model
+\begin{equation*}
+    P_\theta(s_{t+1}\mid s_t, a_t)=P^g_\theta(g_{t+1}\mid g_t, a^g_t)P_\theta^k(\ell^k_{t+1}\mid \ell^k_t, a^\ell_t), \quad  a_t^g(k)=1, 
+\end{equation*}
+where $k$ denotes the component selected for recovery and $P_{\theta}^k$ models the progress of component $k$ through the response stages under action $a_t^{\ell}$. The global state transition follows from the outcome of the local action. Specifically, if component $k$ is compromised and its local state reaches the recovered state $\ell^k_T = (1,1,1,1,1,1)$, then its global state becomes safe ($g^k_{t+1}=0$). Otherwise, it remains compromised ($g^k_{t+1}=1$), as formally expressed below.
+\begin{align*}
+P_{\theta}^g(g^k_{t+1} &= 0 \mid g^k_t = 1) = \mathds{1}\{\ell_{t+1}^{k} = \ell^k_T\},\\
+P_{\theta}^g(g^k_{t+1} &= 1 \mid g^k_t = 1) = \mathds{1}\{\ell_{t+1}^{k} \neq \ell^k_T\}.
+\end{align*}
+For all other components, the global state transition is governed by the attack graph, which models how the attack spreads from the compromised nodes. Specifically, let $g^{-k}_t$ denote the global state of all components except $k$, i.e., $g_{t+1}=(g^k_{t+1}, g^{-k}_{t+1})$. Then, 
+\begin{align*}
+P_{\theta}^g(g_{t+1} \mid g_t, a^g_t) = P_{\theta}^{g}(g^k_{t+1} \mid g^k_t)P_{\theta}^{g}(g_{t+1}^{-k} \mid g^{-k}_t).
+\end{align*}  
+%(Recall that $g^k_t=0$ means that component $k$ is safe and $g^k_{t+1}=1$ means that it is compromised.) 
+
+%More specifically, given the global state $g_t$, and the recovery priority $a_t^g$, the local action $a_t^\ell$ acts on component $k$, which drives its recovery state from $\ell_t^k$ to $\ell_t^{k+1}$. The local transition $P_\theta^k(\ell_{t+1}^k|\ell_t^k, a_t^\ell)$, which represents progression across stages, depends on the recovery action's success rate under the attack tactics. Given a compromised node $k$, $g_t^k=1$, if the local state reaches the terminal state $\ell^k_T=(1,1,1,1,1,1)$ at time $t$, then the corresponding global state $g^k_{t+1}$ turns 0; otherwise $g^k_{t+1}=g^k_{t}=1$. Summing up our discussion, let $g_{t+1}=(g_{t+1}^{k}, g_{t+1}^{-k})$, where the $-k$ superscript denotes the components other than the $k$-th, then we have $P_{\theta}^g(g_{t+1}\mid g_t, a_t^g)=P_{\theta}^g(g^k_{t+1}\mid g^k_t=1)P_{\theta}^g(g^{-k}_{t+1}\mid g^{-k}_t)$, where
+%\begin{align*}
+%    & P^g_\theta(g^k_{t+1}=0| g_t^k=1)= \mathds{1}\{\ell^k_{t+1}=\ell^k_T\},\\
+%    & P^g_\theta(g^k_{t+1}=1| g_t^k=1)= \mathds{1}\{\ell^k_{t+1}\neq \ell^k_T\}.
+%\end{align*}
+%$P_{\theta}^g(g^{-k}_{t+1}\mid g^{-k}_t)$ is given by the attack graph that captures the attack progression from compromised nodes specified by $g_t^{-k}$. 
+
+These definitions imply that the global and local transition kernels differ in both timescale and granularity. In particular, the global state $g^k_t$ changes only after component $k$ has completed several recovery steps and reached its terminal recovery state. Thus, global transitions describe network-level changes in compromise status, while local transitions capture the detailed recovery progress of an individual component. This separation motivates our multiscale planning approach, where a decision-theoretic planner computes a high-level response strategy that allocates security resources (the tactical scale), which are then translated into executable commands by an LLM agent (the operational scale), as detailed below.
+
+%one can see that the global and local transition kernels operate on different timescales and at different system granularities. The global state $g^k_t$ remains the same for a period of time until node $k$ is fully recovered after several local recovery steps. In addition, the global-scale transition concerns the evolution of server compromise status at the network level, rather than node-level details required for the local-scale transition. This observation motivates the proposed multiscale planning method, which relies on DT's abstract simulation for network-level recovery-priority planning and on DT's emulation for node-level recovery planning using LLMs.
+
+
+% TODO: We need to argue that the global state transition is easier to simulate, whereas the local state transition is less structured. This motivates us to separate them and manage them through 1) planning at the global and tactical scale, and 2) LLM generation at the local and operational scale. 
+\section{Agentic Multiscale Response Planning}
+In this section, we present our method for incident response planning. It includes an offline stage and an online stage. In the offline stage, we fine-tune a lightweight LLM for incident response planning. In the online stage, we use the fine-tuned LLM and a digital twin to plan responses at two scales: tactical and operational. At the tactical scale, a decision-theoretic planner uses digital-twin simulation to prioritize which component should be recovered next. At the operational scale, an LLM-based agent generates recovery actions for that component and verifies them in a digital-twin emulation. 
+
+\subsection{Offline Fine-tuning of a Lightweight LLM}
+We adapt the DeepSeek-R1-14B LLM to incident response by fine-tuning it on a labeled dataset of incident descriptions. In particular, we fine-tune three versions of the model, each corresponding to a different stage of the response workflow, as detailed below.
+
+%as detailed below.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Incident assessment fine-tuning.}}  We start by fine-tuning the LLM to infer likely attacker tactics and techniques from an incident description, such as system logs and security alerts. We conduct this fine-tuning by training the LLM on a labeled dataset of incident examples, denoted by $\mathcal{D}_{\text{incident}}=\{(\mathbf{x}^i, \mathbf{y}^i)\}_{i=1}^K$. Each input $\mathbf{x}^i$ contains an incident description (e.g., security alerts), while the target output $\mathbf{y}^i$ contains the corresponding MITRE ATT\&CK tactics and techniques \cite{mitre-attack}. After tokenizing each label as $\mathbf{y}^i = (y_1^i, \hdots, y^i_l)$, we fine-tune the model by sampling mini-batches and minimizing the standard autoregressive cross-entropy loss:
+\begin{equation}
+\label{eq:loss}
+L(w)=-\frac{1}{B}\sum_{i=1}^B\sum_{k=1}^{l_i} \log \Phi_{w}(y_k^i|\mathbf{x}^i, y_{1:k-1}^{i}),
+\end{equation}
+where $\Phi_w$ denotes the LLM with tunable model weights $w\in \mathbb R^d$.
+
+Figure~\ref{fig:fine_tune_loss} displays loss curves when training using $4\times$ RTX 8000 GPUs. We observe that the higher learning rate results in convergence to a lower loss; see \Cref{sec:experiment} for the experimental setup.
+\begin{figure}[H]
+  \centering
+  \scalebox{0.7}{
+ \includegraphics{figs/fine_tune_loss3.pdf}    
+ }
+ \caption{Loss curves when fine-tuning the Deepseek-R1-14B LLM for incident assessment. The solid lines indicate the mean loss and the shaded lines represent the loss on specific batches of training examples. See \Cref{sec:experiment} for the experimental setup and the hyperparameters.}
+\label{fig:fine_tune_loss}
+\end{figure}
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Belief generation fine-tuning.}} Next, we apply the same fine-tuning method to adapt a version of the LLM for belief estimation. Specifically, given incident observations and previous actions, the model is trained to estimate the belief $b_t$ and an evidence summary $m_t$, which contains the observations that justify the belief. The training data consists of instruction-answer pairs where the input describes the incident context and the output provides the corresponding belief $b_t$ and evidence summary $m_t$. This fine-tuning enables the agent to compress incident context (e.g., system logs and security alerts) into a compact belief representation $(b_t, m_t)$.
+%, where $b_t$ stores the probabilistic state estimate and $m_t$ records the supporting evidence.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Response action fine-tuning.}} Lastly, we apply the same fine-tuning method to adapt a version of the LLM to generate response actions conditioned on the current belief state. In this case, each training example provides the incident description, the current belief $(b_t, m_t)$, and the previous response action $a_{t-1}$ as input. The model is then trained to predict the next local action $a^{\ell}_t$, which can be verified in the digital twin, as detailed below.
+%Lastly, we apply the same fine-tuning methodology to adapt a version of the LLM to generate recovery actions from the current belief state. In this context, each training example includes the incident description, the current belief $(b_t, m_t)$, and the previous recovery action $a_{t-1}$ as input. Given this input, the target output is the next local recovery action $a^{\ell}_t$ that can be verified in the digital twin. 
+%This fine-tuning biases the agent toward actions that are consistent with the current recovery stage, the inferred attack behavior, and the operational constraints of the affected component.
+
+\subsection{Digital Twin for Simulation and Emulation}
+The digital twin is an isolated execution environment that replicates the relevant hosts, services, and configurations of the system affected by the incident; see Fig.~\ref{fig:dt}. It provides a safe environment to investigate the incident and evaluate response actions. For example, if the incident occurs in a cloud environment, then the digital twin can be created by taking snapshots of system components and deploying them in a private cloud. Without such a digital twin, investigation and testing must be performed directly on the affected system, which increases risks and operational costs.
+
+\begin{figure}[H]
+  \centering
+  \scalebox{0.9}{
+  \includegraphics{figs/digital_twin_2.pdf}    
+ }
+\caption{The digital twin is a virtual replica of the affected system. It provides a safe environment for investigating the incident and testing response actions.}\label{fig:dt}
+\end{figure}
+
+In our method, the digital twin supports two complementary modes of execution: simulation and emulation. In simulation mode, it uses an attack graph of the network to evaluate attack progression and compare recovery-priority orders efficiently. This mode is used for tactical planning, where the goal is to decide which component should be recovered next. In emulation mode, the digital twin executes candidate recovery actions in a replica of the affected environment. This mode is used for operational planning, where the goal is to test whether generated response actions are effective before applying them to the operational system.
+
+\vspace{2.5mm}
+\noindent\textit{\textbf{Identification of an attack graph for simulation.}}
+Before initiating tactical response planning, we use the digital twin and the fine-tuned LLM to identify an \textit{attack graph} that can be used for simulation. To this end, we start by prompting the fine-tuned LLM with the incident description $\mathbf{I}$ and use it to generate an initial assessment of the likely attack tactics and techniques. We refer to this estimate as an \textit{attack conjecture}. To improve the robustness of this conjecture, we run $M=10$ independent generations and retain only the tactics and techniques whose empirical frequency exceeds $0.5$. We denote the resulting conjecture by
+\begin{align*}
+\hat{\theta} \gets \Phi_w(\cdot \mid \mathbf{I}).
+\end{align*}
+Next, we use the digital twin to extract dependencies between system components, which defines a dependency graph $\mathcal{G}$. For each edge $i\rightarrow j$ in this graph, we then test the attack techniques in $\hat{\theta}$ that could enable this attack step in the digital twin. Subsequently, we use the outcomes of these tests to estimate the probability of the attack step $i\rightarrow j$. We denote the resulting attack graph by $\mathcal{G}(\hat{\theta})$.
+
+%the attack conjecture $\hat{\theta}$ to identify an attack graph that can support tactical response planning. We perform this identification using the digital twin. In particular, we first use 
+
+
+%\subsection{Belief Estimation}
+%To support online response planning on the tactical scale, the agent maintains a belief over the system’s security posture and recovery progress. This belief is updated throughout the response process as new logs, alerts, and action outcomes become available. At time $t$, we represent it as $(b_t, m_t)$, where $b_t=(b_t^g,(b_t^k)_{k\in[N]})$ contains the probabilistic state estimate and $m_t$ contains a concise evidence summary with the observations that justify the belief.
+%
+%In principle, this belief could be updated using the Bayesian filter of the underlying POMDP. However, this would require an explicit transition model $P_{\theta}(s_{t+1} \mid s_t, a_t)$ and observation model $O(o_{t+1} \mid s_{t+1})$, which generally are not available in practice. For this reason, we use the fine-tuned LLM as an approximate belief updater. Specifically, after receiving a new observation $o_{t+1}$ (e.g., a security alert), we update the belief as
+%\begin{align*}
+%(b_{t+1},m_{t+1}) \gets \Phi_w(b_t,m_t,o_{t+1}),
+%\end{align*}
+%where $\Phi_w$ is the LLM that is fine-tuned for belief generation.
+
+
+
+
+
+%To facilitate effective response planning on the tactical scale, we maintain a belief that estimates the system's security posture and recovery progress. Specifically, at time $t$, we represent the belief as
+%\begin{align*}
+%(b_t,m_t),
+%\end{align*}      
+%where $b_t=(b_t^g,(b_t^k)_{k\in[N]})$ contains the probabilistic state estimate and $m_t$ contains a concise evidence summary. This summary contains the system observations that justify the belief, such as relevant security alerts and the outcomes of previous response actions. The global belief $b_t^g(k)$ denotes the probability that component $k$ is safe. The local belief $b_t^{k(i)}$ denotes the probability that response stage $i$ has been completed for component $k$.
+%
+%After each new observation $o_{t+1}$, such as a log entry, alert, or result from an executed response action, the LLM updates the belief using the previous belief and evidence summary:
+%\[
+%(b_{t+1},m_{t+1}) \gets \Phi_w(b_t,m_t,o_{t+1}).
+%\]
+%This numeric-semantic belief avoids repeatedly processing the full history of logs, alerts, and actions. The numeric part provides a compact probabilistic estimate for planning, while the semantic part records the evidence supporting that estimate. The updated belief is then passed to the tactical and operational planners.
+
+%\subsection{Online Belief Construction and Attack-Graph Estimation}
+%The core of our agent framework is a lightweight open-source LLM model (Deepseek-14b), denoted by $\Phi_w$, with the tunable model weight $w\in \mathbb R^d$. We adopt a low-rank adaptation (LoRA) \cite{hu2022lora} approach to adapt this general-purpose LLM to different steps in the response planning workflow below. We begin with the LLM-based incident assessment that generates likely attack tactics, techniques, and attack graphs from the incident description and system logs.
+%
+%\subsubsection{Incident Assessment and Attack Graph Conjecture}
+%When presented with an incident description (including system logs), denoted by $\mathbf{I}$, the very first task of the agent is to determine the possible attack tactics and techniques. Towards this end, we leverage an open-source dataset of 50,\,000 incidence examples $\mathcal{D}_{\text{incident}}=\{(\mathbf{x}^i, \mathbf{y}^i)\}_{i=1}^K$, where each instruction $\mathbf{x}^i$ includes an incident description, and the associated answer $\mathbf{y}^i$ reveals the tactics and techniques labels in MITRE ATT\&CK \cite{mitre-attack} involved in the incident. The entire answer $\mathbf{y}^i$ is tokenized into $\mathbf{y}^i=(y^i_1, \ldots, y^i_{l_i})$, following the word-level tokenization with $l_i$ being the token length. Given $\mathcal{D}_{\text{incident}}$, the fine-tuning proceeds by iteratively sampling a batch of instruction-answer pairs $(\mathbf{x}^1, \mathbf{y}^1), \ldots, (\mathbf{x}^B, \mathbf{y}^B)$ and updating the LLM's parameters via gradient descent on the cross-entropy loss:
+%\begin{equation}
+%\label{eq:loss}
+%    L(w)=-\frac{1}{B}\sum_{i=1}^B\sum_{k=1}^{l_i} \log \Phi_{w}(y_k^i|\mathbf{x}^i, y_{1:k-1}^{i
+%    }).
+%\end{equation}
+%To improve the self-consistency in LLM's generation, we carry out $M=10$ independent trials and select the tactics and techniques with frequency beyond 0.5 as the agent's attack conjecture, denoted by $\hat \theta \gets \Phi(\cdot\mid \mathbf{I})$.  
+%
+%Based on the attack conjecture, we now employ the network digital twin to construct the attack graph, focusing on estimating the probability of each directed edge. Our DT is built on the emulation and simulation system in \cite{hammarcsle}. The DT first captures the credential and service dependencies among nodes, resulting in a network topology with directed edges, denoted by $\mathcal{G}$. To estimate the attack progression over the network, as shown in \Cref{fig:state-dependent-priority}, we repeatedly implement the attack techniques in $\hat \theta$ that are relevant for an edge $i\rightarrow j$, and record whether the attack succeeds before session timeout, and if successful, its average time-to-compromise (TTC). The attack success probability of the given edge $i\rightarrow j$ is defined as the empirical frequency multiplied by the ratio of TTC over the session time. The resulting estimated attack graph, denoted by $\mathcal{G}(\hat \theta)$, is instrumental in the priority planning.  
+% 
+%\subsubsection{Belief Generation Fine-Tuning}
+%Ideally, the response agent shall utilize all available partial observations $o_{1:t-1}$ to make the informed decision at time $t$. However, the growing volume of system logs and alerts, historical actions, and incoming observations may cause context rot, leading the LLM agent to become overloaded with excessive data. The challenge of context rot \cite{hong2025context} motivates the introduction of an agentic belief system that compresses historical observations into succinct representations of the agent's perception of the current global and local security posture. 
+%
+%Given that the system transition involves global and local states and attack tactics, the agent's perception of the network system should quantify the uncertainty in these factors due to incomplete information. Inspired by the belief state in POMDP and LLM agentic forecasting \cite{murphy2026agentic}, our agentic belief system presents a semi-structured probabilistic characterization that includes probability distributions over global and local states, $g_t$ and $\ell_t$. and the possible tactics $\hat \theta$ the attacker may employ, paired with natural-language evidence summaries that justify the probabilistic characterizations. 
+%
+%Mathematically, the belief is given by  $b_t=(b_t^g, (b_t^k)_{k\in [N]})$. $b_t^g\in [0,1]^N$ and $b_t^g(k)$ indicates the probability of the $k$-th component being safe. $b_t^k\in [0, 1]^6$ and $b_t^{k(i)}$ indicates the probability of $i$-the criterion is met. To mitigate LLM's hallucination and inconsistency in generating numeric belief $b_t$, we require the LLM to pair each belief with natural language evidence summaries $m_t$ that adopt chain-of-thought \cite{dale22cot} reasoning steps to explain the output. Along with the updated evidence $m_{t+1}$, the LLM runs $M=10$ independent generations on the next state $\hat{s}_{t+1}$, and the resulting empirical frequency yields a new belief, i.e, $b_{t+1}(s)=1/M \sum_{}\mathds{1}(\hat{s}_{t+1}=s)$:
+%\begin{equation*}
+%   (b_{t+1}, m_{t+1})\gets \{\hat{s}_{t+1}\}_{M}, m_{t+1}\gets \Phi_w(b_t, m_t,o_{t+1}).
+%\end{equation*}
+%The advantage of this numeric-semantic hybrid belief lies in the fact that the probability (numeric) can be recursively updated in a Bayesian-like manner (prior + evidence $\rightarrow$ posterior) without storing all the historical information. The LLM agent performs a single forward pass when receiving a new observation, along with the previous natural-language evidence summaries. 
+%
+%% Unlike the state belief $b_t$, where the state space is known, the agent's belief over the attack tactics, defined as a distribution over the attack domain, i.e., the set of possible attack tactics, may not be correctly specified. Denote by $\Theta$ the attack domain, and $\mu\in \Delta(\Theta)$ the corresponding belief. It is likely that the actual attack tactics, denoted by $\theta$, may not fall within the domain: $\theta\notin\Theta$. To differentiate this possibly misspecified attack tactic from the state belief, we hereafter refer to $\mu$ as the attack conjecture.   
+%
+%
+%To adapt the LLM model towards this agentic belief generation, we utilize an open-source dataset of 50,\,000 instruction-answer pairs $\mathcal{D}=\{(\mathbf{x}^i, \mathbf{y}^i)\}_{i=1}^K$ \cite{kim26ndss}, where each instruction $\mathbf{x}^i$ consists of information related to an incident and an instruction to assess the state. The associated answer $\mathbf{y}^i$ describes the ground-truth, paired with a sequence of chain-of-thought reasoning steps to explain the answers. Similar to our practice in the incident assessment, we tokenize the entire answer $\mathbf{y}^i$ at the word-level, and employ the cross-entropy loss in \eqref{eq:loss} to fine-tune the LLM.
+
+\subsection{Tactical Scale Planning}
+The attack graph $\mathcal{G}(\hat{\theta})$ induces a transition model $\hat{P}^g(g_{t+1} \mid g_t, a^g_t)$ of the global state, which we use for tactical scale planning to decide which system component should be recovered next. This tactical planning involves comparing candidate recovery orders through lookahead simulations based on the attack graph and then select the order that leads to the minimal cost, which we compute as 
+\begin{align*}
+\hat{c}^g(g_t, a^g_t) \approx \lambda \left(\sum_{j\neq k}r_j(g_t)a^g_t(j)\right)\tau_{\text{avg}},
+\end{align*}
+where $k$ is the component placed first in the recovery order and $\tau_\text{avg}$ is the average local execution time. (We use the average time since the local recovery time is not known before selecting a component.)
+
+
+%Since the exact local recovery time is not known before selecting a component, we approximate it using the average local execution time $\tau_\text{avg}$. This gives the estimated global cost
+
+To evaluate candidate recovery orders, we start by using the fine-tuned LLM to generate a belief state $b_t$. We then use this belief state to sample $M_g$ possible global states as $\{\hat{g}^i_t\}_{i \in [M_g]} \sim b^g_t$ and simulate $H_g$ lookahead steps in the attack graph. We then estimate the cost of the resulting rollout by averaging the sampled states as
+\begin{align*}
+J(\hat{a}^g_t) &= \frac{1}{M_g}\sum_{i \in [M_g]}\hat{c}^g(\hat{g}^i_t, \hat{a}^g_t). 
+\end{align*}
+Next, we select the recovery order with the lowest estimated cost:
+\begin{align*}
+a^g_t &= \argmin_{\hat{a} \in \mathcal{A}_t^g}J(\hat{a}).
+\end{align*}
+Since enumerating all $N!$ recovery orders is computationally infeasible for large networked systems, we restrict this minimization to candidate orders $\mathcal{A}^g_t$ derived by permuting the previous order $a^g_{t-1}$.
+%, where the top priority component is treated as being under recovery and not reachable for the attacker
+% where the component currently under recovery is moved to the end of the queue and only the next $K$ high-priority components are permuted.
+%by moving the component currently under recovery to the end of the queue and permuting the next $K$ high-priority components according to the updated weights. 
+% At time step $t$ of planning, we use the current global belief $b_t^g$, the identified attack graph $\mathcal{G}(\hat{\theta})$, and the state-dependendent importance weifghts $r(\cdot)$.
+
+%Rather than solving the full POMDP, we compare a small set of candidate recovery orders by simulating their short-term consequences in the digital twin. The objective is to choose the order that minimizes expected exposure, i.e., the cost of leaving important or risky components unattended.
+
+%At the tactical scale, the agent aims to choose a recovery-priority order that minimizes expected exposure time, i.e., the opportunity cost. The agent does not need to solve the entire POMDP problem exactly. Instead, to facilitate rapid response planning, it is sufficient for the agent to compare a finite set of candidate orders by simulating possible future attack progression in the DT.  
+%
+%At time $t$, given the agentic belief $b_t$, the agent aims to find a priority order $a_t^g$ by performing a lookahead rollout with horizon $H_g$ that is usually set to be the average number of steps required to recover a node in the network. In other words, the priority order $a_t^g$ is expected to remain (nearly) optimal during the recovery of a specific node; otherwise, the agent must interrupt the recovery halfway and switch to another more urgent node, which is undesired in intrusion response.   
+%
+%The key ingredients of tactical-scale planning include 1) the attack graph $\mathcal{G}(\hat \theta)$, which leads to a surrogate transition model $\hat P^g(g_{t+1}|g_t, a_t^g)$ under the attack progression estimated in DT, 2) the importance factor $r(\cdot)$ based on the estimated attack graph and the global state, and 3) the estimated local response action execution time obtained from the operational-scale planning in \Cref{sec:local-plan}. Naturally, without determining $a_t^g$, it remains unknown which node would be recovered, and hence, the local response execution time is unavailable. We use the average local response execution time across attended nodes, denoted by $\tau_\text{avg}$, as an estimate of $c^\ell(\ell_t, a_t^\ell)$. The estimate of quantities in 2) and 3) contributes to the estimate of the global cost $\hat c^g(g_t, a_t^g)\approx \lambda(\sum_{j\neq k}r_j(g_t)a_t^g(j)) \tau_{\text{avg}}$.  
+%
+%Starting from the current global state belief $b_t^g$, we sample $M_g$ possible states $\{\hat g^i_t\}_{i\in [M_g]}\sim b_t^g$. For each candidate order $\hat a_t^g\in \mathcal{A}^g_t$, we employ DT to simulate $H_g$ steps under the surrogate $\hat P^g$ and the configuration that the top node in $\hat a_t^g$ is being attended and unavailable for lateral movement. The simulated global state trajectories $\{q_g^i=(\hat g_t^i, \hat g_{t+1}^i, \ldots g_{t+H_g}^i)_{i\in [M_g]}\}$ empirically evaluate the exposure time under $\hat a_t^g$. Its sample average $J(\hat a_t^g)$ yields a sample-estimated rollout cost over the lookahead horizon, and the agent selects the minimizer, $a_t^g$, for the subsequent recovery. 
+%\begin{equation*}
+%    J(\hat a_t^g) = \frac{1}{M_g}\sum_{i\in [M_g]} \hat c^g(\hat{g}_t^i, \hat a_t^g),\quad  a_t^g=\argmin_{\hat a\in \mathcal{A}^g_t} J(\hat a)
+%\end{equation*}
+%
+%We conclude the tactical-scale planning with a remark on the candidate set $\mathcal{A}_t^g$. It is infeasible to enumerate $N!$ priority orders for large networks, and hence, the construction of $\mathcal{A}_t^g$ relies on the heuristic that $a_{t-1}^g$ provides a decent starting point since the first few positions matter most for immediate response. Specifically, after the top-ranked server in $a_{t-1}^g=(k_1, k_2, \ldots, K_N)$ receives a response action, it is moved to the end of the queue, i.e., $(k_2, k_3, \ldots, K_N, k_1)$. We swap elements among the next $K$ most urgent servers by the updated important factor $r(\hat g_t)$, leading to a high-quality candidate set of $K!$ elements. This practice produces a small candidate set that preserves the structure of the previous plan while allowing adaptation to updated state information.  
+
+%Unlike the tactical scale planning with a relatively small set of global states and actions, operational scale planning addresses concrete response commands to be executed with a far larger space of admissible actions. To avoid overwhelming communication and computational overhead when calling the digital twin to roll out a sequence of candidate response actions, we aim to enable the LLM to generate a response trajectory, including future observations under different candidate response actions, based on its understanding of the network environment and attack assessment.  
+%Hence, the length of these trajectories provides an estimate of the remaining recovery effort if action $\hat{a}^i_t$ is selected.
+%The first step of this planning is to prompt the fine-tuned LLM to generate a set of candidate response actions
+\subsection{Operational Scale Planning}\label{sec:local-plan}
+Given the belief and system component selected through tactical planning, operational planning decides how to recover that component, i.e., it determines the next local recovery action $a^{\ell}_t$. This planning process involves three main steps. First, we use the fine-tuned LLM to generate a set of candidate response actions
+\begin{align*}
+\mathcal{A}^{\ell}_t &= \{\hat{a}^1_t, \hat{a}^2_t, \hdots, \hat{a}^N_t\}.
+\end{align*}
+Second, we evaluate the candidate actions using LLM-generated recovery rollouts. In particular, for each candidate action $\hat{a}^i_t$, we use the fine-tuned LLM to generate $M_{\ell} > 0$ recovery trajectories. Each trajectory starts with an action $\hat{a}^i_t$ and continues until the target component reaches the recovered state $\ell_T = (1,1,1,1,1,1)$. These rollouts are then used to estimate the remaining recovery cost as
+\begin{align*}
+Q(b_t, \hat{a}^i_t) &= \frac{1}{M_{\ell}}\sum_{j \in [M_{\ell}]}\sum_{\hat{a} \in q^{i,j}}c(\hat{a}),
+\end{align*}
+where $q^{i,j}$ is the $j$th rollout trajectory starting from action $\hat{a}^i_t$ and we define the cost function $c(\hat{a})$ as
+\begin{align*}  
+c(\hat{a}) &=
+\begin{dcases}
+\operatorname{DT-Emul}(\hat a), & \text{if }\hat{a} \text{ is executable in the digital twin},\\
+\infty,  & \text{otherwise},
+\end{dcases}               
+\end{align*}
+where $\operatorname{DT-Emul}(\hat{a})$ is the execution time in the digital twin.
+
+Third, we select the action with the lowest estimated cost, i.e.,
+\begin{align*}
+a^{\ell}_t &\in \argmin_{\hat{a}^i_t \in \mathcal{A}^{\ell}_t} Q(b_t, \hat{a}^i_t).
+\end{align*}
+We then execute the selected action in the digital twin. As a result of this execution, the digital twin produces a new observation $o_{t+1}$ (e.g., the outcome of the action), which we feed to the fine-tuned LLM to generate a new belief $(b_{t+1}, m_{t+1})$. We then repeat the same planning procedure from the new belief. This process of planning a local recovery action, executing it, and updating the belief continues until the component is recovered, as defined in \Cref{algo:mcts-plan}.
+
+\begin{algorithm}[h]
+\caption{Operational-Scale Digital-Twin-Verified Planning}
+\label{algo:mcts-plan}
+    \begin{algorithmic}[1]
+        \STATE \textbf{Input:} Fine-tuned LLM $\Phi_w$, digital-twin emulation $\operatorname{DT-Emul}(\cdot)$, current belief $(b_t,m_t)$, target component $k$, previous local action $a_{t-1}^{\ell}$, action batch size $N_{\ell}$, rollout batch size $M_{\ell}$.
+        \STATE \textbf{Output:} Local response actions $\pi^{\ell}$ for component $k$.
+        \STATE Initialize $\pi^{\ell}\leftarrow\{\}$ and $t\leftarrow 0$.
+        \WHILE{Component $k$ is not fully recovered}
+            \STATE Use the fine-tuned LLM to generate candidate actions\\
+            $\quad\quad\mathcal{A}^{\ell}_t = \{\hat a_t^1,\hat a_t^2,\ldots,\hat a_t^{N_{\ell}}\} \gets \Phi_w(b_t,m_t,a_{t-1}^{\ell},k).$
+            \FOR{$i=1,\ldots,N_{\ell}$}
+                \STATE Generate $M_{\ell}$ rollout trajectories\\
+                $\quad\quad\{q^{i,j}\}_{j=1}^{M_{\ell}}\gets \Phi_w(b_t,m_t,\hat a_t^i,k).$
+                \STATE Compute the verified rollout cost\\
+                $\quad\quad Q(b_t,\hat a_t^i)=\frac{1}{M_{\ell}}\sum_{j\in[M_{\ell}]}\sum_{\hat a\in q^{i,j}}c(\hat a).$
+            \ENDFOR
+            \STATE Select a lowest-cost action $a_t^{\ell} \in \argmin_{\hat a_t^i\in\mathcal{A}^{\ell}_t}Q(b_t,\hat a_t^i).$
+            \STATE Execute $a_t^{\ell}$ and append it to the local response plan:\\
+            $\quad\quad \pi^{\ell}\leftarrow \pi^{\ell}\cup\{a_t^{\ell}\}.$            
+            \STATE Receive the new observation $o_{t+1}$.
+            \STATE Update the belief: $(b_{t+1},m_{t+1}) \gets \Phi_w(b_t,m_t,o_{t+1}).$
+            \STATE Set $t\leftarrow t+1$.
+        \ENDWHILE
+        \STATE \textbf{return} $\pi^{\ell}$.
+    \end{algorithmic}
+\end{algorithm}
+%\begin{align*}
+%    Q(b_t, \hat a_t^i)&=\frac{1}{M} \sum_{j\in [M_\ell]}\sum_{\hat a\in q^{i,j} } c(\hat a)\\
+%    c(\hat a)&=\left\{\begin{array}{ll}
+%    \operatorname{DT-Emul}(\hat a),     & \text{if $a$ is executable}, \\
+%    \text{Penalty},     & \text{otherwise},
+%    \end{array}
+%    \right.
+%\end{align*}
+
+
+%Specifically, the LLM agent first generates an observation (alert) prediction $\hat{o}_{t+1}$ based on the current belief $(b_{t}, m_t)$, the recovery action $a^\ell_{t}$, i.e., $\hat{o}_{t+1}\gets \Phi_w(b_t, m_t, a_t^\ell)$. Note that with the predicted observation, the LLM agent can update its belief $(\hat b_{t+1}, \hat m_{t+1})\gets \Phi_w(b_t, m_t, o_t)$, and this procedure can repeat in a lookahead horizon $H_\ell$ under a sequence of actions $\{ a_{t+1}^\ell,  a_{t+2}^\ell, \ldots,  a_{t+H_\ell}^\ell\}$ generated by the LLM: for $\tau =1, 2, \ldots, H_\ell-1$,
+%\begin{align*}
+%    {a}_{t+1}&\gets \Phi_w(\hat b_{t+\tau},a_{t+\tau-1})\\
+%    \hat o_{t+1+\tau} &\gets \Phi_w (\hat b_{t+\tau}, \hat m_{t+\tau}, a_{t+\tau}^\ell),\\
+%    (\hat b_{t+\tau+1}, \hat m_{t+\tau+1})& \gets \Phi_w(\hat b_{t+\tau}, \hat m_{t+\tau}, \hat o_{t+\tau}).\\
+%\end{align*}
+%This autoregressive generation yields a recovery trajectory that can be used to evaluate recovery time and assess the effectiveness of candidate actions, and it leads to Monte Carlo tree search-based planning at the operational scale. Specifically, at the current belief $b_t$, we first prompt the LLM to generate $N$ candidate local response action $\mathcal{A}^\ell_t=\{\hat a^{1}_t,  \hat{a}_t^2,\ldots, \hat{a}_t^N \}$. For each candidate action, we prompt the LLM to predict the alert $\hat o_{t+1}$ and the new belief $\hat b_{t+1}$. Starting from this new belief $\hat b_{t+1}$, the LLM generates $M_\ell$ recovery trajectories until the server prioritized by $a_t^g$ is fully recovered, i.e., reaching the terminal state $\ell_T=(1,1,1,1,1,1)$. Denote the $j$-th trajectory following action $\hat a^i_t$ by $q^{i,j}=\{(b_t, \hat a_t^i), (\hat o_{t+1}, \hat b_{t+1}, \hat a_{t+1}^{i,j} ), \ldots, \ell_T\}$. Then, we employ a digital twin to verify the validity of each generated action, i.e., if it is legitimate and executable, and record the execution time. The cumulative recovery cost associated with action $a_t^i$ is given by 
+%\begin{align*}
+%    Q(b_t, \hat a_t^i)&=\frac{1}{M} \sum_{j\in [M_\ell]}\sum_{\hat a\in q^{i,j} } c(\hat a)\\
+%    c(\hat a)&=\left\{\begin{array}{ll}
+%    \operatorname{DT-Emul}(\hat a),     & \text{if $a$ is executable}, \\
+%    \text{Penalty},     & \text{otherwise},
+%    \end{array}
+%    \right.
+%\end{align*}
+%where $\operatorname{DT-Emul}(a)$ first calls an external frontier LLM model API to translate the recovery action $a$ into command lines to be implemented in the DT, and returns the total execution time if the action is executable. If the LLM generates a hallucinated action that cannot be implemented, we penalize the generation with a penalty cost, which can be a hyperparameter set by the security operator to reflect the sensitivity to LLM-generated actions. The larger the penalty is, the less appealing the trajectory following the current candidate action, since the $Q$ value is larger than that of other trajectories with less or no hallucination.
+%
+%Among all the candidate actions, the LLM agent selects the one with the minimum recovery cost as the action to be implemented $a_t=\argmin_{i\in [N]} Q(b_t, a_t^i)$. The execution incurs new alert observation $o_{t+1}$ and belief $b_{t+1}$, upon which the same Monte-Carlo tree search planning repeats. \Cref{algo:mcts-plan} summarizes the operational planning procedure. 
+%\subsection{Computational Complexity Discussion}
+
+\section{Experiment}\label{sec:experiment}
+In this section, we present experimental evaluations of our proposed agentic response planning. In particular, we first assess the effectiveness of offline fine-tuning the lightweight model through prediction accuracy. By comparing the recovery time and success rate of our agentic response planning with frontier LLMs and two relevant baselines in \cite{guo25ircopilot, kim26ndss}, we empirically confirm the superiority of integrating decision-theoretic planning with digital-twin enhanced LLM operations. 
+
+\subsection{Experiment Steup}
+We start by introducing the experiment setup.   We instantiate the agentic model $\Phi_w$ with
+  \path{deepseek-ai/DeepSeek-R1-Distill-Qwen-14B} and adapt it using LoRA. The
+  base-model parameters remain frozen during fine-tuning, while the trainable
+  parameters are restricted to the LoRA adapter weights. The LoRA hyperparameters are presented in \Cref{tab:lora}. 
+\paragraph{Fine-Tuning Datasets}
+Our offline fine-tuning and evaluation are based on log data from 25 incidents (see Fig.~\ref{fig:incidence-example} for an example) across 4 different datasets published in the literature, as summarized in \Cref{tab:dataset}. The training dataset is \cite{kim24dataset}, which is transformed into four fine-tuning datasets: $\mathcal{D}=\mathcal{D}_{\mathrm{incident}}
+      \cup
+      \mathcal{D}_{\mathrm{state}}
+      \cup
+      \mathcal{D}_{\mathrm{action}}
+      \cup
+      \mathcal{D}_{\mathrm{alert}}$. $\mathcal{D}_{\mathrm{incident}}$ is used for incident assessment fine-tuning, where each example consists of a system description and security logs. The model is fine-tuned to decide whether the evidence indicates an incident, summarize the incident, identify involved entities, and assign MITRE ATT\&CK tactics and techniques. See Fig.~\ref{fig:incident-prompt} for the prompt template.
+
+$\mathcal{D}_{\mathrm{state}}$ is the dataset of belief generation fine-tuning, where each example contains a prompt detailing the system
+      description, logs, incident summary, current local state, and previously
+      executed actions, see Fig.~\ref{fig:state-prompt}. The model is trained to predict the next global and local recovery state, along with a summary of evidence. The belief is obtained by the empirical distribution of repeatedly generated state predictions. We adapt the instructions in $\mathcal{D}_{\mathrm{state}}$ to fit the task of response action generation, arriving at $\mathcal{D}_{\mathrm{action}}$, where the prompt instructs the model to generate the next response action based on previous ones. 
+
+$\mathcal{D}_{\mathrm{alert}}$ is used for the alert prediction. This auxiliary dataset improves the model's ability to associate attack context with alert-related evidence used in incident assessment, and the predicted alerts help the LLM generate future states and actions for the operation-scale rollout. The prompt contains a system description and a target MITRE ATT\&CK tactic, and instructs the model to generate IDS-style alert fields, including classifications and priorities, see Fig.~\ref{fig:alert-prompt}.      
+\begin{table*}[!ht]
+    \centering
+    \begin{tabular}{llll}
+    \toprule
+    Dataset & Systems & Attacks & logs\\
+    \midrule
+    CTU-Malware-2014     & \textsc{windows xp sp2} & Malwares and ransomwares & \textsc{snort} alerts\\
+    CIC-IDS-2017     & \textsc{windows}, \textsc{linux} & Denial-of-Service, web attacks, \textsc{sql} injections, and etc.&\textsc{snort} alerts\\
+    AIT-IDS-V2-2022 & \textsc{windows}, \textsc{linux} & Multi-stage attacks from reconnaissance to escalation& \textsc{wazuh} alerts\\
+    CSLE-IDS-2024 & \textsc{linux} & Software exploits, e.g., \textsc{cve}-2015-1427&\textsc{snort} alerts \\
+    \bottomrule
+    \end{tabular}
+    \caption{The four evaluation datasets, from \cite{GARCIA2014100}, \cite{ghorbani18dataset}, \cite{Wurzenberger24}, and \cite{kim24dataset}, respectively, include diverse attacks, logs, and systems.}
+    \label{tab:dataset}
+\end{table*}
+
+  % \begin{itemize}
+  %     \item \textbf{Incident assessment dataset}
+  %     $\mathcal{D}_{\mathrm{incident}}$. We use
+  %     \path{incident_examples.json} from
+  %     \path{kimhammar/CSLE-IncidentResponse-V1}\cite{kim26ndss}. 
+
+  %     \item \textbf{Recovery action generation dataset}
+  %     $\mathcal{D}_{\mathrm{action}}$. We use
+  %     \path{action_examples.json} from
+  %     \path{kimhammar/CSLE-IncidentResponse-V1}\cite{kim26ndss}. Each example contains the system
+  %     description, logs, incident summary, current local state, and previously
+  %     executed actions, and supervises the model to generate the next high-level
+  %     recovery action with an explanation.
+
+  %     \item \textbf{Recovery state transition dataset}
+  %     $\mathcal{D}_{\mathrm{state}}$. We use
+  %     \path{states_examples.json} from
+  %     \path{kimhammar/CSLE-IncidentResponse-V1}\cite{kim26ndss}. Each example contains the system
+  %     description, logs, incident summary, current six-dimensional local state,
+  %     and a proposed recovery action, and supervises the model to predict the next
+  %     recovery state.
+
+  %     \item \textbf{IDS alert classification-priority generation dataset}
+  %     $\mathcal{D}_{\mathrm{alert}}$. We creat a JSON dataset by transforming \path{incident_examples.json} from
+  %     \path{kimhammar/CSLE-IncidentResponse-V1}\cite{kim26ndss},
+  %     \path{transformed_dataset.json}. Each example contains a system description
+  %     and a target MITRE ATT\&CK tactic, and supervises the model to generate
+  %     IDS-style alert fields, including Snort classifications and priorities. This
+  %     auxiliary dataset improves the model's ability to associate attack context
+  %     with alert-level evidence used in incident assessment and response planning.
+  % \end{itemize}
+
+  % We sample instruction-answer pairs from the four datasets and train LoRA
+  % adapters with the hyperparameters summarized in Table~\ref{tab:lora}. 
+
+
+
+\paragraph{Digital Twin}
+  We utilize a dockerized network digital
+  twin, as shown in Fig.~\ref{tab:dt-testbed}, which emulates a small segmented enterprise network with two
+  subnets: a client network \path{10.0.1.0/24} and a server network
+  \path{10.0.2.0/24}. The two subnets are connected by a gateway container, which
+  acts as both the network router and the IDS monitoring point. The gateway has
+  IP address \path{10.0.1.10} on the client network and \path{10.0.2.10} on the
+  server network. It runs Snort to collect alerts and uses \path{iptables} to
+  support containment and recovery actions.
+The client container has IP address \path{10.0.1.11} and serves as the attack
+  platform in the experiments. It includes common network and exploitation tools,
+  including \path{nmap}, \path{hydra}, \path{curl}, \path{smbclient}, and
+  \path{sshpass}. The server network contains five service containers, summarized
+  in Table~\ref{tab:dt-testbed}.
+
+  \begin{table}[!ht]
+      \centering
+      \small
+      \begin{tabular}{lll}
+      \toprule
+      Host & IP address & Service role \\
+      \midrule
+      \path{server_ssh} & \path{10.0.2.11} & OpenSSH service \\
+      \path{server_samba} & \path{10.0.2.12} & Samba file sharing \\
+      \path{server_shellshock} & \path{10.0.2.13} & Apache CGI service \\
+      \path{server_web1} & \path{10.0.2.14} & Nginx and upload service \\
+      \path{server_web2} & \path{10.0.2.15} & Nginx and diagnostic service \\
+      \bottomrule
+      \end{tabular}
+      \caption{Digital-twin network services used in the experiments.}
+      \label{tab:dt-testbed}
+  \end{table}
+\begin{figure}
+  \centering
+  \scalebox{0.85}{
+ \includegraphics{figs/testbed_1.pdf}    
+ }
+ \caption{Network topology and configuration of the digital twin.}
+\label{fig:digital_twin}
+\end{figure}
+
+\paragraph{Attack Scenarios}
+
+We consider three different attack scenarios to evaluate our agentic response planning method. These scenarios are designed to generate different combinations of attack patterns that compromise different nodes in the digital twin.
+
+The first scenario, which we refer to as \textbf{Weak-Credential-3}, represents a multi-stage attack launched from the client host \path{10.0.1.11} that eventually takes down three nodes. The attack starts with network reconnaissance and TCP service scanning across the server network. It then compromises \path{server_ssh} at \path{10.0.2.11} through weak SSH credentials, accesses \path{server_samba} at \path{10.0.2.12} through an exposed anonymous SMB share, and exploits the Shellshock-vulnerable CGI service on \path{server_shellshock} at \path{10.0.2.13}. The attack also probes the two web servers at \path{10.0.2.14} and \path{10.0.2.15}. Finally, it uses the compromised SSH server as a pivot to reach other internal services. This scenario mainly compromises the first three servers in \Cref{tab:dt-testbed}.
+
+The second scenario, referred to as \textbf{Shellshock-4}, targets four servers: \path{10.0.2.11}, \path{10.0.2.12}, \path{10.0.2.13}, and \path{10.0.2.14}. Unlike the first scenario, it avoids a broad ICMP sweep and instead performs targeted service discovery. It uses low-volume SSH password spraying against \path{server_ssh}, anonymous SMB share
+access against \path{server_samba}, Shellshock exploitation against
+\path{server_shellshock}, and unauthorized HTTP upload against
+\path{server_web1}. The scenario also includes a pivot from
+\path{server_shellshock}, where commands executed on \path{10.0.2.13} are used to probe reachable services on the other targeted servers.
+
+The last scenario extends the attack coverage to all five servers in the server network, which we refer to as \textbf{Command-Injection-5}. This scenario increases attack techniques diversity by using service-specific TCP and HTTP fingerprinting, SSH credential reuse with file transfer, multi-file SMB staging and rename operations, Shellshock command
+execution, static HTML upload through the web upload service, and command injection through the diagnostic service on \path{server_web2}. In contrast to the previous scenarios, the pivot host is \path{server_web2}. After command injection, the attack uses this host to probe reachable services on the other servers. This scenario evaluates the framework under a full five-server compromise with a different pivot point and a broader mixture of service-specific attack evidence.
+
+\subsection{LLM Generation Evaluation}
+\paragraph{Incident assessment evaluation} 
+We begin by evaluating evaluate the model's ability to identify MITRE ATT\&CK tactics from incident descriptions and security logs. For each ground-truth tactic in the test data, we define precision as the fraction of predicted instances that correctly include the tactic among all predictions, and recall as the fraction of correctly predicted instances among all testing instances that contain the tactic. \Cref{tab:per-tactic} summarizes the results for all tactics in the testing dataset. We observe that the tactic prediction accuracy is positively correlated with the occurrences of each tactic in the training dataset. Except for those less frequent tactics, such as privilege escalation and discovery, our model achieves decent performance in assessing the incident instance. 
+\begin{table}
+  \scalebox{0.9}{    
+    \centering
+    \begin{tabular}{lccc}
+    \toprule
+    Tactic & Precision & Recall & F1 \\
+    \midrule
+    Reconnaissance & 1.000 & 0.857 & 0.923 \\
+    Initial Access & 0.839 & 0.975 & 0.902 \\
+    Execution & 0.938 & 0.974 & 0.955 \\
+    Persistence & 0.500 & 0.667 & 0.571 \\
+    Privilege Escalation & 0.378 & 0.583 & 0.459 \\
+    Defense Evasion & 0.417 & 0.714 & 0.526 \\
+    Credential Access & 0.733 & 0.647 & 0.688 \\
+    Discovery & 0.333 & 0.765 & 0.464 \\
+    Lateral Movement & 0.527 & 0.879 & 0.659 \\
+    Collection & 0.571 & 0.800 & 0.667 \\
+    Command and Control & 0.690 & 0.925 & 0.790 \\
+    Exfiltration & 0.833 & 0.893 & 0.862 \\
+    Impact & 0.818 & 0.818 & 0.818 \\
+    \bottomrule
+    \end{tabular}}
+    \caption{Per-tactic MITRE ATT\&CK generation metrics on held-out incident assessment examples. }
+    \label{tab:per-tactic}
+\end{table}
+\paragraph{Belief generation evaluation}
+ Recall that each local recovery state is a six-dimensional vector with each entry representing the six criteria in \Cref{subsec:ir}. Hence, the ground-truth label is a 6-dimensional Boolean vector indicating whether the corresponding recovery criterion is satisfied. Since recovery-state prediction consists of multiple Boolean entries, it is naturally a multi-label binary classification problem, for which we report the F1 score in \Cref{tab:belief-f1}. In addition to per-entry F1 scores, we also include two averaged F1 scores: (i) {class-agnostic average F1} (caa-F1), which aggregates True Positive (TP)/ False Positive (FP)/ False Negative (FN) across all entries before computing F1, and (ii) {class-specific average F1} (csa-F1),
+which computes F1 per Boolean entry and then averages across entries. The results in \Cref{tab:belief-f1} suggest that our lightweight model can accurately predict the recovery state. We further consider the LLM-generated global state beliefs specific to the three attack scenarios in the digital twin. Given the entries of the global state belief denote the probabilities of each node being safe, we report in \Cref{tab:global-state-bce} the binary cross entropy between the belief and the true state as an accuracy metric, which indicates that our model is capable of accurately assessing the network-level security posture after fine-tuning.  
+\begin{table}[h]
+      \centering
+      \resizebox{\linewidth}{!}{
+      \begin{tabular}{lcccccccc}
+      \toprule
+          & caa-F1 & csa-F1 & $\ell^c$ & $\ell^a$ & $\ell^p$ & $\ell^e$ & $\ell^h$ & $\ell^r$ \\
+      \midrule
+      F1  & 0.9902 & 0.9822 & 0.9975 & 0.9964 & 0.9970 & 0.9952 & 0.9541 & 0.9533 \\
+      \bottomrule
+      \end{tabular}
+      }
+      \caption{Local state prediction F1 scores. In addition to per-entry F1, the class-agnostic average (caa) and class-specific average (csa) scores indicate that our model performs well on the test data.}
+      \label{tab:belief-f1}
+  \end{table}
+\begin{table}[h] 
+    \centering
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{lccc}
+    \toprule
+    Scenario & Ground truth $\mathbf g$ & Predicted belief $\hat{\mathbf g}$ & BCE \\
+    \midrule
+    Weak-Credential-3 & $(1,1,1,0,0)$ & $(0.96,0.94,0.92,0.42,0.42)$ & 0.2551 \\
+    Shellshock-4 & $(1,1,1,1,0)$ & $(0.96,0.92,0.96,0.90,0.08)$ & 0.0708 \\
+    Command-Injection-5 & $(1,1,1,1,1)$ & $(0.90,0.88,0.90,0.74,0.90)$ & 0.1490 \\
+    \bottomrule
+    \end{tabular}
+    }
+    \caption{Global state belief prediction accuracy in binary cross entropy. Our fine-tuned model can accurately assess the system security posture.}
+    \label{tab:global-state-bce}
+\end{table}
+
+
+% We evaluate whether the fine-tuned model can infer the global compromised-state
+% belief from system descriptions and attack logs. In our testbed, the global
+% state is represented by a five-dimensional vector, where the entries correspond
+% to \path{10.0.2.11}, \path{10.0.2.12}, \path{10.0.2.13}, \path{10.0.2.14},
+% and \path{10.0.2.15}, respectively. An entry equal to one indicates that the
+% corresponding server is compromised and requires recovery, while an entry equal
+% to zero indicates that the server is not compromised in the scenario. For each
+% attack scenario, we use the empirical recovery-target
+% frequency as the predicted compromised-state belief
+% $\hat{\mathbf g}\in[0,1]^5$.
+
+% We compare $\hat{\mathbf g}$ with the ground-truth global state
+% $\mathbf g\in\{0,1\}^5$ using binary cross entropy (BCE),
+% \begin{equation*}
+%     \mathrm{BCE}(\mathbf g,\hat{\mathbf g})
+%     =
+%     -\frac{1}{5}\sum_{k=1}^{5}
+%     \left[
+%         g_k\log \hat g_k
+%         +
+%         (1-g_k)\log(1-\hat g_k)
+%     \right].
+% \end{equation*}
+% The ground-truth vector is $(1,1,1,0,0)$ for the three-compromise attack,
+% $(1,1,1,1,0)$ for the four-server attack, and $(1,1,1,1,1)$ for the
+% five-server attack. Table~\ref{tab:global-state-bce} summarizes the resulting
+% global-state beliefs and BCE scores.
+
+
+% \paragraph{MITRE Tactic Generation Evaluation.}
+% We further evaluate the model's ability to identify MITRE ATT\&CK tactics from incident descriptions and security logs. The evaluation examples are held out
+% from the incident assessment dataset $\mathcal{D}_{\mathrm{incident}}$. For each
+% example, the model generates a structured incident assessment that includes a set of predicted tactics. We report per-tactic precision, recall, and F1 scores
+% in Table~\ref{tab:per-tactic}. Overall, the model achieves high recall for frequently observed tactics such as Initial Access, Execution, Command and Control, and Exfiltration, while tactics with more ambiguous evidence, such as Privilege Escalation and Discovery, show lower precision due to false-positive
+% predictions.
+
+
+
+
+
+% \paragraph{Local State Prediction Evaluation.}
+% We evaluate the fine-tuned model on the local recovery state prediction task to assess whether the agent can estimate the local recovery status induced by a candidate response action. Each local recovery state is represented by the six recovery criteria introduced in \Cref{subsec:ir}: containment, assessment, preservation, eviction,
+% hardening, and restoration. Each ground-truth label is a six-dimensional Boolean vector indicating whether the corresponding recovery criterion has been satisfied.
+
+% The evaluation examples are held out from the recovery-state transition dataset $\mathcal{D}_{\mathrm{state}}$. Given the system description, incident context,
+% current recovery state, and a candidate recovery action, the model generates a structured prediction for the next recovery state.
+
+% We report exact-match accuracy and multi-label F1 scores. Exact-match accuracy counts a prediction as correct only when all six Boolean entries match the ground-truth recovery state, making it a strict measure of whether the model produces a fully correct local state transition. Since the recovery state is multi-dimensional, we also report two averaged F1 scores: class-agnostic average
+% F1 (caa-F1), which aggregates true positives, false positives, and false negatives across all recovery criteria before computing F1, and class-specific
+% average F1 (csa-F1), which computes F1 for each recovery criterion and then averages across criteria. We additionally report per-criterion F1 scores to
+% identify which recovery stages are more difficult for the model to predict. In Table~\ref{tab:f1}, $s^c$, $s^a$, $s^p$, $s^e$, $s^h$, and $s^r$ denote containment, assessment, preservation, eviction, hardening, and restoration, respectively.
+
+
+\paragraph{Alert prediction evaluation.}
+We further evaluate whether the fine-tuned model can generate IDS alert fields from a system description and a specified attack tactic. We reformat the ground-truth answer, which consists of Snort-style alert fields, into a pair of  \texttt{Classification} and \texttt{Priority} entries.  We extract pairs of \([\texttt{Classification: }]\,[\texttt{Priority: }]\) from both the generated output $\hat{\mathbf y}$ and the true answer $\mathbf y$,and remove duplicates, yielding a prediction set $\widehat{\mathcal P}$ and a label set $\mathcal P$, respectively. The precision and recall are defined as
+\begin{equation*}
+    \mathrm{Precision}
+    =
+    \frac{|\widehat{\mathcal P}\cap\mathcal P|}
+    {|\widehat{\mathcal P}|},
+    \qquad
+    \mathrm{Recall}
+    =
+    \frac{|\widehat{\mathcal P}\cap\mathcal P|}
+    {|\mathcal P|}.
+\end{equation*}
+We report the alert-field generation results across the ten most frequent tactics in Table~\ref{tab:alert-prediction}, which indicates that our fine-tuning enables the model to generate highly accurate security alerts under various tactics.
+\begin{table}[t]
+  \scalebox{0.9}{
+      \centering
+      \small
+      \begin{tabular}{p{0.58\linewidth}ccc}
+      \toprule
+      \textbf{Tactics} (\% over all data points) & \textbf{Precision} & \textbf{Recall} & \textbf{F1} \\
+      \midrule
+      Normal Activity (15.59\%) & 0.6368 & 0.5427 & 0.5860 \\
+      Initial Access, Execution, Collection, Exfiltration (6.92\%) & 0.9010 & 0.8187 & 0.8579 \\
+      Initial Access, Execution, Credential Access, Exfiltration (1.71\%) & 0.8667 & 0.8532 & 0.8599 \\
+      Impact (1.55\%) & 0.8867 & 0.8652 & 0.8758 \\
+      Initial Access, Execution, Command and Control, Exfiltration (1.52\%) & 0.8123 & 0.6836 & 0.7424 \\
+      Initial Access, Execution, Command and Control (1.27\%) & 0.8030 & 0.6472 & 0.7167 \\
+      Initial Access, Execution, Lateral Movement, Collection, Exfiltration (1.08\%) & 0.8926 & 0.8371 & 0.8640 \\
+      Initial Access, Execution, Impact (0.75\%) & 0.7887 & 0.5449 & 0.6445 \\
+      Initial Access, Execution, Persistence, Collection, Exfiltration (0.70\%) & 0.8830 & 0.8187 & 0.8496 \\
+      Initial Access, Execution (0.63\%) & 0.7143 & 0.6230 & 0.6655 \\
+      Initial Access, Execution, Persistence, Lateral Movement, Collection, Command and Control, Exfiltration (0.63\%) & 0.6925 & 0.5326 & 0.6021\\
+      \bottomrule
+      \end{tabular}}
+      \caption{Most frequent tactics and corresponding IDS alert-generation metrics.}
+      \label{tab:alert-prediction}
+  \end{table}
+
+\subsection{Recovery-Time Evaluation}
+
+We evaluate the recovery performance of the response plan by our proposed method, and the metrics we utilize include the recovery success rate and the average execution time for those successful recoveries under each attack scenario in the digital twin. The evaluation includes the following frontier LLMs, such as \textsc{gpt-5.5} \cite{gpt5-5}, \textsc{gemini-3.1-pro} \cite{gemini3-1}, \textsc{deepseek-v4-pro} \cite{ds-v4}, \textsc{claude-opus-4.8} \cite{opus4-8}. Compared with these LLMs, our model is significantly more lightweight and fine-tuned towards the incident response use cases. 
+
+Additionally, we include IRCOPILOT \cite{guo25ircopilot}, and the LLM-based incident response (LLM-IR) in \cite{kim26ndss}. We adopt their planning workflow and use our fine-tuned model as the base LLM agent. The main difference from our method is that the two LLM-based approaches simply rely on LLM invocations without tactical-scale decision-theoretic planning or digital-twin-enabled verification. The comparisons with these two approaches highlight the necessity of including digital-twin and tactical planning.
+
+Since all these baseline methods do not admit a tactical planning instrument, our first set of evaluation experiments shares the tactical response plan across all baselines and focuses on comparing the operational planning across three attack scenarios. Figures~\ref{fig:recovery-time-3}, \ref{fig:recovery-time-4}, and \ref{fig:recovery-time-5} summarize both the total recovery time and the success rates across the three scenarios, where bar colors are related to different methods; numbers and error bars indicate the mean and standard deviation from 5 repeated experiments using distinct random seeds. Notably, the success rates of our method, which are around 90\% in three scenarios, surpass all other baselines by a large margin. In contrast, the frontier models only arrive at rates below 75\%, and the rates for two LLM-based approaches are within 50\% to 65\%. This suggests that our digital-twin-enhanced operational planning can verify and eliminate hallucinated response actions generated by LLMs, yielding effective response planning.  For those successful recoveries, our method delivers the shortest recovery time on average, which outperforms the frontier models by 15\% on average, indicating that the lightweight model is sufficient for the response planning in the testing cases, highlighting the effectiveness of fine-tuning.
+
+We move on to an additional set of experiments to evaluate the role played by tactical scale planning. In this case, only our method preserves the tactical planning, whereas IRCOPILOT and LLM-IR must also determine which server to recover at each step, in addition to generating response actions. We report the average recovery time and success rate in Fig.~\ref{fig:recovery-system-3-4-5}. Similar to our previous findings, our agentic approach maintains a recovery rate of around 90\% on average, which is above 30\% higher than the two baselines. The average recovery time of our method is X\% and Y\% less than those of LLM-IR and IRCOPILOT, respectively, highlighting the benefit of adopting tactical planning.  
+\begin{figure}[t]
+  \scalebox{0.8}{    
+\centering
+\input{figs/attack-3}
+}
+\caption{Evaluation of recovery time ($\downarrow$ better) and recovery rate ($\uparrow$ better) in Weak-Credential-3. Our agentic planning achieves the highest recovery rate and minimal recovery time.}
+\label{fig:recovery-time-3}
+\end{figure}
+
+\begin{figure}[t]
+  \scalebox{0.8}{        
+\centering
+\input{figs/attack-4}
+}
+\caption{Evaluation of recovery time ($\downarrow$ better) and recovery rate ($\uparrow$ better) in Shellshock-4. Our lightweight model achieves comparable recovery time to GPT-5.5, with a much higher recovery rate.}
+\label{fig:recovery-time-4}
+\end{figure}
+
+\begin{figure}[t]
+\scalebox{0.8}{        
+\centering
+\input{figs/attack-5}
+}
+\caption{Evaluation of recovery time ($\downarrow$ better) and recovery rate ($\uparrow$ better) in Command-Injection-5. Our agent maintains a nearly 90\% success rate in this most challenging scenario and achieves the minimal recovery time.}
+\label{fig:recovery-time-5}
+\end{figure}
+
+
+\begin{figure}[t]
+\scalebox{0.8}{
+\centering
+\input{figs/attack-system-3-4-5}
+}
+\caption{Comparison of recovery time ($\downarrow$ better) and recovery rate ($\uparrow$ better) for our agentic method, LLM-IR, and IRCOPILOT across the three attack scenarios. Patterned left bars show recovery time, while adjacent solid right bars show recovery rate.}
+\label{fig:recovery-system-3-4-5}
+\end{figure}
+
+
+\subsection{Discussion}
+\paragraph{Summary} The experimental results demonstrate that our proposed agentic multiscale response planning consistently outperforms the frontier LLMs and prior works on LLM-based incident response across three attack scenarios on all evaluation metrics. The comparisons with frontier LLMs suggest that a tailored lightweight model, powered by decision-theoretic planning, presents a sufficient agentic approach for incident response. The digital twin-based action verification reduces LLM hallucination, leading to higher success rates. Comparing with two prior works on LLM-based incident response planning, we observe that integrating tactical-scale planning over the network system improves the agent's performance by narrowing the context to server-specific recovery.  
+
+\paragraph{Limitations} One of the limitations in our agentic approach, which is beyond the scope of this work, lies in the attack tactics misspecification in the incident assessment stage, where the obtained attack conjecture deviates from the actual attack tactics. Such misspecification will lead to inaccurate attack graph estimates and, therefore, render the tactical-scale planning less effective. Even though there have been initial attempts to address the misspecification challenge in security contexts \cite{kim-tao25col,kim-tao25quantization}, it remains an open question when the LLM, a black-box generative model, serves as the inference model.
+
+Another limitation arises from the LLM-based rollout in the operational planning, which constitutes the major computation expense. Recall that for each of the $N$ candidate actions, the LLM generates $M_\ell$ trajectories, with each spanning at most six steps. The complexity is of $O(N M_\ell)$, plus the LLM re-generation and digital twin re-initialization once some actions fail the verification. We can mitigate this limitation in part by parallel LLM sessions and digital-twin emulations.   
+
+\paragraph{Connections to playbooks} Our agentic response planning method, aiming to offer an end-to-end decision support, plays a similar role to incident response books \cite{applebaum}, with a particular focus on the generation of executable response action at the operational scale. We summarize our approach's advantages over conventional playbooks. The main advantage is that, unlike the general and sometimes vague actions in the playbook, our method generates more concrete and context-specific response actions that are directly executable and tailored to the system of interest. Second, our agentic response method presents a more dynamic and lively playbook than the conventional, static one, where the multiscale planning dynamically prioritizes compromised nodes within the system. Third, our agentic approach can incorporate the existing response playbooks through Retrieval-Augmented Generation (RAG) when generating response actions.  
+
+\section{Conclusion}
+We present an agentic approach that integrates decision-theoretic planning, large language models (LLMs), and digital twins for incident response planning. The proposed method uses a rollout planner based on digital twin simulation to compute a high-level response strategy that allocates security resources at the tactical scale. A lightweight LLM, fine-tuned over public incident datasets, translates the abstract strategies into executable commands verified by the digital twin emulation at the operational scale. We evaluate the agentic response planning approach on logs reported in the literature and three distinct attack scenarios. The results demonstrate that our agentic approach maintains around 90\% recovery success rate and achieves over 15\% shorter recovery time and 25\% improvement in recovery rate than frontier LLMs.
+
+A primary direction for future work is to address the attack tactics misspecification in the LLM-based incident assessment, which plays an instrumental role in tactical planning. The key is to leverage LLMs' in-context learning ability to calibrate their inference on potential tactics present in the network by comparing the actual alerts observed and the predicted alerts under the misspecified tactics. Such inconsistency, which is widely used to improve LLM reasoning \cite{wang2023selfconsistency}, can provide an in-context trigger that adapts the inference. Another direction that is worth exploring is to extend the current rollout planning to more efficient search procedures under adaptive attackers, arriving at game-theoretic planning. 
+
+%%
+%% The acknowledgments section is defined using the "acks" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+% \begin{acks}
+
+% \end{acks}
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{ref}
+
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\clearpage
+\appendix
+
+\section{Additional Setup}
+  \begin{table}[!ht]
+  \scalebox{1}{
+      \centering
+      \small
+      \begin{tabular}{ll}
+      \toprule
+      Parameter(s) & Value(s) \\
+      \midrule
+      Base model & DeepSeek-R1-Distill-Qwen-14B \\
+      LoRA rank, scaling, dropout & 64, 128, 0.05 \\
+      Learning rate & $9.5\times 10^{-4}$ \\
+      Per-device batch size & 1 \\
+      Gradient accumulation steps & 32 \\
+      Effective batch size & 32 \\
+      Precision & bfloat16 \\
+      \bottomrule
+      \end{tabular}}
+      \caption{A summary of LoRA fine-tuning hyperparameters.}
+      \label{tab:lora}
+  \end{table}
+
+
+\textcolor{Red}{Yiran: Refine the prompt template to add more details.}
+
+\begin{figure}
+\begin{tcolorbox}[
+  title=Incident Example from CTU-Malware-2014,
+  colback=gray!5,
+  colframe=gray!60,
+  boxrule=0.5pt,
+  arc=2pt,
+  left=4pt,
+  right=4pt,
+  top=4pt,
+  bottom=4pt
+]
+\small
+\textbf{System description}: Two subnetworks (A and B) are connected via a switch that is also connected to the Internet. All servers run \textsc{windows xp sp2}. Their IPs are...
+
+\textbf{Snort alert logs}: 
+\begin{verbatim}
+[120:3:2](http_inspect) NO CONTENT-LENGTH..
+[1:31033:6]MALWARE Win.Trojan.Cryptodefence
+[Classification:A Network Trojan Detected] 
+[Priority 1]
+{TCP}147.32.84.165:1057->222.88.205.195:443 
+\end{verbatim}
+
+\textbf{Incident description}: Server 147.32.84.165 is infected with the \textsc{win.trojan.cryptodefense} ransomware. Alerts show the server
+is making outbound command and control (\textsc{c}2) connections to
+222.88.205.195. ...
+
+\textbf{Response actions}:
+
+1. Disconnect the Ethernet cable of the infected server at
+147.32.84.165 to sever its network connection. Concurrently, configure a rule on the main switch/firewall to block all outbound
+traffic to the \textsc{c}2 server 222.88.205.195.
+
+2. Analyze the central switch to scan all network traffic from
+both subnetworks A and B for any other hosts attempting to make
+connections to the malicious IP 222.88.205.195.
+
+3. Before altering the infected server, create a complete bit-for-bit
+forensic image of its hard drive. 
+
+4. Wipe the hard drive of 147.32.84.165. If other infected machines
+were discovered, they must also be taken offline and wiped.
+
+5. Upgrade all servers from \textsc{windows xp sp2}
+to a modern operating system that receives security patches.
+
+6. Restore the server’s data from a trusted backup. Once the server is
+rebuilt with a modern operating system, reconnect it to the network
+and closely monitor for any anomalous activity.
+\end{tcolorbox}
+\caption{An incidence example from \cite{GARCIA2014100}.}
+    \label{fig:incidence-example}
+\end{figure}
+
+Figures~\ref{fig:incident-prompt}--\ref{fig:action-prompt} present the prompt
+templates used for incident classification, local-state prediction, IDS alert generation, and high-level recovery-action generation, respectively.
+
+\begin{figure}
+\centering
+\begin{tcolorbox}[
+  title=Incident Classification Prompt Template,
+  colback=Purple!5,
+  colframe=Purple!60,
+  boxrule=0.5pt,
+  arc=2pt,
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt]
+\footnotesize
+Below is a system description, a sequence of network logs (e.g., from an
+intrusion detection system), and an instruction that describes a task. Write a
+response that appropriately completes the request. Before generating the
+response, reason carefully about the system, logs, and instruction.
+
+\textbf{\#\#\# System:} The Dockerized digital twin contains a client network (10.0.1.0/24) and a server network (10.0.2.0/24), connected by a gateway that runs Snort and iptables at 10.0.1.10/10.0.2.10. The client at 10.0.1.11 is the attack platform. The server network contains \texttt{server\_ssh} at 10.0.2.11 (OpenSSH/22), \texttt{server\_samba} at 10.0.2.12 (Samba/139,445), \texttt{server\_shellshock} at 10.0.2.13 (Apache CGI/80), \texttt{server\_web1} at 10.0.2.14 (Nginx/80, OpenSSH/22, upload service/8080), and \texttt{server\_web2} at 10.0.2.15 (Nginx/80, OpenSSH/22, diagnostic service/8081).
+
+\textbf{\#\#\# Logs:}\par
+{\ttfamily\scriptsize\raggedright\noindent
+2026-06-14 11:26:10,009 [\ \ \ \ INFO] Alert: [pri=1 cls=Attempted User
+Privilege Gain] \{TCP\} 10.0.1.11:36886 -> 10.0.2.11:22 [1:1000007:2] SSH
+connection attempt\\[2pt]
+2026-06-14 11:26:10,009 [\ \ \ \ INFO] Alert: [pri=3 cls=Generic Protocol
+Command Decode] \{TCP\} 10.0.1.11:35416 -> 10.0.2.12:445 [1:1000003:2]
+SMB traffic to Samba server}
+
+
+\textbf{\#\#\# Instruction:}
+Determine whether the logs indicate a cyber incident that requires recovery. Support the decision using only evidence from the system description and logs. For an incident, summarize the activity, associate it with MITRE ATT\&CK tactics and techniques, and identify attacker, system, and targeted entities. For normal or insignificant activity, return no incident and leave the tactic, technique, and entity fields empty. Return only a JSON object with fields
+\texttt{Incident}, \texttt{Incident description},
+\texttt{MITRE ATT\&CK Tactics}, \texttt{MITRE ATT\&CK Techniques}, and \texttt{Entities}.
+
+\textbf{\#\#\# Response:}
+\texttt{<think>}
+\end{tcolorbox}
+\caption{Prompt template for incident classification. The model determines
+whether observed activity requires recovery and extracts an evidence-grounded
+incident summary, MITRE ATT\&CK mappings, and involved entities.}
+\Description{A boxed prompt template containing a system description and security logs. The requested JSON response classifies whether an incident occurred and reports its description, MITRE ATT\&CK tactics and techniques, and attacker, system, and targeted entities.}\label{fig:incident-prompt}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\begin{tcolorbox}[
+  title=Local-State Generation Prompt Template,
+  colback=bluetwo!10,
+  colframe=bluetwo,
+  boxrule=0.5pt,
+  arc=2pt,
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt]
+\footnotesize
+\textbf{\#\#\# System:} \ldots
+
+\textbf{\#\#\# Logs:} \ldots
+
+\textbf{\#\#\# Incident:} A multi-stage incident originates from 10.0.1.11 and targets all five server-network hosts. It includes SSH credential reuse and file transfer on 10.0.2.11; SMB enumeration, multi-file staging, rename, and read-back activity on 10.0.2.12; Shellshock command execution on 10.0.2.13; static HTML upload and web-accessible retrieval on 10.0.2.14; diagnostic-endpoint command injection on 10.0.2.15; and follow-on internal reachability checks from 10.0.2.15. The recovery targets are 10.0.2.11 through 10.0.2.15.
+
+\textbf{\#\#\# State:}
+\{\texttt{is\_attack\_contained}: false,
+\texttt{is\_knowledge\_sufficient}: false,
+\texttt{are\_forensics\_preserved}: true,
+\texttt{is\_eradicated}: false,
+\texttt{is\_hardened}: false,
+\texttt{is\_recovered}: false\}
+
+\textbf{\#\#\# Recovery action:}\newline
+Remove unauthorized SSH keys and active attacker sessions from \texttt{server\_ssh}, rotate the compromised credentials, and preserve copies of removed artifacts in the forensic store.
+
+\textbf{\#\#\# Instruction:}
+Predict the local state after applying the proposed action. A state field may change from false to true only when the action effectively achieves the corresponding recovery objective: containment, information gathering, forensic preservation, eradication, hardening, or service recovery. State fields cannot regress from true to false. Return a JSON object containing the
+six Boolean recovery-state fields.
+
+\textbf{\#\#\# Response:}
+\texttt{<think>}
+\end{tcolorbox}
+\caption{Prompt template for recovery-state generation. The model predicts the six-dimensional state transition conditioned on the incident context, current state, and proposed recovery action.}
+\Description{A boxed prompt template containing a system description, security logs, incident description, current six-field Boolean recovery state, proposed recovery action, and an instruction to predict the resulting recovery state as JSON.}
+\label{fig:state-prompt}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tcolorbox}[
+  title=IDS Alert Generation Prompt Template,
+  colback=Orange!8,
+  colframe=Orange!70,
+  boxrule=0.5pt,
+  arc=2pt,
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt]
+\footnotesize
+\textbf{\#\#\# System:} \ldots
+
+\textbf{\#\#\# Instruction:}
+Generate fields produced by an intrusion detection system (e.g., Snort)
+during a cyberattack by an attacker following this MITRE ATT\&CK tactic:
+\emph{[Reconnaissance, Initial Access, Execution, \ldots]}.
+
+\textbf{\#\#\# Response:}
+\texttt{<think>}
+
+\texttt{[Classification: Attempted User Privilege Gain]}
+\texttt{[Priority: 1]}
+\texttt{[Classification: Generic Protocol Command Decode]}
+\texttt{[Priority: 3]}
+
+\end{tcolorbox}
+\caption{Prompt template for IDS alert generation. The generated continuation
+is structured as classification--priority pairs conditioned on the system
+description and MITRE ATT\&CK tactic chain.}
+\Description{A boxed prompt template containing a system description and a
+MITRE ATT\&CK tactic chain. The requested response consists of one or more IDS
+alert classification and priority pairs.}
+\label{fig:alert-prompt}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tcolorbox}[
+  title=Recovery-Action Generation Prompt Template,
+  colback=teal!5,
+  colframe=teal!60,
+  boxrule=0.5pt,
+  arc=2pt,
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt]
+\footnotesize
+\textbf{\#\#\# System:} \ldots
+
+\textbf{\#\#\# Logs:} \ldots
+
+\textbf{\#\#\# Incident:} \ldots
+
+\textbf{\#\#\# State:} \ldots
+
+\textbf{\#\#\# Prioritized target server:}
+\texttt{server\_ssh} (10.0.2.11)
+
+\textbf{\#\#\# Previous recovery actions:}\newline
+1. Block traffic from 10.0.1.11 to 10.0.2.11 at the gateway.\newline
+2. Collect SSH authentication logs and preserve disk, memory, and relevant network evidence from \texttt{server\_ssh}. 
+
+\textbf{\#\#\# Instruction:}
+Generate the next concrete recovery action for the prioritized target server.
+The action should advance at least one currently false recovery-state field,
+avoid repeating previous actions, and minimize unnecessary service disruption.
+Follow the preferred trajectory: (1) contain the attack, (2) gather information,
+(3) preserve evidence, (4) eradicate the attacker, (5) harden the target and
+its attack path, and (6) restore operational services. Include other hosts or
+gateway controls only when needed to recover the prioritized server. Return
+only a JSON object with string fields \texttt{Action} and
+\texttt{Explanation}.
+
+\textbf{\#\#\# Response:}
+\texttt{<think>}
+\end{tcolorbox}
+\caption{Prompt template for high-level recovery-action generation. The model
+is instructed to follow the recovery trajectory while focusing on the
+prioritized server and maintaining consistency with previous actions.}
+\Description{A boxed prompt template containing the system, logs, incident,
+current recovery state, prioritized target server, and previous recovery
+actions. The instruction requests the next high-level recovery action and its
+explanation as JSON.}
+\label{fig:action-prompt}
+\end{figure}
+
+
+
+
+
+
+\end{document}
+

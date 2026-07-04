@@ -1,0 +1,171 @@
+\begin{tikzpicture}
+\begin{axis}[
+name=systemleftaxis,
+scale only axis,
+ybar,
+ymin=0,
+ymax=225,
+ylabel={Recovery time (s)},
+axis x line=bottom,
+axis y line=left,
+axis line style={-|},
+ymajorgrids,
+grid style={gray!25},
+width=1.08\linewidth,
+height=4.8cm,
+bar width=0.16cm,
+xmin=-0.25,
+xmax=3.35,
+xtick={0.35,1.55,2.75},
+xticklabels={Weak-Credential-3,Shellshock-4,Command-Injection-5},
+xtick style={draw=none},
+x tick label style={font=\small,align=center},
+clip=false,
+point meta=y,
+nodes near coords={
+  \pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}
+},
+every node near coord/.append style={
+  anchor=south,
+  yshift=2pt,
+  xshift=-5pt,
+  font=\scriptsize\bfseries
+},
+legend style={
+  nodes={scale=0.80,transform shape},
+  at={(0.5,-0.18)},
+  anchor=north,
+  legend columns=3,
+  draw=none,
+  /tikz/every even column/.append style={column sep=0.16cm}
+},
+]
+
+% Our Agent: patterned recovery-time bars.
+\addplot+[
+draw=black,
+fill=Orange!90,
+postaction={pattern=north east lines},
+bar shift=-0.12cm,
+every node near coord/.append style={text=Orange!80!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,mark size=2pt,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(0.00,44.473) +- (0,5.493)
+(1.20,59.791) +- (0,6.668)
+(2.40,75.184) +- (0,8.330)
+};
+
+% IRCOPILOT: patterned recovery-time bars.
+\addplot+[
+draw=black,
+fill=Gray!55,
+postaction={pattern=north east lines},
+bar shift=-0.12cm,
+every node near coord/.append style={text=Gray!85!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,mark size=2pt,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(0.35,115.470) +- (0,39.097)
+(1.55,120.094) +- (0,11.671)
+(2.75,150.691) +- (0,11.507)
+};
+
+% LLM-IR: patterned recovery-time bars.
+\addplot+[
+draw=black,
+fill=Cyan!50,
+postaction={pattern=north east lines},
+bar shift=-0.12cm,
+every node near coord/.append style={text=Cyan!70!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,mark size=2pt,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(0.70,115.994) +- (0,14.970)
+(1.90,133.276) +- (0,17.791)
+(3.10,173.573) +- (0,36.542)
+};
+
+\legend{
+\textsc{our agent},
+\textsc{ircopilot},
+\textsc{llm-ir}
+}
+\end{axis}
+
+\begin{axis}[
+at={(systemleftaxis.south west)},
+anchor=south west,
+scale only axis,
+ybar,
+ymin=0,
+ymax=110,
+ylabel={Recovery rate (\%)},
+ylabel style={
+  at={(axis description cs:1.12,0.5)},
+  anchor=south
+},
+axis x line=none,
+axis y line*=right,
+axis line style={-|},
+width=1.08\linewidth,
+height=4.8cm,
+bar width=0.16cm,
+xmin=-0.25,
+xmax=3.35,
+xtick=\empty,
+clip=false,
+point meta=y,
+nodes near coords={
+  \pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}\%
+},
+every node near coord/.append style={
+  anchor=south,
+  yshift=1pt,
+  xshift=5pt,
+  font=\scriptsize\bfseries
+},
+]
+
+% Solid bars show recovery rate for the same method and scenario.
+\addplot+[
+draw=black,
+fill=Orange!90,
+bar shift=0.12cm,
+forget plot,
+every node near coord/.append style={text=Orange!80!black}
+] coordinates {
+(0.00,94.4) (1.20,92.6) (2.40,89.7)
+};
+
+\addplot+[
+draw=black,
+fill=Gray!55,
+bar shift=0.12cm,
+forget plot,
+every node near coord/.append style={text=Gray!85!black}
+] coordinates {
+(0.35,58.27) (1.55,54.83) (2.75,51.42)
+};
+
+\addplot+[
+draw=black,
+fill=Cyan!50,
+bar shift=0.12cm,
+forget plot,
+every node near coord/.append style={text=Cyan!70!black}
+] coordinates {
+(0.70,48.16) (1.90,45.78) (3.10,42.54)
+};
+
+\end{axis}
+\end{tikzpicture}

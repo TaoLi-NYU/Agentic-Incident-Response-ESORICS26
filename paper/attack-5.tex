@@ -1,0 +1,242 @@
+
+\begin{tikzpicture}
+\begin{axis}[
+name=leftaxis,
+scale only axis,
+ybar,
+ymin=0,
+ymax=165,
+ylabel={Recovery time (s)},
+ylabel style={yshift=-0.1cm},
+axis x line=bottom,
+axis y line=left,
+axis line style={-|},
+ymajorgrids,
+grid style={gray!25},
+width=1.10\linewidth,
+height=4.2cm,
+bar width=0.20cm,
+xmin=-0.55,
+xmax=6.55,
+xtick=\empty,
+clip=false,
+nodes near coords,
+every node near coord/.append style={
+anchor=south,
+yshift=2pt,
+xshift=-4pt,
+font=\scriptsize\bfseries
+},
+legend style={
+nodes={scale=0.85, transform shape},
+at={(0.5,-0.10)},
+anchor=north,
+legend columns=4,
+draw=none,
+/tikz/every even column/.append style={column sep=0.08cm}
+},
+]
+
+\addplot+[
+draw=black,
+fill=Orange!90,
+postaction={pattern=north east lines},
+bar shift=-0.20cm,
+every node near coord/.append style={yshift=5.5pt,text=Orange!80!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(0,75.184) +- (0,8.33)
+};
+
+\addplot+[
+draw=black,
+fill=Red!90,
+postaction={pattern=north east lines},
+bar shift=-0.20cm,
+every node near coord/.append style={yshift=1.5pt,text=Red!80!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(1,87.391) +- (0,4.425)
+};
+
+\addplot+[
+draw=black,
+fill=OliveGreen!60,
+postaction={pattern=north east lines},
+bar shift=-0.20cm,
+every node near coord/.append style={yshift=5.5pt,text=OliveGreen!80!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(2,100.36) +- (0,9.4235)
+};
+
+\addplot+[
+draw=black,
+fill=Blue!40,
+postaction={pattern=north east lines},
+bar shift=-0.20cm,
+every node near coord/.append style={yshift=8pt,text=Blue!75!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(3,113.516) +- (0,12.168)
+};
+
+\addplot+[
+draw=black,
+fill=Purple!45,
+postaction={pattern=north east lines},
+bar shift=-0.20cm,
+every node near coord/.append style={yshift=5pt,text=Purple!80!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(4,86.513) +- (0,7.578)
+};
+
+\addplot+[
+draw=black,
+fill=Cyan!50,
+postaction={pattern=north east lines},
+bar shift=-0.20cm,
+every node near coord/.append style={text=Cyan!70!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(5,124.940) +- (0,12.360)
+};
+
+\addplot+[
+draw=black,
+fill=Gray!55,
+postaction={pattern=north east lines},
+bar shift=-0.20cm,
+every node near coord/.append style={text=Gray!85!black},
+error bars/.cd,
+error bar style={draw=black},
+error mark options={rotate=90,draw=black,fill=black},
+y dir=both,
+y explicit,
+] coordinates {
+(6,111.478) +- (0,38.465)
+};
+
+\legend{
+\hspace{-2.7cm}\textsc{our agent},
+\textsc{gpt-5.5},
+\textsc{gemini-3.1-pro-preview},
+\textsc{deepseek-v4-pro},
+\textsc{claude-opus-4.8 (high effort)},
+\textsc{llm-ir},
+\hspace{-1.9cm}\textsc{ircopilot}
+}
+
+\end{axis}
+
+\begin{axis}[
+at={(leftaxis.south west)},
+anchor=south west,
+scale only axis,
+ybar,
+ymin=0,
+ymax=110,
+ylabel={Recovery rate (\%)},
+ylabel style={
+at={(axis description cs:1.11,0.5)},
+anchor=south
+},
+axis x line=none,
+axis y line*=right,
+axis line style={-|},
+width=1.10\linewidth,
+height=4.2cm,
+bar width=0.20cm,
+xmin=-0.55,
+xmax=6.55,
+xtick=\empty,
+clip=false,
+point meta=y,
+nodes near coords={
+\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}\%
+},
+every node near coord/.append style={
+anchor=south,
+yshift=0pt,
+xshift=4pt,
+font=\scriptsize\bfseries
+},
+]
+
+\addplot+[
+draw=black,
+fill=Orange!90,
+bar shift=0.20cm,
+every node near coord/.append style={text=Orange!80!black}
+]
+coordinates {(0,89.7)};
+\addplot+[
+draw=black,
+fill=Red!90,
+bar shift=0.20cm,
+every node near coord/.append style={text=Red!80!black}
+]
+coordinates {(1,61.0)};
+\addplot+[
+draw=black,
+fill=OliveGreen!60,
+bar shift=0.20cm,
+every node near coord/.append style={text=OliveGreen!80!black}
+]
+coordinates {(2,47.3)};
+\addplot+[
+draw=black,
+fill=Blue!40,
+bar shift=0.20cm,
+every node near coord/.append style={text=Blue!75!black}
+]
+coordinates {(3,46.8)};
+\addplot+[
+draw=black,
+fill=Purple!45,
+bar shift=0.20cm,
+every node near coord/.append style={text=Purple!80!black}
+]
+coordinates {(4,64.2)};
+\addplot+[
+draw=black,
+fill=Cyan!50,
+bar shift=0.20cm,
+every node near coord/.append style={text=Cyan!70!black}
+]
+coordinates {(5,47.9)};
+\addplot+[
+draw=black,
+fill=Gray!55,
+bar shift=0.20cm,
+every node near coord/.append style={text=Gray!85!black}
+]
+coordinates {(6,64.7)};
+
+\end{axis}
+\end{tikzpicture}
