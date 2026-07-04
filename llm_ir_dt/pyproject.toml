@@ -1,0 +1,67 @@
+[project]
+name = "llm-ir-dt"
+description = "Dockerized incident response testbed (digital twin)"
+dynamic = ["version", "authors", "requires-python"]
+license = { file = "LICENSE.md" }
+readme = "README.md"
+keywords = ["Cyber-Security", "Incident-Response", "Digital-Twin"]
+maintainers = [
+    { name = "Kim Hammar", email = "hammar.kim@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Science/Research"
+]
+dependencies = [
+    "docker==7.1.0",
+    "requests==2.32.3",
+    "pydantic==2.10.6",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "pytest-mock>=3.6.0",
+    "mypy>=1.7.0",
+    "mypy-extensions>=1.0.0",
+    "types-requests>=2.31.0",
+    "flake8>=6.1.0",
+    "flake8-rst-docstrings>=0.3.0",
+    "tox>=4.24.1",
+    "build>=0.10.0"
+]
+
+[project.urls]
+"Homepage" = "https://kim-hammar.com"
+"Source" = "https://github.com/Kim-Hammar/llm_ir_dt"
+
+[build-system]
+requires = ["setuptools==75.7.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "-p no:warnings"
+testpaths = [
+    "tests",
+]
+log_cli = 1
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[tool.mypy]
+mypy_path = "src"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true

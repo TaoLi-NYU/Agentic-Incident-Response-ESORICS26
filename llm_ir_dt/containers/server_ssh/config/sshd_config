@@ -1,0 +1,6 @@
+Port 22
+PermitRootLogin yes
+PasswordAuthentication yes
+MaxAuthTries 100
+UsePAM yes
+Subsystem sftp /usr/lib/openssh/sftp-server

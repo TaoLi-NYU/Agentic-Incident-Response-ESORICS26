@@ -1,0 +1,20 @@
+# 表示：去 ./containers/gateway 目录里找 Dockerfile, 然后：👉 根据 Dockerfile 构建一个镜像
+services:
+  gateway:
+    build: ./containers/gateway
+    image: llm_ir_dt-gateway:latest # 构建完成后，给这个镜像取个名字叫 llm_ir_dt-gateway:latest
+  client:
+    build: ./containers/client
+    image: llm_ir_dt-client:latest
+  server_ssh:
+    build: ./containers/server_ssh
+    image: llm_ir_dt-server_ssh:latest
+  server_samba:
+    build: ./containers/server_samba
+    image: llm_ir_dt-server_samba:latest
+  server_shellshock:
+    build: ./containers/server_shellshock
+    image: llm_ir_dt-server_shellshock:latest
+  server_web:
+    build: ./containers/server_web
+    image: llm_ir_dt-server_web:latest

@@ -1,0 +1,19 @@
+services:
+  gateway:
+    build: ./containers/gateway
+    image: llm_ir_dt-gateway:latest
+  client:
+    build: ./containers/client
+    image: llm_ir_dt-client:latest
+  server_ssh:
+    build: ./containers/server_ssh
+    image: llm_ir_dt-server_ssh:latest
+  server_samba:
+    build: ./containers/server_samba
+    image: llm_ir_dt-server_samba:latest
+  server_shellshock:
+    build: ./containers/server_shellshock
+    image: llm_ir_dt-server_shellshock:latest
+  server_web:
+    build: ./containers/server_web
+    image: llm_ir_dt-server_web:latest

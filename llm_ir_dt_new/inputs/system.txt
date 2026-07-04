@@ -1,0 +1,11 @@
+The testbed is a Dockerized incident response digital twin designed for autonomous incident response research. It emulates a small segmented IT infrastructure with two networks: a client network (10.0.1.0/24) and a server network (10.0.2.0/24). These two networks are connected through a gateway container that functions both as a router and as a Snort IDS sensor.
+
+The gateway container has IP address 10.0.1.10 on the client network and 10.0.2.10 on the server network. It runs Snort IDS for traffic monitoring and iptables for network control. A client container with IP address 10.0.1.11 resides on the client network and includes common network testing utilities such as nmap, hydra, curl, smbclient, and sshpass, which are used to generate experimental traffic.
+
+The server network contains five servers. server_ssh at 10.0.2.11 provides OpenSSH on TCP port 22. server_samba at 10.0.2.12 provides Samba file-sharing services on TCP ports 139 and 445. server_shellshock at 10.0.2.13 runs Apache with CGI support on TCP port 80.
+
+server_web1 at 10.0.2.14 runs Nginx on TCP port 80 and OpenSSH on TCP port 22. It also runs a small HTTP service on TCP port 8080. This service provides an /upload endpoint that accepts a name query parameter and stores submitted content under /var/www/html/uploads/. Files stored under /var/www/html/uploads/ are served through the web server under the /uploads/ path.
+
+server_web2 at 10.0.2.15 runs Nginx on TCP port 80 and OpenSSH on TCP port 22. It also runs a small HTTP diagnostic service on TCP port 8081. This service provides a /diag endpoint that accepts a target query parameter and returns diagnostic output.
+
+The gateway monitors traffic flowing between the client and server networks.

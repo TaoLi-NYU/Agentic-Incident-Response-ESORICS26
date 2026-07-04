@@ -1,0 +1,364 @@
+Digital Twin Command Context for llm_ir_dt_new
+
+Purpose
+
+Use this context when converting a high-level recovery action into concrete
+commands for the llm_ir_dt_new Docker digital twin. Commands are executed with
+DockerManager.exec_run(container, command), inside the named container. This is
+not a full VM and not a systemd host.
+
+Execution Boundary
+
+- Commands must run inside one of these containers only:
+  - gateway
+  - client
+  - server_ssh
+  - server_samba
+  - server_shellshock
+  - server_web1
+  - server_web2
+- Do not generate host-level commands.
+- Do not use docker, sudo, systemctl, package managers, network downloads,
+  reverse shells, or arbitrary script execution.
+- Do not stop SSH service as a recovery action.
+- Avoid commands that depend on a full init system.
+
+Topology
+
+- client_net: 10.0.1.0/24
+- server_net: 10.0.2.0/24
+- gateway:
+  - client_net IP: 10.0.1.10
+  - server_net IP: 10.0.2.10
+  - image: llm_ir_dt-gateway:latest
+  - has NET_ADMIN and NET_RAW
+  - runs Snort on interfaces and keeps logs under /var/log/snort/
+  - routes traffic between client_net and server_net
+- client:
+  - IP: 10.0.1.11
+  - image: llm_ir_dt-client:latest
+  - attacker platform
+  - installed attack tools include openssh-client, sshpass, nmap, curl,
+    hydra, smbclient, iproute2, iputils-ping, netcat-openbsd
+  - password list exists at /opt/passwords.txt
+- server_ssh:
+  - IP: 10.0.2.11
+  - image: llm_ir_dt-server_ssh:latest
+  - Ubuntu 22.04
+  - installed tools include openssh-server, curl, iproute2, iputils-ping
+  - entrypoint starts SSH directly with /usr/sbin/sshd
+  - no systemd assumption
+  - vulnerable user: admin / password123
+  - root password in lab image: toor
+  - /etc/ssh/sshd_config starts with:
+    - Port 22
+    - PermitRootLogin yes
+    - PasswordAuthentication yes
+    - MaxAuthTries 100
+
+Gateway IDS Rules
+
+- ICMP traffic detection.
+- SSH brute-force threshold to HOME_NET port 22.
+- SSH connection attempt alerts to HOME_NET port 22.
+- SMB traffic alerts to 10.0.2.12 ports 445 and 139.
+- Shellshock HTTP payload detection.
+- General HTTP traffic detection.
+
+Attack Behavior from run_attack.py
+
+- Attacker host is client / 10.0.1.11.
+- SSH target is server_ssh / 10.0.2.11.
+- Attack performs ICMP reconnaissance, nmap port scanning, SSH brute force,
+  SSH login as admin using password123, reads host information and /etc/passwd,
+  probes SMB and Shellshock services, and performs lateral movement probes from
+  server_ssh.
+- The attack does not intentionally stop sshd. SSH can remain healthy while
+  the server is still compromised or vulnerable.
+
+Command Safety Contract
+
+- Prefer simple commands using the allowlisted executables:
+  apachectl, cat, chmod, cp, curl, find, grep, head, ip, iptables,
+  iptables-save, ls, mkdir, nginx, passwd, pgrep, ping, pkill, ps, sed,
+  service, ss, sshd, tar, test, touch, true, uname.
+- Do not use rm. The current safety layer rejects rm. For eradication, prefer
+  disabling access, changing vulnerable configuration, killing active attacker
+  tooling with pkill, and writing the target-specific eradicated.marker after
+  the remedial action succeeds.
+- Do not use echo. Use touch for marker files and cat/cp/sed/chmod for file
+  changes.
+- Do not use printf. The command safety layer rejects printf.
+- Do not use pkill -f vulnerable in server_shellshock. It can kill the command
+  shell itself. For Shellshock eradication/hardening, preserve
+  /usr/lib/cgi-bin/vulnerable first, then use:
+  - chmod -x /usr/lib/cgi-bin/vulnerable
+  - apachectl restart
+  - touch /tmp/recovery_artifacts/server_shellshock/eradicated.marker
+- Do not add server_ssh commands or server_ssh verification checks when the
+  selected target is server_samba, server_shellshock, server_web1, or
+  server_web2, unless the high-level action explicitly requires SSH-host
+  evidence. Optional cross-host evidence must not be required for plan success.
+- Do not use systemctl.
+- Do not use service sshd stop.
+- Use simple shell syntax only. Do not use shell negation with !, find -exec,
+  xargs, command substitution, backticks, heredocs, loops, functions, subshells,
+  environment-variable assignments, or backslash line continuations.
+- Do not generate commands that require quoting a literal semicolon for
+  find -exec. If file discovery is needed, prefer simple listing commands such
+  as find PATH -type f > DEST.
+- Never use exit as a command or as part of a shell snippet.
+- Do not use ! grep. Use a positive grep -q check with allowed_exit_codes, or
+  use test where possible. Keep grep commands simple: use only grep -q PATTERN
+  PATH or ps aux | grep [p]attern. Do not use grep -E, grep -i, grep -Ei,
+  unclosed quotes, or multi-line grep patterns.
+- Prefer several short command objects over one long command with complex
+  shell control flow.
+- For containment, only add gateway FORWARD-chain DROP rules between attacker
+  and target. Do not add gateway INPUT-chain or OUTPUT-chain DROP rules.
+- Do not include rollback_commands unless explicitly requested.
+- File names must not contain spaces. Save ps aux output to processes.txt, not
+  to a file named ps aux.
+- If interacting with SSH health, use:
+  - /usr/sbin/sshd -t
+  - pkill sshd 2>/dev/null || true; /usr/sbin/sshd
+  - pgrep sshd
+  - ps aux | grep [s]shd
+  - ss -ltn | grep -q ':22 '
+- Log files may not exist inside minimal containers. Reads of optional logs
+  must not make the whole command fail. Use patterns such as:
+  - cat /var/log/auth.log > DEST 2>/dev/null || true
+  - cp /var/log/snort/alert DEST 2>/dev/null || true
+  - cat /var/log/auth.log > DEST 2>/dev/null || true
+- Do not make optional log files hard verification requirements with
+  allowed_exit_codes [0]. Either omit optional verification or use
+  allowed_exit_codes [0, 1].
+
+Preferred Evidence and Artifact Paths
+
+- For server_ssh evidence that should satisfy the verifier, prefer:
+  - /tmp/recovery_evidence/server_ssh/
+- For server_ssh knowledge/artifacts that should satisfy the verifier, prefer:
+  - /tmp/recovery_artifacts/server_ssh/
+- For non-SSH target servers, use the same target-specific path pattern:
+  - /tmp/recovery_evidence/<target_server>/
+  - /tmp/recovery_artifacts/<target_server>/
+  Examples:
+  - /tmp/recovery_evidence/server_samba/
+  - /tmp/recovery_artifacts/server_samba/
+  - /tmp/recovery_evidence/server_shellshock/
+  - /tmp/recovery_artifacts/server_shellshock/
+- For gateway evidence, prefer:
+  - /tmp/recovery_evidence_gateway_/
+- The older Codex-generated PowerShell plan used:
+  - /var/ir/evidence211/
+  This path is acceptable for compatibility, but /tmp/recovery_evidence/server_ssh/
+  and /tmp/recovery_artifacts/server_ssh/ are preferred because the current
+  Python verifier checks those paths directly.
+- Do not invent paths such as /tmp/recovery_evidence_ssh/.
+
+State Verifier Expectations for server_ssh
+
+- is_attack_contained:
+  - gateway FORWARD rules contain attacker IP 10.0.1.11, target IP 10.0.2.11,
+    and DROP.
+  - client ping to 10.0.2.11 fails.
+- is_knowledge_sufficient:
+  - server_ssh has nonempty /tmp/recovery_artifacts/server_ssh/ip_addr.txt.
+  - server_ssh has nonempty /tmp/recovery_artifacts/server_ssh/passwd.txt.
+- are_forensics_preserved:
+  - server_ssh has nonempty /tmp/recovery_evidence/server_ssh/passwd.txt.
+  - server_ssh has nonempty /tmp/recovery_evidence/server_ssh/home_admin.txt.
+- is_eradicated:
+  - server_ssh has marker file
+    /tmp/recovery_artifacts/server_ssh/eradicated.marker.
+- is_hardened:
+  - /etc/ssh/sshd_config contains PermitRootLogin no.
+  - /etc/ssh/sshd_config contains PasswordAuthentication no.
+- is_recovered:
+  - sshd is healthy and all other recovery states above are true.
+  - Service health alone is not enough for is_recovered.
+
+State Verifier Expectations for Non-SSH Target Servers
+
+- The current target is passed separately as server / server_ip. Do not assume
+  server_ssh or 10.0.2.11 unless that is the selected target.
+- is_attack_contained:
+  - gateway FORWARD rules contain attacker IP 10.0.1.11, current target IP,
+    and DROP.
+  - client ping to the current target IP fails.
+- is_knowledge_sufficient:
+  - target container has nonempty /tmp/recovery_artifacts/<target>/ip_addr.txt.
+  - target container has nonempty /tmp/recovery_artifacts/<target>/processes.txt.
+- are_forensics_preserved:
+  - server_samba: preserve Samba logs, share listings, or share snapshot.
+  - server_shellshock: preserve Apache logs or the CGI file.
+  - server_web1/server_web2: preserve Nginx logs or relevant host evidence.
+- is_eradicated:
+  - target container has /tmp/recovery_artifacts/<target>/eradicated.marker.
+- is_hardened:
+  - server_samba: /etc/samba/smb.conf contains guest ok = no and read only = yes.
+  - server_shellshock: /usr/lib/cgi-bin/vulnerable is no longer executable.
+  - server_web1/server_web2: nginx -t and /usr/sbin/sshd -t pass, or a
+    hardened.marker is present.
+- is_recovered:
+  - target service is healthy and all other recovery states above are true.
+  - server_samba health: smbd process is running.
+  - server_shellshock health: Apache process is running.
+  - server_web1/server_web2 health: Nginx and sshd are running.
+
+Known-Good Command Patterns
+
+Containment on gateway:
+
+- iptables -I FORWARD 1 -s 10.0.1.11 -d 10.0.2.11 -j DROP
+- iptables -I FORWARD 1 -s 10.0.2.11 -d 10.0.1.11 -j DROP
+- iptables-save
+- Verification from client should expect ping failure:
+  - ping -c 2 10.0.2.11
+  - allowed_exit_codes should include 1 and 2 for this containment test.
+
+Knowledge collection for verifier on server_ssh:
+
+- mkdir -p /tmp/recovery_artifacts/server_ssh
+- ip addr > /tmp/recovery_artifacts/server_ssh/ip_addr.txt
+- ip route > /tmp/recovery_artifacts/server_ssh/ip_route.txt
+- ps aux > /tmp/recovery_artifacts/server_ssh/processes.txt
+- cat /etc/passwd > /tmp/recovery_artifacts/server_ssh/passwd.txt
+
+Knowledge collection for non-SSH target verifier:
+
+- mkdir -p /tmp/recovery_artifacts/<target_server>
+- ip addr > /tmp/recovery_artifacts/<target_server>/ip_addr.txt
+- ip route > /tmp/recovery_artifacts/<target_server>/ip_route.txt
+- ps aux > /tmp/recovery_artifacts/<target_server>/processes.txt
+
+Forensics preservation for verifier on server_ssh:
+
+- mkdir -p /tmp/recovery_evidence/server_ssh
+- cat /etc/passwd > /tmp/recovery_evidence/server_ssh/passwd.txt
+- ls -la /home/admin > /tmp/recovery_evidence/server_ssh/home_admin.txt 2>/dev/null || true
+- cp /etc/ssh/sshd_config /tmp/recovery_evidence/server_ssh/sshd_config.before
+- cat /var/log/auth.log > /tmp/recovery_evidence/server_ssh/auth.log 2>/dev/null || true
+
+Forensics preservation examples for non-SSH targets:
+
+- server_samba:
+  - mkdir -p /tmp/recovery_evidence/server_samba
+  - ls -la /srv/share > /tmp/recovery_evidence/server_samba/share_listing.txt 2>/dev/null || true
+  - find /var/log/samba -maxdepth 1 -type f > /tmp/recovery_evidence/server_samba/samba_logs.txt 2>/dev/null || true
+- server_shellshock:
+  - mkdir -p /tmp/recovery_evidence/server_shellshock
+  - cat /var/log/apache2/access.log > /tmp/recovery_evidence/server_shellshock/apache_access.log 2>/dev/null || true
+  - cat /var/log/apache2/error.log > /tmp/recovery_evidence/server_shellshock/apache_error.log 2>/dev/null || true
+  - cat /usr/lib/cgi-bin/vulnerable > /tmp/recovery_evidence/server_shellshock/cgi_file.sh 2>/dev/null || true
+- server_web1/server_web2:
+  - mkdir -p /tmp/recovery_evidence/<target_server>
+  - cat /var/log/nginx/access.log > /tmp/recovery_evidence/<target_server>/nginx_access.log 2>/dev/null || true
+  - cat /var/log/nginx/error.log > /tmp/recovery_evidence/<target_server>/nginx_error.log 2>/dev/null || true
+
+Hardening and recovery examples for non-SSH targets:
+
+- server_samba:
+  - sed -i 's/guest ok = yes/guest ok = no/' /etc/samba/smb.conf
+  - sed -i 's/read only = no/read only = yes/' /etc/samba/smb.conf
+  - pkill smbd 2>/dev/null || true; /usr/local/samba/sbin/smbd -s /etc/samba/smb.conf --no-process-group
+  - touch /tmp/recovery_artifacts/server_samba/eradicated.marker
+- server_shellshock:
+  - chmod -x /usr/lib/cgi-bin/vulnerable
+  - apachectl restart
+  - touch /tmp/recovery_artifacts/server_shellshock/eradicated.marker
+- server_web1/server_web2:
+  - nginx -t
+  - /usr/sbin/sshd -t
+  - pkill nginx 2>/dev/null || true; nginx
+  - pkill sshd 2>/dev/null || true; /usr/sbin/sshd
+  - touch /tmp/recovery_artifacts/<target_server>/eradicated.marker
+  - touch /tmp/recovery_artifacts/<target_server>/hardened.marker
+
+Gateway evidence examples:
+
+- mkdir -p /tmp/recovery_evidence_gateway_
+- cp /var/log/snort/alert /tmp/recovery_evidence_gateway_/snort.alert 2>/dev/null || true
+- iptables-save > /tmp/recovery_evidence_gateway_/iptables.rules
+- ip addr > /tmp/recovery_evidence_gateway_/ip_addr.txt
+- ip route > /tmp/recovery_evidence_gateway_/ip_route.txt
+- ps aux > /tmp/recovery_evidence_gateway_/processes.txt
+
+Client knowledge and eradication examples:
+
+- mkdir -p /tmp/recovery_artifacts/server_ssh
+- cat /root/.ssh/known_hosts > /tmp/recovery_artifacts/server_ssh/client_known_hosts.txt 2>/dev/null || true
+- cat /opt/passwords.txt > /tmp/recovery_artifacts/server_ssh/password_list.txt 2>/dev/null || true
+- pkill -9 hydra 2>/dev/null || true
+- pkill -9 nmap 2>/dev/null || true
+- pkill -9 sshpass 2>/dev/null || true
+- pkill -9 ssh 2>/dev/null || true
+
+Eradication marker for verifier on server_ssh:
+
+- mkdir -p /tmp/recovery_artifacts/server_ssh
+- pkill -u admin 2>/dev/null || true
+- passwd -l admin 2>/dev/null || true
+- touch /tmp/recovery_artifacts/server_ssh/eradicated.marker
+- Verification:
+  - test -f /tmp/recovery_artifacts/server_ssh/eradicated.marker
+
+Hardening on server_ssh:
+
+- cp /etc/ssh/sshd_config /tmp/recovery_evidence/server_ssh/sshd_config.before_hardening 2>/dev/null || true
+- sed -i 's/^PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
+- sed -i 's/^#PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
+- sed -i 's/^PasswordAuthentication .*/PasswordAuthentication no/' /etc/ssh/sshd_config
+- sed -i 's/^#PasswordAuthentication .*/PasswordAuthentication no/' /etc/ssh/sshd_config
+- sed -i 's/^MaxAuthTries .*/MaxAuthTries 3/' /etc/ssh/sshd_config
+- /usr/sbin/sshd -t
+- pkill sshd 2>/dev/null || true; /usr/sbin/sshd
+- Verification:
+  - grep -q '^PermitRootLogin no' /etc/ssh/sshd_config
+  - grep -q '^PasswordAuthentication no' /etc/ssh/sshd_config
+
+Recovery service health on server_ssh:
+
+- /usr/sbin/sshd -t
+- pgrep sshd
+- ss -ltn | grep -q ':22 '
+- ps aux | grep [s]shd
+
+Output Requirements
+
+Return only valid JSON in the requested command-plan shape:
+
+{
+  "commands": [
+    {
+      "container": "gateway",
+      "command": "iptables -I FORWARD 1 -s 10.0.1.11 -d 10.0.2.11 -j DROP",
+      "allowed_exit_codes": [0],
+      "description": "Block attacker traffic to the SSH server."
+    }
+  ],
+  "verification_commands": [
+    {
+      "container": "gateway",
+      "command": "iptables-save",
+      "allowed_exit_codes": [0],
+      "description": "Show gateway firewall rules."
+    },
+    {
+      "container": "client",
+      "command": "ping -c 2 10.0.2.11",
+      "allowed_exit_codes": [1, 2],
+      "description": "Confirm the attacker cannot reach the SSH target."
+    }
+  ],
+  "expected_state_change": {
+    "is_attack_contained": true,
+    "is_knowledge_sufficient": false,
+    "are_forensics_preserved": false,
+    "is_eradicated": false,
+    "is_hardened": false,
+    "is_recovered": false
+  },
+  "rollback_commands": []
+}

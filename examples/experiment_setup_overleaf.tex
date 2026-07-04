@@ -1,0 +1,72 @@
+\subsection{Fine-Tuning Datasets and Training Configuration}
+
+We instantiate the agentic model $\Phi_w$ with
+\texttt{deepseek-ai/DeepSeek-R1-Distill-Qwen-14B} and adapt it using LoRA. The
+base-model parameters remain frozen during fine-tuning, while the trainable
+parameters are restricted to the LoRA adapter weights. The checkpoint used in
+the experiments is denoted by \texttt{checkpoint-850}.
+
+The supervised fine-tuning corpus consists of four instruction-answer datasets.
+Let
+\[
+    \mathcal{D}
+    =
+    \mathcal{D}_{\mathrm{state}}
+    \cup
+    \mathcal{D}_{\mathrm{action}}
+    \cup
+    \mathcal{D}_{\mathrm{incident}}
+    \cup
+    \mathcal{D}_{\mathrm{local}},
+\]
+where each element $(\mathbf{x}^i,\mathbf{y}^i)\in\mathcal{D}$ contains an
+instruction prompt $\mathbf{x}^i$ and a target response $\mathbf{y}^i$.
+
+\begin{itemize}
+    \item \textbf{State prediction dataset}
+    $\mathcal{D}_{\mathrm{state}}$. We use \texttt{states\_examples.json} from
+    \texttt{kimhammar/CSLE-IncidentResponse-V1}. This dataset provides
+    supervision for predicting incident-response state transitions.
+
+    \item \textbf{Recovery action dataset}
+    $\mathcal{D}_{\mathrm{action}}$. We use \texttt{action\_examples.json} from
+    \texttt{kimhammar/CSLE-IncidentResponse-V1}. This dataset provides
+    supervision for generating high-level response and recovery actions.
+
+    \item \textbf{Incident understanding dataset}
+    $\mathcal{D}_{\mathrm{incident}}$. We use \texttt{incident\_examples.json}
+    from \texttt{kimhammar/CSLE-IncidentResponse-V1}. This dataset provides
+    supervision for extracting incident descriptions, involved entities, and
+    security-relevant labels from system and log evidence.
+
+    \item \textbf{Local transformed incident classification dataset}
+    $\mathcal{D}_{\mathrm{local}}$. We use a local JSON dataset,
+    \texttt{transformed\_dataset\_cls\_pri\_all2preprocessing.json}, to provide
+    additional supervision for identifying targeted systems and
+    recovery-relevant assets.
+\end{itemize}
+
+In the final four-dataset training run, we sample at most 5,000 examples from
+$\mathcal{D}_{\mathrm{state}}$, 5,000 examples from
+$\mathcal{D}_{\mathrm{action}}$, 15,000 examples from
+$\mathcal{D}_{\mathrm{incident}}$, and 5,000 examples from
+$\mathcal{D}_{\mathrm{local}}$. This yields at most 30,000 supervised
+instruction-answer pairs. The combined training set is shuffled using random
+seed 99125.
+
+The LoRA configuration is given by rank $r=64$, scaling factor
+$\alpha=128$, and dropout probability $0.05$. The adapter is applied to the
+\texttt{q\_proj} and \texttt{v\_proj} modules, with no trainable bias terms.
+The resulting adapter contains 50,331,648 trainable parameters, corresponding
+to approximately 0.36\% of the 14B-parameter base model.
+
+The training uses fused AdamW with learning rate $9.5\times 10^{-4}$ and a
+linear learning-rate schedule. The per-device batch size is 1, with 32 gradient
+accumulation steps, giving an effective batch size of 32. We train for one
+epoch using bfloat16 precision, maximum gradient norm 1.0, no warmup steps, and
+no weight decay. We log the training loss at every optimization step and save a
+checkpoint every 50 steps, retaining the latest three checkpoints. The
+checkpoint used in the experiments is taken at global step 850, which
+corresponds to approximately 0.907 training epochs, with logged training loss
+0.6054.
+

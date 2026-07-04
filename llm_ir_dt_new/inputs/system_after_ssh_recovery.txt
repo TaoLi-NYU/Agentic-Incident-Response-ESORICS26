@@ -1,0 +1,41 @@
+The testbed is a Dockerized incident response digital twin designed for autonomous incident response research. It emulates a small segmented IT infrastructure with two networks: a client network (10.0.1.0/24) and a server network (10.0.2.0/24). These two networks are connected through a gateway container that functions both as a router and as a Snort IDS sensor.
+
+The gateway container has IP address 10.0.1.10 on the client network and 10.0.2.10 on the server network. It runs Snort IDS for traffic monitoring and iptables for network control. A client container with IP address 10.0.1.11 resides on the client network and includes common network testing utilities such as nmap, hydra, curl, smbclient, and sshpass, which are used to generate experimental attack traffic.
+
+The server network contains five servers. server_ssh at 10.0.2.11 provides OpenSSH. server_samba at 10.0.2.12 provides Samba file-sharing services. server_shellshock at 10.0.2.13 runs Apache with CGI support. In addition, server_web1 at 10.0.2.14 and server_web2 at 10.0.2.15 run Nginx and OpenSSH as additional web servers.
+
+The gateway monitors traffic flowing between the client and server networks.
+
+Current recovery context:
+Before the current alert analysis, the SSH server server_ssh at 10.0.2.11 was already selected for recovery and a recovery workflow was executed against it. This means that 10.0.2.11 should be treated as a previously recovered server, not as an unrecovered compromised server, unless the new logs provide strong evidence of a fresh compromise after recovery.
+
+The executed recovery for server_ssh / 10.0.2.11 included the following actions:
+- Containment: gateway firewall rules were inserted to drop traffic from attacker 10.0.1.11 to 10.0.2.11 and from 10.0.2.11 back to 10.0.1.11. Verification confirmed that the client could no longer ping 10.0.2.11.
+- Evidence preservation and knowledge collection: forensic and operational evidence was collected from server_ssh and gateway, including network configuration, routing table, process list, account files, SSH configuration, Snort alerts, and iptables rules under evidence directories such as /var/ir/evidence211/ and /tmp/recovery_evidence/server_ssh/.
+- Eradication: processes owned by the compromised admin user were terminated where present, the admin and root accounts were locked where possible, and an eradication marker was created at /tmp/recovery_artifacts/server_ssh/eradicated.marker.
+- Hardening: SSH was hardened by setting PermitRootLogin no, PasswordAuthentication no, and MaxAuthTries 3 in /etc/ssh/sshd_config. The SSH daemon configuration was validated with /usr/sbin/sshd -t.
+- Service restoration: the SSH daemon was restarted and verified to be running and listening on port 22.
+
+Observed attack behavior after server_ssh recovery:
+After the server_ssh recovery workflow, the attack script was run again. The new attack execution showed that recovery controls on 10.0.2.11 were effective even though IDS alerts still recorded attack attempts against 10.0.2.11.
+
+The post-recovery attack execution produced the following important outcomes:
+- ICMP reachability to 10.0.2.11 failed: ping -c 3 10.0.2.11 returned 100% packet loss.
+- Nmap did not report 10.0.2.11 as an up host in the port scan results, while 10.0.2.12, 10.0.2.13, 10.0.2.14, and 10.0.2.15 were still up.
+- Hydra against ssh://10.0.2.11:22 failed with a timeout: "could not connect to ssh://10.0.2.11:22 - Timeout connecting to 10.0.2.11".
+- Direct SSH login with stolen credentials to admin@10.0.2.11 failed repeatedly with "connect to host 10.0.2.11 port 22: Connection timed out".
+- Attempts to read /etc/passwd and /etc/shadow on 10.0.2.11 over SSH also failed with SSH connection timeouts.
+- Lateral movement attempts through 10.0.2.11 failed. SSH commands that tried to pivot from 10.0.2.11 to 10.0.2.12 and 10.0.2.13 both timed out.
+
+At the same time, the post-recovery attack execution showed that other services remained vulnerable or reachable:
+- SMB enumeration on server_samba / 10.0.2.12 succeeded.
+- Writing evil_payload.txt to the Samba share on 10.0.2.12 succeeded.
+- Shellshock exploitation on server_shellshock / 10.0.2.13 succeeded and returned command output including uid=33(www-data).
+- HTTP probing of server_web1 / 10.0.2.14 and server_web2 / 10.0.2.15 returned HTTP 200.
+
+Therefore, if the current IDS alerts include SSH connection attempts or SSH brute-force alerts against 10.0.2.11, interpret those as blocked or failed post-recovery attack attempts unless there is explicit evidence of successful SSH login, command execution, credential theft, or lateral movement through 10.0.2.11 after recovery. In contrast, successful SMB activity against 10.0.2.12 and successful Shellshock execution against 10.0.2.13 should be treated as evidence of unrecovered active compromise risk.
+
+Important interpretation rule:
+The current logs may still contain reconnaissance, scans, or failed attack attempts against 10.0.2.11 because the attack script may try to attack all known services again. Such attempts alone do not mean that 10.0.2.11 is unrecovered. Distinguish between new attack attempts against a recovered server and evidence that the recovery controls failed. For planning the next recovery target, prioritize unrecovered servers with supported attack evidence, especially 10.0.2.12 and 10.0.2.13 if they appear in the logs.
+
+

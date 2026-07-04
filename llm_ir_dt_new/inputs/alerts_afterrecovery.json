@@ -1,0 +1,2815 @@
+{
+  "alerts": [
+    {
+      "raw": "05/31-04:39:45.975516  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.10",
+      "timestamp": "05/31-04:39:45.975516",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:39:45.975534  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.1.11",
+      "timestamp": "05/31-04:39:45.975534",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:39:47.026200  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.10",
+      "timestamp": "05/31-04:39:47.026200",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:39:47.026217  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.1.11",
+      "timestamp": "05/31-04:39:47.026217",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:39:48.050198  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.10",
+      "timestamp": "05/31-04:39:48.050198",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:39:48.050214  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.1.11",
+      "timestamp": "05/31-04:39:48.050214",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:39:48.118706  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11",
+      "timestamp": "05/31-04:39:48.118706",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.11"
+    },
+    {
+      "raw": "05/31-04:39:49.138212  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11",
+      "timestamp": "05/31-04:39:49.138212",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.11"
+    },
+    {
+      "raw": "05/31-04:39:50.162206  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11",
+      "timestamp": "05/31-04:39:50.162206",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.11"
+    },
+    {
+      "raw": "05/31-04:40:00.226675  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:00.226675",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:00.226724  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:00.226724",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:00.226640  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:00.226640",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:00.226727  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:00.226727",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:01.234199  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:01.234199",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:01.234216  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:01.234216",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:01.234180  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:01.234180",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:01.234219  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:01.234219",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:02.258205  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:02.258205",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:02.258223  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:02.258223",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:02.323273  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:02.323273",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:02.323316  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:02.323316",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:02.258188  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:02.258188",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:02.258225  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:02.258225",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:02.323252  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:02.323252",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:02.323319  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:02.323319",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:03.346283  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:03.346283",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:03.346300  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:03.346300",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:03.346265  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:03.346265",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:03.346302  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:03.346302",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:04.370226  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:04.370226",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:04.370245  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:04.370245",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:04.430485  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:04.430485",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:04.430525  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:04.430525",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:04.370209  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:04.370209",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:04.370248  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:04.370248",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:04.430465  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:04.430465",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:04.430528  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:04.430528",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:05.458203  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:05.458203",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:05.458218  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:05.458218",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:05.458186  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:05.458186",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:05.458221  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:05.458221",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:06.482241  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:06.482241",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:06.482257  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:06.482257",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:06.543665  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:06.543665",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:06.543705  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:06.543705",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:06.482223  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:06.482223",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:06.482259  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:06.482259",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:06.543644  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:06.543644",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:06.543708  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:06.543708",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:07.570253  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:07.570253",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:07.570271  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:07.570271",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:07.570235  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:07.570235",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:07.570274  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:07.570274",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:08.594216  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:08.594216",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:08.594233  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:08.594233",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:08.701582  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:08.701582",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:08.701602  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:08.701602",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:08.701631  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:08.701631",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:08.701643  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:08.701643",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:08.701656  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:08.701656",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:08.701665  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:08.701665",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:08.701677  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:08.701677",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.10",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:08.701686  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10",
+      "timestamp": "05/31-04:40:08.701686",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.2.10"
+    },
+    {
+      "raw": "05/31-04:40:08.594199  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:08.594199",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:08.594236  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:08.594236",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:08.701562  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12",
+      "timestamp": "05/31-04:40:08.701562",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.12"
+    },
+    {
+      "raw": "05/31-04:40:08.701604  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:08.701604",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.12",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:08.701628  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13",
+      "timestamp": "05/31-04:40:08.701628",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.13"
+    },
+    {
+      "raw": "05/31-04:40:08.701645  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:08.701645",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.13",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:08.701652  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14",
+      "timestamp": "05/31-04:40:08.701652",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.14"
+    },
+    {
+      "raw": "05/31-04:40:08.701666  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:08.701666",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.14",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:08.701673  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15",
+      "timestamp": "05/31-04:40:08.701673",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.15"
+    },
+    {
+      "raw": "05/31-04:40:08.701687  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11",
+      "timestamp": "05/31-04:40:08.701687",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.2.15",
+      "destination": "10.0.1.11"
+    },
+    {
+      "raw": "05/31-04:40:08.701694  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11",
+      "timestamp": "05/31-04:40:08.701694",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.11"
+    },
+    {
+      "raw": "05/31-04:40:08.703899  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11",
+      "timestamp": "05/31-04:40:08.703899",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.11"
+    },
+    {
+      "raw": "05/31-04:40:09.921990  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:34604 -> 10.0.2.13:22",
+      "timestamp": "05/31-04:40:09.921990",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.2.10:34604",
+      "destination": "10.0.2.13:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922049  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:47406 -> 10.0.2.14:22",
+      "timestamp": "05/31-04:40:09.922049",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.2.10:47406",
+      "destination": "10.0.2.14:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922148  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:36250 -> 10.0.2.15:22",
+      "timestamp": "05/31-04:40:09.922148",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.2.10:36250",
+      "destination": "10.0.2.15:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922229  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:39224 -> 10.0.2.12:22",
+      "timestamp": "05/31-04:40:09.922229",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.2.10:39224",
+      "destination": "10.0.2.12:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922415  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:48106 -> 10.0.2.12:139",
+      "timestamp": "05/31-04:40:09.922415",
+      "message": "[1:1000004:2] SMB traffic to Samba server (NetBIOS)",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:48106",
+      "destination": "10.0.2.12:139"
+    },
+    {
+      "raw": "05/31-04:40:09.922440  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:48106 -> 10.0.2.12:139",
+      "timestamp": "05/31-04:40:09.922440",
+      "message": "[1:1000004:2] SMB traffic to Samba server (NetBIOS)",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:48106",
+      "destination": "10.0.2.12:139"
+    },
+    {
+      "raw": "05/31-04:40:09.922484  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:60736 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:40:09.922484",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:60736",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:40:09.922537  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:39028 -> 10.0.2.14:80",
+      "timestamp": "05/31-04:40:09.922537",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:39028",
+      "destination": "10.0.2.14:80"
+    },
+    {
+      "raw": "05/31-04:40:09.922611  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:48106 -> 10.0.2.12:139",
+      "timestamp": "05/31-04:40:09.922611",
+      "message": "[1:1000004:2] SMB traffic to Samba server (NetBIOS)",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:48106",
+      "destination": "10.0.2.12:139"
+    },
+    {
+      "raw": "05/31-04:40:09.922872  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:33064 -> 10.0.2.15:80",
+      "timestamp": "05/31-04:40:09.922872",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:33064",
+      "destination": "10.0.2.15:80"
+    },
+    {
+      "raw": "05/31-04:40:09.922949  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:36762 -> 10.0.2.12:80",
+      "timestamp": "05/31-04:40:09.922949",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:36762",
+      "destination": "10.0.2.12:80"
+    },
+    {
+      "raw": "05/31-04:40:09.923023  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:43936 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:40:09.923023",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:43936",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:40:09.923040  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:43936 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:40:09.923040",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:43936",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:40:09.923069  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:43936 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:40:09.923069",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:43936",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:40:09.802986  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11",
+      "timestamp": "05/31-04:40:09.802986",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.11"
+    },
+    {
+      "raw": "05/31-04:40:09.803027  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11",
+      "timestamp": "05/31-04:40:09.803027",
+      "message": "[1:1000001:2] ICMP traffic detected",
+      "classification": "Attempted Information Leak",
+      "priority": "2",
+      "protocol": "ICMP",
+      "source": "10.0.1.11",
+      "destination": "10.0.2.11"
+    },
+    {
+      "raw": "05/31-04:40:09.921975  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:34604 -> 10.0.2.13:22",
+      "timestamp": "05/31-04:40:09.921975",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:34604",
+      "destination": "10.0.2.13:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922044  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:47406 -> 10.0.2.14:22",
+      "timestamp": "05/31-04:40:09.922044",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:47406",
+      "destination": "10.0.2.14:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922141  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:36250 -> 10.0.2.15:22",
+      "timestamp": "05/31-04:40:09.922141",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:36250",
+      "destination": "10.0.2.15:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922223  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39224 -> 10.0.2.12:22",
+      "timestamp": "05/31-04:40:09.922223",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39224",
+      "destination": "10.0.2.12:22"
+    },
+    {
+      "raw": "05/31-04:40:09.922410  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:48106 -> 10.0.2.12:139",
+      "timestamp": "05/31-04:40:09.922410",
+      "message": "[1:1000004:2] SMB traffic to Samba server (NetBIOS)",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48106",
+      "destination": "10.0.2.12:139"
+    },
+    {
+      "raw": "05/31-04:40:09.922437  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:48106 -> 10.0.2.12:139",
+      "timestamp": "05/31-04:40:09.922437",
+      "message": "[1:1000004:2] SMB traffic to Samba server (NetBIOS)",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48106",
+      "destination": "10.0.2.12:139"
+    },
+    {
+      "raw": "05/31-04:40:09.922478  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:60736 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:40:09.922478",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:60736",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:40:09.922532  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:39028 -> 10.0.2.14:80",
+      "timestamp": "05/31-04:40:09.922532",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39028",
+      "destination": "10.0.2.14:80"
+    },
+    {
+      "raw": "05/31-04:40:09.922608  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:48106 -> 10.0.2.12:139",
+      "timestamp": "05/31-04:40:09.922608",
+      "message": "[1:1000004:2] SMB traffic to Samba server (NetBIOS)",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48106",
+      "destination": "10.0.2.12:139"
+    },
+    {
+      "raw": "05/31-04:40:09.922867  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:33064 -> 10.0.2.15:80",
+      "timestamp": "05/31-04:40:09.922867",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:33064",
+      "destination": "10.0.2.15:80"
+    },
+    {
+      "raw": "05/31-04:40:09.922943  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:36762 -> 10.0.2.12:80",
+      "timestamp": "05/31-04:40:09.922943",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:36762",
+      "destination": "10.0.2.12:80"
+    },
+    {
+      "raw": "05/31-04:40:09.923020  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:43936 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:40:09.923020",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:43936",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:40:09.923038  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:43936 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:40:09.923038",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:43936",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:40:09.923067  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:43936 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:40:09.923067",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:43936",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:40:10.009583  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:10.009583",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:10.009583  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:10.009583",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:11.026202  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:11.026202",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:12.050192  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:12.050192",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:13.074207  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:13.074207",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:14.098191  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:14.098191",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:15.122170  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:15.122170",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:15.122170  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:15.122170",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:17.170172  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:17.170172",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:21.202196  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:21.202196",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:29.458268  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:29.458268",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59248",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:42.111189  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:42.111189",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:43.154168  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:43.154168",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:43.154168  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:43.154168",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:44.178171  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:44.178171",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:45.202204  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:45.202204",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:46.226163  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:46.226163",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:47.250183  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:47.250183",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:49.298150  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:49.298150",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:49.298150  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:49.298150",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:40:53.330177  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:40:53.330177",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:41:01.714177  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:41:01.714177",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:41:18.098148  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:41:18.098148",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:41:50.354245  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:41:50.354245",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38682",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:42:57.990307  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:42:57.990307",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:42:59.026176  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:42:59.026176",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:00.050171  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:00.050171",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:01.074194  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:01.074194",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:02.098169  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:02.098169",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:02.098169  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:02.098169",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:03.122150  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:03.122150",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:05.170149  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:05.170149",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:09.202163  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:09.202163",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:17.394160  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:17.394160",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:33.778292  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:33.778292",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:43:33.778292  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:43:33.778292",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:44:06.034162  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:44:06.034162",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:48876",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:13.154365  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:13.154365",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:14.194171  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:14.194171",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:15.218236  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:15.218236",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:16.242172  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:16.242172",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:17.266172  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:17.266172",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:17.266172  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:17.266172",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:18.290166  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:18.290166",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:20.338154  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:20.338154",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:24.370240  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:24.370240",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:32.562155  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:32.562155",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:48.946237  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:48.946237",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:45:48.946237  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:45:48.946237",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:46:21.202236  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:46:21.202236",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:50578",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:27.340267  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.340267",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.340402  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.340402",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.340557  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.340557",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.345003  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.345003",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.346464  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.346464",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.347125  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.347125",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.347867  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.347867",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.348411  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.348411",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.348871  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.348871",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349244  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349244",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349626  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349626",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349762  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349762",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349903  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349903",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.353775  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.353775",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.340242  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.340242",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.340399  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.340399",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.340552  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.340552",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.344999  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.344999",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.346455  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.346455",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.347119  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.347119",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.347863  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.347863",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.348407  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.348407",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.348865  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.348865",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349239  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349239",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349622  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349622",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349759  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349759",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.349900  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.349900",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.353768  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.353768",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59464",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.434490  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.434490",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.434548  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.434548",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.434711  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.434711",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.438926  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.438926",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.440355  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.440355",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.440936  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.440936",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.441661  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.441661",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.442086  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442086",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.434508  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.434508",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.434551  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.434551",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.434715  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.434715",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.438930  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.438930",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.440363  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.440363",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.440942  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.440942",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.441666  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.441666",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.442090  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442090",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.442273  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442273",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.442431  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442431",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.442741  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442741",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443174  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443174",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443435  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443435",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443539  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443539",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443685  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443685",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443865  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443865",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444282  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444282",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444426  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444426",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444823  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444823",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444967  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444967",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445383  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445383",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445628  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445628",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445838  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445838",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445922  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445922",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446036  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446036",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446236  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446236",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446537  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446537",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446650  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446650",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446784  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446784",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.449949  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.449949",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.2.10:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.515920  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:49226 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.515920",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:49226",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.516025  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.2.10:49226 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.516025",
+      "message": "[1:1000005:2] Shellshock attack attempt",
+      "classification": "Web Application Attack",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.2.10:49226",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.704444  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:49228 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.704444",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:49228",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.704524  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.2.10:49228 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.704524",
+      "message": "[1:1000005:2] Shellshock attack attempt",
+      "classification": "Web Application Attack",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.2.10:49228",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.889318  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:40172 -> 10.0.2.14:80",
+      "timestamp": "05/31-04:47:27.889318",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:40172",
+      "destination": "10.0.2.14:80"
+    },
+    {
+      "raw": "05/31-04:47:27.959116  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:35306 -> 10.0.2.15:80",
+      "timestamp": "05/31-04:47:27.959116",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.2.10:35306",
+      "destination": "10.0.2.15:80"
+    },
+    {
+      "raw": "05/31-04:47:27.442269  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442269",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.442427  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442427",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.442738  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.442738",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443170  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443170",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443431  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443431",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443536  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443536",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443682  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443682",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.443862  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.443862",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444278  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444278",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444422  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444422",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444819  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444819",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.444963  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.444963",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445374  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445374",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445624  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445624",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445834  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445834",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.445920  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.445920",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446033  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446033",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446231  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446231",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446533  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446533",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446647  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446647",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.446780  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.446780",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.449943  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445",
+      "timestamp": "05/31-04:47:27.449943",
+      "message": "[1:1000003:2] SMB traffic to Samba server",
+      "classification": "Generic Protocol Command Decode",
+      "priority": "3",
+      "protocol": "TCP",
+      "source": "10.0.1.11:59472",
+      "destination": "10.0.2.12:445"
+    },
+    {
+      "raw": "05/31-04:47:27.515902  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:49226 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.515902",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:49226",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.516023  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.1.11:49226 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.516023",
+      "message": "[1:1000005:2] Shellshock attack attempt",
+      "classification": "Web Application Attack",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:49226",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.704427  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:49228 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.704427",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:49228",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.704522  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.1.11:49228 -> 10.0.2.13:80",
+      "timestamp": "05/31-04:47:27.704522",
+      "message": "[1:1000005:2] Shellshock attack attempt",
+      "classification": "Web Application Attack",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:49228",
+      "destination": "10.0.2.13:80"
+    },
+    {
+      "raw": "05/31-04:47:27.889299  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:40172 -> 10.0.2.14:80",
+      "timestamp": "05/31-04:47:27.889299",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:40172",
+      "destination": "10.0.2.14:80"
+    },
+    {
+      "raw": "05/31-04:47:27.959082  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:35306 -> 10.0.2.15:80",
+      "timestamp": "05/31-04:47:27.959082",
+      "message": "[1:1000006:2] HTTP traffic detected",
+      "classification": "access to a potentially vulnerable web application",
+      "priority": "2",
+      "protocol": "TCP",
+      "source": "10.0.1.11:35306",
+      "destination": "10.0.2.15:80"
+    },
+    {
+      "raw": "05/31-04:47:28.028078  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:28.028078",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:29.042175  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:29.042175",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:30.066150  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:30.066150",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:31.090174  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:31.090174",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:32.114166  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:32.114166",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:32.114166  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:32.114166",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:33.138181  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:33.138181",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:35.186182  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:35.186182",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:39.218218  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:39.218218",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:47:47.730141  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:47:47.730141",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:48:04.114188  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:48:04.114188",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:48:04.114188  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:48:04.114188",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:48:36.370192  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:48:36.370192",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:38072",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:42.487436  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:42.487436",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:43.506153  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:43.506153",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:44.530165  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:44.530165",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:45.554199  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:45.554199",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:46.578197  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:46.578197",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:46.578197  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:46.578197",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:47.602165  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:47.602165",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:49.650175  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:49.650175",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:49:53.682158  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:49:53.682158",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:50:01.874186  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:50:01.874186",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:50:18.258189  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:50:18.258189",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:50:18.258189  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:50:18.258189",
+      "message": "[1:1000002:2] Potential SSH brute force attack",
+      "classification": "Attempted Administrator Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    },
+    {
+      "raw": "05/31-04:50:50.514261  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22",
+      "timestamp": "05/31-04:50:50.514261",
+      "message": "[1:1000007:2] SSH connection attempt",
+      "classification": "Attempted User Privilege Gain",
+      "priority": "1",
+      "protocol": "TCP",
+      "source": "10.0.1.11:39382",
+      "destination": "10.0.2.11:22"
+    }
+  ],
+  "raw": "05/31-04:39:45.975516  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.10\n05/31-04:39:45.975534  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.1.11\n05/31-04:39:47.026200  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.10\n05/31-04:39:47.026217  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.1.11\n05/31-04:39:48.050198  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.10\n05/31-04:39:48.050214  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.1.11\n05/31-04:39:48.118706  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11\n05/31-04:39:49.138212  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11\n05/31-04:39:50.162206  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11\n05/31-04:40:00.226675  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12\n05/31-04:40:00.226724  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10\n05/31-04:40:00.226640  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12\n05/31-04:40:00.226727  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11\n05/31-04:40:01.234199  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12\n05/31-04:40:01.234216  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10\n05/31-04:40:01.234180  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12\n05/31-04:40:01.234219  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11\n05/31-04:40:02.258205  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12\n05/31-04:40:02.258223  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10\n05/31-04:40:02.323273  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13\n05/31-04:40:02.323316  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10\n05/31-04:40:02.258188  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12\n05/31-04:40:02.258225  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11\n05/31-04:40:02.323252  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13\n05/31-04:40:02.323319  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11\n05/31-04:40:03.346283  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13\n05/31-04:40:03.346300  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10\n05/31-04:40:03.346265  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13\n05/31-04:40:03.346302  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11\n05/31-04:40:04.370226  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13\n05/31-04:40:04.370245  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10\n05/31-04:40:04.430485  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14\n05/31-04:40:04.430525  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10\n05/31-04:40:04.370209  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13\n05/31-04:40:04.370248  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11\n05/31-04:40:04.430465  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14\n05/31-04:40:04.430528  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11\n05/31-04:40:05.458203  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14\n05/31-04:40:05.458218  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10\n05/31-04:40:05.458186  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14\n05/31-04:40:05.458221  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11\n05/31-04:40:06.482241  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14\n05/31-04:40:06.482257  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10\n05/31-04:40:06.543665  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15\n05/31-04:40:06.543705  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10\n05/31-04:40:06.482223  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14\n05/31-04:40:06.482259  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11\n05/31-04:40:06.543644  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15\n05/31-04:40:06.543708  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11\n05/31-04:40:07.570253  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15\n05/31-04:40:07.570271  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10\n05/31-04:40:07.570235  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15\n05/31-04:40:07.570274  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11\n05/31-04:40:08.594216  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15\n05/31-04:40:08.594233  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10\n05/31-04:40:08.701582  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.12\n05/31-04:40:08.701602  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.2.10\n05/31-04:40:08.701631  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.13\n05/31-04:40:08.701643  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.2.10\n05/31-04:40:08.701656  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.14\n05/31-04:40:08.701665  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.2.10\n05/31-04:40:08.701677  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.10 -> 10.0.2.15\n05/31-04:40:08.701686  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.2.10\n05/31-04:40:08.594199  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15\n05/31-04:40:08.594236  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11\n05/31-04:40:08.701562  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.12\n05/31-04:40:08.701604  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.12 -> 10.0.1.11\n05/31-04:40:08.701628  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.13\n05/31-04:40:08.701645  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.13 -> 10.0.1.11\n05/31-04:40:08.701652  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.14\n05/31-04:40:08.701666  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.14 -> 10.0.1.11\n05/31-04:40:08.701673  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.15\n05/31-04:40:08.701687  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.2.15 -> 10.0.1.11\n05/31-04:40:08.701694  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11\n05/31-04:40:08.703899  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11\n05/31-04:40:09.921990  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:34604 -> 10.0.2.13:22\n05/31-04:40:09.922049  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:47406 -> 10.0.2.14:22\n05/31-04:40:09.922148  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:36250 -> 10.0.2.15:22\n05/31-04:40:09.922229  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.2.10:39224 -> 10.0.2.12:22\n05/31-04:40:09.922415  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:48106 -> 10.0.2.12:139\n05/31-04:40:09.922440  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:48106 -> 10.0.2.12:139\n05/31-04:40:09.922484  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:60736 -> 10.0.2.13:80\n05/31-04:40:09.922537  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:39028 -> 10.0.2.14:80\n05/31-04:40:09.922611  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:48106 -> 10.0.2.12:139\n05/31-04:40:09.922872  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:33064 -> 10.0.2.15:80\n05/31-04:40:09.922949  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:36762 -> 10.0.2.12:80\n05/31-04:40:09.923023  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:43936 -> 10.0.2.12:445\n05/31-04:40:09.923040  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:43936 -> 10.0.2.12:445\n05/31-04:40:09.923069  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:43936 -> 10.0.2.12:445\n05/31-04:40:09.802986  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11\n05/31-04:40:09.803027  [**] [1:1000001:2] ICMP traffic detected [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.0.1.11 -> 10.0.2.11\n05/31-04:40:09.921975  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:34604 -> 10.0.2.13:22\n05/31-04:40:09.922044  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:47406 -> 10.0.2.14:22\n05/31-04:40:09.922141  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:36250 -> 10.0.2.15:22\n05/31-04:40:09.922223  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39224 -> 10.0.2.12:22\n05/31-04:40:09.922410  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:48106 -> 10.0.2.12:139\n05/31-04:40:09.922437  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:48106 -> 10.0.2.12:139\n05/31-04:40:09.922478  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:60736 -> 10.0.2.13:80\n05/31-04:40:09.922532  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:39028 -> 10.0.2.14:80\n05/31-04:40:09.922608  [**] [1:1000004:2] SMB traffic to Samba server (NetBIOS) [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:48106 -> 10.0.2.12:139\n05/31-04:40:09.922867  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:33064 -> 10.0.2.15:80\n05/31-04:40:09.922943  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:36762 -> 10.0.2.12:80\n05/31-04:40:09.923020  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:43936 -> 10.0.2.12:445\n05/31-04:40:09.923038  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:43936 -> 10.0.2.12:445\n05/31-04:40:09.923067  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:43936 -> 10.0.2.12:445\n05/31-04:40:10.009583  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:10.009583  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:11.026202  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:12.050192  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:13.074207  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:14.098191  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:15.122170  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:15.122170  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:17.170172  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:21.202196  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:29.458268  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:59248 -> 10.0.2.11:22\n05/31-04:40:42.111189  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:43.154168  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:43.154168  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:44.178171  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:45.202204  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:46.226163  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:47.250183  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:49.298150  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:49.298150  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:40:53.330177  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:41:01.714177  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:41:18.098148  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:41:50.354245  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38682 -> 10.0.2.11:22\n05/31-04:42:57.990307  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:42:59.026176  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:00.050171  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:01.074194  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:02.098169  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:02.098169  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:03.122150  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:05.170149  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:09.202163  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:17.394160  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:33.778292  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:43:33.778292  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:44:06.034162  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:48876 -> 10.0.2.11:22\n05/31-04:45:13.154365  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:14.194171  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:15.218236  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:16.242172  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:17.266172  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:17.266172  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:18.290166  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:20.338154  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:24.370240  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:32.562155  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:48.946237  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:45:48.946237  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:46:21.202236  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:50578 -> 10.0.2.11:22\n05/31-04:47:27.340267  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.340402  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.340557  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.345003  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.346464  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.347125  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.347867  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.348411  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.348871  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.349244  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.349626  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.349762  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.349903  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.353775  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59464 -> 10.0.2.12:445\n05/31-04:47:27.340242  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.340399  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.340552  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.344999  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.346455  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.347119  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.347863  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.348407  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.348865  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.349239  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.349622  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.349759  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.349900  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.353768  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59464 -> 10.0.2.12:445\n05/31-04:47:27.434490  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.434548  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.434711  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.438926  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.440355  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.440936  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.441661  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.442086  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.434508  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.434551  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.434715  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.438930  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.440363  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.440942  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.441666  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.442090  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.442273  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.442431  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.442741  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.443174  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.443435  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.443539  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.443685  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.443865  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.444282  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.444426  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.444823  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.444967  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.445383  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.445628  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.445838  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.445922  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.446036  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.446236  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.446537  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.446650  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.446784  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.449949  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.2.10:59472 -> 10.0.2.12:445\n05/31-04:47:27.515920  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:49226 -> 10.0.2.13:80\n05/31-04:47:27.516025  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.2.10:49226 -> 10.0.2.13:80\n05/31-04:47:27.704444  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:49228 -> 10.0.2.13:80\n05/31-04:47:27.704524  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.2.10:49228 -> 10.0.2.13:80\n05/31-04:47:27.889318  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:40172 -> 10.0.2.14:80\n05/31-04:47:27.959116  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.2.10:35306 -> 10.0.2.15:80\n05/31-04:47:27.442269  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.442427  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.442738  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.443170  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.443431  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.443536  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.443682  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.443862  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.444278  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.444422  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.444819  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.444963  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.445374  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.445624  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.445834  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.445920  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.446033  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.446231  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.446533  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.446647  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.446780  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.449943  [**] [1:1000003:2] SMB traffic to Samba server [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.0.1.11:59472 -> 10.0.2.12:445\n05/31-04:47:27.515902  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:49226 -> 10.0.2.13:80\n05/31-04:47:27.516023  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.1.11:49226 -> 10.0.2.13:80\n05/31-04:47:27.704427  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:49228 -> 10.0.2.13:80\n05/31-04:47:27.704522  [**] [1:1000005:2] Shellshock attack attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.1.11:49228 -> 10.0.2.13:80\n05/31-04:47:27.889299  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:40172 -> 10.0.2.14:80\n05/31-04:47:27.959082  [**] [1:1000006:2] HTTP traffic detected [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 10.0.1.11:35306 -> 10.0.2.15:80\n05/31-04:47:28.028078  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:29.042175  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:30.066150  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:31.090174  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:32.114166  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:32.114166  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:33.138181  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:35.186182  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:39.218218  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:47:47.730141  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:48:04.114188  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:48:04.114188  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:48:36.370192  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:38072 -> 10.0.2.11:22\n05/31-04:49:42.487436  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:43.506153  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:44.530165  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:45.554199  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:46.578197  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:46.578197  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:47.602165  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:49.650175  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:49:53.682158  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:50:01.874186  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:50:18.258189  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:50:18.258189  [**] [1:1000002:2] Potential SSH brute force attack [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n05/31-04:50:50.514261  [**] [1:1000007:2] SSH connection attempt [**] [Classification: Attempted User Privilege Gain] [Priority: 1] {TCP} 10.0.1.11:39382 -> 10.0.2.11:22\n"
+}
