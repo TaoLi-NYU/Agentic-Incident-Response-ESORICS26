@@ -3,7 +3,7 @@ About Artifacts for the paper "Agentic Incident Response through Multiscale Plan
 
 
 
-![Uploading image.png…]()
+<img width="951" height="552" alt="image" src="https://github.com/user-attachments/assets/154eca00-7c49-4297-b1ac-31100f5b6550" />
 
 
 
