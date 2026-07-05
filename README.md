@@ -60,7 +60,7 @@ NVIDIA A100 GPU. The experiments use the
 
 Training the 14B model requires a CUDA-capable GPU with sufficient memory. The
 fine-tuning commands below are not intended to run on a typical CPU-only host.
-![alt text](image-1.png)
+
 
 
 
