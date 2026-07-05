@@ -3,7 +3,8 @@ About Artifacts for the paper "Agentic Incident Response through Multiscale Plan
 
 
 ## Digital-Twin Topology
-![alt text](image.png)
+<img width="473" height="164" alt="image" src="https://github.com/user-attachments/assets/be5265c9-b8f3-481d-b9ad-e8bc98efb37f" />
+
 (Left) The digital twin is a virtual replica of the affected system, which
 offers a safe environment for investigating the incident and testing response
 actions. (Right) The network digital twin configuration adopted in our testbed.
