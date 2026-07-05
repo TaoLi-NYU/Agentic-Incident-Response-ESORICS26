@@ -1,13 +1,12 @@
 # Agentic-Incident-Response-ESORICS26
 About Artifacts for the paper "Agentic Incident Response through Multiscale Planning with a Digital Twin"
 
+
 ## Digital-Twin Topology
-
-### LLM IR Digital Twin
-
-Dockerized incident response testbed ("digital twin") for autonomous incident response research. The system emulates a small IT infrastructure with a Snort IDS gateway, a client, and several servers (3 vulnerable + 2 normal).
-
-### Network Topology
+![alt text](image.png)
+(Left) The digital twin is a virtual replica of the affected system, which
+offers a safe environment for investigating the incident and testing response
+actions. (Right) The network digital twin configuration adopted in our testbed.
 
 ## Artifacts
 
