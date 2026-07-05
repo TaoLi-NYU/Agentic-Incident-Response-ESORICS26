@@ -17,6 +17,54 @@ actions. (Right) The network digital twin configuration adopted in our testbed.
 - The LoRA adapter weights of our fine-tuned model are available on
   [Hugging Face](https://huggingface.co/GYR1-determine/llmagent4incident-response).
 
+## Attack Scenarios
+
+The digital-twin experiments evaluate the incident-response framework under
+three multi-stage attack scenarios of increasing scope and technique diversity.
+
+| Scenario | Compromised servers | Main techniques |
+|---|---:|---|
+| **Weak-Credential-3** | 3 | SSH weak credentials, anonymous SMB access, and Shellshock exploitation |
+| **Shellshock-4** | 4 | SSH password spraying, anonymous SMB access, Shellshock exploitation, and unauthorized HTTP upload |
+| **Command-Injection-5** | 5 | SSH credential reuse, SMB staging, Shellshock exploitation, and diagnostic-service command injection |
+
+The corresponding attack scripts and experiment inputs are:
+
+- **Weak-Credential-3**: [`run_attack.py`](llm_ir_dt_new/run_attack.py),
+  [`system.txt`](llm_ir_dt_new/inputs/system.txt),
+  [`logs.txt`](llm_ir_dt_new/inputs/logs.txt), and
+  [`incident.txt`](llm_ir_dt_new/inputs/incident.txt).
+- **Shellshock-4**: [`run_attack_four_servers_diverse.py`](llm_ir_dt_new/run_attack_four_servers_diverse.py),
+  [`logs_four_servers_diverse.txt`](llm_ir_dt_new/inputs/logs_four_servers_diverse.txt), and
+  [`incident_four_servers_diverse.txt`](llm_ir_dt_new/inputs/incident_four_servers_diverse.txt).
+- **Command-Injection-5**: [`run_attack_five_servers_diverse.py`](llm_ir_dt_new/run_attack_five_servers_diverse.py),
+  [`logs_5_servers_diverse.txt`](llm_ir_dt_new/inputs/logs_5_servers_diverse.txt), and
+  [`incident_5_servers_diverse.txt`](llm_ir_dt_new/inputs/incident_5_servers_diverse.txt).
+
+## Experimental Environment
+
+Offline fine-tuning was performed on a Google Cloud virtual machine with one
+NVIDIA A100 GPU. The experiments use the
+`DeepSeek-R1-Distill-Qwen-14B` base model with LoRA fine-tuning.
+
+| Parameter | Value |
+|---|---:|
+| Cloud platform | Google Cloud |
+| Machine type | `a2-highgpu-1g` |
+| Provisioning model | Spot VM |
+| Region | `us-central1` |
+| GPU | 1 × NVIDIA A100 40 GB |
+| Operating system | Ubuntu 22.04 LTS |
+| Boot disk | 200 GB balanced persistent disk |
+| Base model | DeepSeek-R1-Distill-Qwen-14B |
+
+Training the 14B model requires a CUDA-capable GPU with sufficient memory. The
+fine-tuning commands below are not intended to run on a typical CPU-only host.
+![alt text](image-1.png)
+
+
+
+
 ## Fine-tuning DeepSeek-R1-Distill-Qwen-14B on our action generation dataset
 
 Command:
