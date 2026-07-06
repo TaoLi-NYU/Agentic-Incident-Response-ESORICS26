@@ -41,6 +41,180 @@ The corresponding attack scripts and experiment inputs are:
   [`logs_5_servers_diverse.txt`](llm_ir_dt_new/inputs/logs_5_servers_diverse.txt), and
   [`incident_5_servers_diverse.txt`](llm_ir_dt_new/inputs/incident_5_servers_diverse.txt).
 
+## Core Recovery Experiment
+
+The main experiment is implemented by
+[`run_recovery_loop_llm_state.py`](llm_ir_dt_new/run_recovery_loop_llm_state.py).
+For one prioritized compromised server, the fine-tuned `checkpoint-850` model
+generates candidate high-level recovery actions and predicts their local-state
+transitions. DeepSeek V4 Pro translates each high-level action into executable
+and verifiable commands, which are evaluated in the Docker digital twin.
+
+Each local state contains six Boolean recovery criteria: containment,
+knowledge sufficiency, forensic preservation, eradication, hardening, and
+service recovery. At each planning step, the implementation generates three
+candidate actions and evaluates each candidate with two rollouts. Candidate
+selection first maximizes the fraction of valid rollouts that reach the
+six-dimensional terminal state, then minimizes average command execution and
+verification time, and finally maximizes average local-state progress as a
+tie-breaker. Only the first action of the selected rollout is committed before
+replanning.
+
+The script recovers one prioritized server per invocation. To evaluate a full
+scenario, run it once for each compromised server in that scenario and then
+aggregate the per-server results. The commands below reproduce the core
+experiment configuration with three candidate actions and two rollouts per
+candidate.
+
+> **Safety notice:** the included attack scripts and intentionally vulnerable
+> containers must only be run inside the isolated Docker digital twin. Do not
+> run them against external or production systems.
+
+### 1. Prerequisites
+
+The reference environment uses Ubuntu 22.04, Python 3.11, Docker Engine with
+the Compose plugin, and an NVIDIA A100 40 GB GPU. A CUDA-capable GPU with enough
+memory to load `DeepSeek-R1-Distill-Qwen-14B` and the LoRA adapter is required.
+The user running the experiment must be able to access the Docker daemon.
+
+Check the main prerequisites:
+
+```bash
+python3.11 --version
+docker --version
+docker compose version
+nvidia-smi
+```
+
+### 2. Clone the repository
+
+```bash
+git clone https://github.com/TaoLi-NYU/Agentic-Incident-Response-ESORICS26.git
+cd Agentic-Incident-Response-ESORICS26
+```
+
+### 3. Configure the command-generation API
+
+DeepSeek V4 Pro translates each selected high-level action into executable and
+verification commands. Export the API key in the shell; never commit it to the
+repository:
+
+```bash
+export DEEPSEEK_API_KEY="your-api-key"
+test -n "$DEEPSEEK_API_KEY"
+```
+
+### 4. Build and verify the digital twin
+
+```bash
+cd llm_ir_dt_new
+python start.py
+docker ps --format 'table {{.Names}}\t{{.Status}}'
+```
+
+The expected deployment contains the gateway, client, SSH, Samba, Shellshock,
+and web-server containers. `start.py` builds the images on the first run and
+deploys the isolated client and server networks.
+
+### 5. Run Weak-Credential-3
+
+The following command recovers `server_ssh`. It restores the digital-twin
+baseline, executes `run_attack.py`, generates and evaluates candidate recovery
+actions, and stores the selected plans and timing results under `artifacts/`:
+
+```bash
+python -u run_recovery_loop_llm_state.py \
+  --server server_ssh \
+  --action-provider local-model \
+  --adapter ../models/checkpoint-850 \
+  --state-checkpoint ../models/checkpoint-850 \
+  --num-candidates 3 \
+  --num-rollouts 2 \
+  --max-plan-steps 7 \
+  --max-rollout-depth 7 \
+  --action-max-new-tokens 500 \
+  --action-temperature 0.6 \
+  --action-top-p 0.9 \
+  --state-max-new-tokens 1200 \
+  --state-temperature 0.0 \
+  --state-top-p 0.9 \
+  --command-agent deepseek \
+  --deepseek-model deepseek-v4-pro \
+  --deepseek-api-key-env DEEPSEEK_API_KEY \
+  --deepseek-base-url "https://api.deepseek.com" \
+  --deepseek-max-tokens 8192 \
+  --system-file inputs/system.txt \
+  --logs-file inputs/logs.txt \
+  --incident-file inputs/incident.txt \
+  --dt-context-file inputs/dt_project_context_full.txt \
+  --attack-script run_attack.py \
+  --wait-seconds 15 \
+  --artifacts-dir artifacts/recovery_loop_llm_state
+```
+
+A representative successful run selected six high-level actions. Replaying
+the selected command plans in a freshly restored digital twin produced the
+following verified result (times include command execution and verification):
+
+```text
+step=1 success=True time=11.270s action=Contain the attack by blocking 10.0.1.11 and quarantining 10.0.2.11.
+step=2 success=True time=1.675s  action=Acquire disk, memory, gateway, SSH, and web evidence.
+step=3 success=True time=0.699s  action=Analyze evidence and enumerate compromised credentials and indicators.
+step=4 success=True time=1.030s  action=Reset compromised credentials, patch software, and rebuild from a trusted image.
+step=5 success=True time=0.746s  action=Enforce key-based SSH, disable password authentication, and harden exposed services.
+step=6 success=True time=0.296s  action=Restore validated data, return the server to production, and enable monitoring.
+Replay complete. total_seconds=15.886
+Final local state: containment=True, knowledge=True, preservation=True,
+                   eradication=True, hardening=True, recovery=True
+```
+
+
+Repeat the command with `--server server_samba` and
+`--server server_shellshock` to recover the other two compromised servers.
+
+### 6. Run the larger scenarios
+
+Keep all planning and model parameters unchanged. Replace only the scenario
+inputs, attack script, and target server:
+
+| Scenario | Logs | Incident | Attack script | Valid targets |
+|---|---|---|---|---|
+| Weak-Credential-3 | `inputs/logs.txt` | `inputs/incident.txt` | `run_attack.py` | `server_ssh`, `server_samba`, `server_shellshock` |
+| Shellshock-4 | `inputs/logs_four_servers_diverse.txt` | `inputs/incident_four_servers_diverse.txt` | `run_attack_four_servers_diverse.py` | previous three plus `server_web1` |
+| Command-Injection-5 | `inputs/logs_5_servers_diverse.txt` | `inputs/incident_5_servers_diverse.txt` | `run_attack_five_servers_diverse.py` | previous four plus `server_web2` |
+
+For example, run Shellshock-4 against `server_web1` by changing the four
+arguments below in the core command:
+
+```bash
+--server server_web1 \
+--logs-file inputs/logs_four_servers_diverse.txt \
+--incident-file inputs/incident_four_servers_diverse.txt \
+--attack-script run_attack_four_servers_diverse.py
+```
+
+### 7. Inspect the results
+
+Each execution creates a timestamped directory under:
+
+```text
+llm_ir_dt_new/artifacts/recovery_loop_llm_state/runs/
+```
+
+The directory contains the experiment context, candidate evaluations, selected
+command plans, state transitions, command outputs, verification results, and
+measured execution times. A run is considered recovered only when all six
+local-state fields reach `true` before the planning-step limit.
+
+### 8. Stop the digital twin
+
+```bash
+python stop.py
+```
+
+
+
+
 ## Experimental Environment
 
 Offline fine-tuning was performed on a Google Cloud virtual machine with one
