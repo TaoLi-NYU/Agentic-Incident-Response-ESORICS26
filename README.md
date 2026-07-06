@@ -404,3 +404,10 @@ Yiran Gao gaoyiran525@gmail.com
 Kim Hammar <kimham@kth.se>
 
 Tao Li li.tao@cityu.edu.hk
+
+## Copyright and License
+
+Copyright © 2026 Yiran Gao, Kim Hammar, and Tao Li.
+
+This project is licensed under the
+[Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE.md).
