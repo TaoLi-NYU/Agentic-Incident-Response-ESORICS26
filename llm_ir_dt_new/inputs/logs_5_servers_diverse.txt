@@ -1,0 +1,85 @@
+Five-server diverse attack evidence.
+
+Client 10.0.1.11 performs service-specific TCP and HTTP fingerprinting against 10.0.2.11, 10.0.2.12, 10.0.2.13, 10.0.2.14, and 10.0.2.15. The scenario uses targeted TCP socket checks and HTTP header checks rather than a broad ICMP sweep. TCP probes report 10.0.2.11:22 open, 10.0.2.12:445 open, 10.0.2.13:80 open, 10.0.2.14:8080 open, and 10.0.2.15:8081 open. HTTP HEAD requests return 200 OK for 10.0.2.13/cgi-bin/vulnerable, 10.0.2.14/, and 10.0.2.15/.
+
+10.0.2.11: SSH credential reuse is performed using admin/password123. The client transfers a short marker file, /tmp/local_ssh_reuse_5server.txt, to /tmp/observed_ssh_reuse_5server.txt with scp, then logs in over SSH to verify access. Returned command output includes whoami=admin, id=uid=1000(admin) gid=1000(admin) groups=1000(admin), hostname=8c1a1c50eb35, and a readable marker file containing "ssh five-server credential reuse marker from client".
+
+10.0.2.12: smbclient lists //10.0.2.12 shares without credentials, including share and IPC$. The client creates observed_dir_5server in //10.0.2.12/share, uploads short marker files alpha.txt and beta.tmp, renames beta.tmp to beta_renamed.txt, lists the directory, then reads beta_renamed.txt back to verify write/read access. The read-back content is "samba five-server marker beta".
+
+10.0.2.13: an HTTP request to /cgi-bin/vulnerable executes a Shellshock-style User-Agent payload. Returned output includes whoami=www-data, id=uid=33(www-data) gid=33(www-data) groups=33(www-data), and hostname=62dd453a7842. The command writes and reads a short marker file, /tmp/observed_shellshock_5server.txt, with content "shellshock five-server marker from client".
+
+10.0.2.14: the client uploads a non-executable static HTML marker file, observed_web1_5server.html, to http://10.0.2.14:8080/upload?name=observed_web1_5server.html. The upload returns status 201 and stored path /uploads/observed_web1_5server.html. A later HTTP GET to /uploads/observed_web1_5server.html returns status 200 and the uploaded non-executable static HTML marker content.
+
+10.0.2.15: the client exploits the diagnostic endpoint at http://10.0.2.15:8081/diag with command injection. Returned command output includes pwd=/, whoami=root, id=uid=0(root) gid=0(root) groups=0(root), and hostname=7604857fd92b; this output reflects the diagnostic service execution context shown by the command response. The command writes and reads a short marker file, /tmp/observed_web2_diag_5server.txt, with content "web2 command injection five-server marker from client".
+
+Pivot evidence: after command injection on server_web2, commands run inside 10.0.2.15 and perform internal TCP reachability checks to other servers. The checks report 10.0.2.11:22 open, 10.0.2.12:445 open, 10.0.2.13:80 open, and 10.0.2.14:8080 open. This shows that 10.0.2.15 is used as the source host for internal service probing in this five-server scenario.
+
+The IDS alert reader reports 162 alerts after the activity completes. The alert list below is compressed: identical alert lines are retained ceil(N/2) times, and line-end source-code suffixes are removed.
+
+Compressed IDS alerts:
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:36886 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35416 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35416 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:50244 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:50248 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:54902 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:44458 -> 10.0.2.15:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:36896 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:36886 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35416 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35416 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:50244 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,009 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:50248 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:54902 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:44458 -> 10.0.2.15:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:36896 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.2.10:36904 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 10.0.1.11:36904 -> 10.0.2.11:22 [1:1000007:2] SSH connection attempt
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,010 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,011 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,011 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,011 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,011 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,011 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.1.11:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:50256 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 10.0.1.11:50256 -> 10.0.2.13:80 [1:1000005:2] Shellshock attack attempt
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35430 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,012 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35432 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 10.0.2.10:35434 -> 10.0.2.12:445 [1:1000003:2] SMB traffic to Samba server
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:50256 -> 10.0.2.13:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 10.0.2.10:50256 -> 10.0.2.13:80 [1:1000005:2] Shellshock attack attempt
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.1.11:54908 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
+2026-06-14 11:26:10,013 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 10.0.2.10:54908 -> 10.0.2.14:80 [1:1000006:2] HTTP traffic detected
