@@ -41,6 +41,29 @@ The corresponding attack scripts and experiment inputs are:
   [`logs_5_servers_diverse.txt`](llm_ir_dt_new/inputs/logs_5_servers_diverse.txt), and
   [`incident_5_servers_diverse.txt`](llm_ir_dt_new/inputs/incident_5_servers_diverse.txt).
 
+## Experimental Environment
+
+Offline fine-tuning was performed on a Google Cloud virtual machine with one
+NVIDIA A100 GPU. The experiments use the
+`DeepSeek-R1-Distill-Qwen-14B` base model with LoRA fine-tuning.
+
+| Parameter | Value |
+|---|---:|
+| Cloud platform | Google Cloud |
+| Machine type | `a2-highgpu-1g` |
+| Provisioning model | Spot VM |
+| Region | `us-central1` |
+| GPU | 1 × NVIDIA A100 40 GB |
+| Operating system | Ubuntu 22.04 LTS |
+| Boot disk | 200 GB balanced persistent disk |
+| Base model | DeepSeek-R1-Distill-Qwen-14B |
+
+Training the 14B model requires a CUDA-capable GPU with sufficient memory. The
+fine-tuning commands below are not intended to run on a typical CPU-only host.
+
+
+
+
 ## Core Recovery Experiment
 
 The main experiment is implemented by
@@ -212,28 +235,6 @@ local-state fields reach `true` before the planning-step limit.
 python stop.py
 ```
 
-
-
-
-## Experimental Environment
-
-Offline fine-tuning was performed on a Google Cloud virtual machine with one
-NVIDIA A100 GPU. The experiments use the
-`DeepSeek-R1-Distill-Qwen-14B` base model with LoRA fine-tuning.
-
-| Parameter | Value |
-|---|---:|
-| Cloud platform | Google Cloud |
-| Machine type | `a2-highgpu-1g` |
-| Provisioning model | Spot VM |
-| Region | `us-central1` |
-| GPU | 1 × NVIDIA A100 40 GB |
-| Operating system | Ubuntu 22.04 LTS |
-| Boot disk | 200 GB balanced persistent disk |
-| Base model | DeepSeek-R1-Distill-Qwen-14B |
-
-Training the 14B model requires a CUDA-capable GPU with sufficient memory. The
-fine-tuning commands below are not intended to run on a typical CPU-only host.
 
 
 
