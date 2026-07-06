@@ -1,0 +1,18 @@
+# ICMP detection
+alert icmp any any -> $HOME_NET any (msg:"ICMP traffic detected"; classtype:attempted-recon; sid:1000001; rev:2;)
+
+# SSH brute-force detection (threshold: 5 attempts in 60 seconds)
+alert tcp any any -> $HOME_NET 22 (msg:"Potential SSH brute force attack"; flags:S; threshold:type threshold, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:1000002; rev:2;)
+
+# SMB traffic to Samba server
+alert tcp any any -> 10.0.2.12 445 (msg:"SMB traffic to Samba server"; classtype:protocol-command-decode; sid:1000003; rev:2;)
+alert tcp any any -> 10.0.2.12 139 (msg:"SMB traffic to Samba server (NetBIOS)"; classtype:protocol-command-decode; sid:1000004; rev:2;)
+
+# Shellshock detection (look for () { pattern in HTTP headers)
+alert tcp any any -> $HOME_NET 80 (msg:"Shellshock attack attempt"; content:"() {"; classtype:web-application-attack; sid:1000005; rev:2;)
+
+# General HTTP traffic
+alert tcp any any -> $HOME_NET 80 (msg:"HTTP traffic detected"; flags:S; classtype:web-application-activity; sid:1000006; rev:2;)
+
+# SSH connection attempts
+alert tcp any any -> $HOME_NET 22 (msg:"SSH connection attempt"; flags:S; classtype:attempted-user; sid:1000007; rev:2;)

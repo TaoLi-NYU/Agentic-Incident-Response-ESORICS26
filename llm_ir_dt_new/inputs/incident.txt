@@ -1,0 +1,7 @@
+The logs indicate a multi-stage incident originating from the client host 10.0.1.11. The activity includes ICMP host discovery and nmap service discovery across the server network, SSH password guessing followed by successful SSH login to 10.0.2.11 as admin, SMB share enumeration and file write activity on 10.0.2.12, Shellshock-style HTTP command execution on 10.0.2.13, HTTP probing of 10.0.2.14 and 10.0.2.15, and follow-on activity from 10.0.2.11 toward 10.0.2.12 and 10.0.2.13. The strongest recovery evidence is associated with 10.0.2.11, 10.0.2.12, and 10.0.2.13.
+MITRE ATT&CK tactics being used: Reconnaissance, Initial Access, Credential Access, Execution, Privilege Escalation, Lateral Movement, Collection
+MITRE ATT&CK techniques being used: T1021.002 Remote Services: SMB/Windows Admin Shares, T1059.004 Command and Scripting Interpreter: Unix Shell, T1110.001 Brute Force: Password Guessing, T1005 Data from Local System, T1046 Network Service Discovery, T1190 Exploit Public-Facing Application, T1078.001 Valid Accounts: Default Accounts
+Attacker IPs/hostnames identified: 10.0.1.11.
+System IPs/hostnames identified: 10.0.1.10, 10.0.1.11, 10.0.2.10, 10.0.2.11, 10.0.2.12, 10.0.2.13, 10.0.2.14, 10.0.2.15.
+IPs/hostnames targeted by the attack: 10.0.2.11, 10.0.2.12, 10.0.2.13, 10.0.2.14, 10.0.2.15.
+Recovery targets identified: 10.0.2.11, 10.0.2.12, 10.0.2.13.
